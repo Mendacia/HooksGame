@@ -10,7 +10,7 @@ public class PlayerControls : MonoBehaviour
     Vector2 wantedDirection;
     public HookThrough scriptThrough;
 
-    private enum PlayerState
+    public enum PlayerState
     {
         GROUNDED,
         AIRBORNE,
@@ -18,7 +18,7 @@ public class PlayerControls : MonoBehaviour
         SWING,
     }
 
-    private PlayerState currentState;
+    public PlayerState currentState;
 
     private void Start()
     {
@@ -38,21 +38,36 @@ public class PlayerControls : MonoBehaviour
             //Taking inputs for LR player movement intent
             if (Input.GetKey(right))
             {
-                xIntent += 5;
+                xIntent += 10;
             }
             if (Input.GetKey(left))
             {
-                xIntent -= 5;
+                xIntent -= 10;
             }
 
             //Taking inputs for the player's jump
             {
                 if (Input.GetKey(jump))
                 {
-                    yIntent = 10;
+                    yIntent = 20;
                 }
             }
         }
+
+        if (currentState == PlayerState.AIRBORNE)
+        {
+            rb.gravityScale = 3;
+            //Taking inputs for LR player movement intent
+            if (Input.GetKey(right) && rb.velocity.x < 3)
+            {
+                xIntent += 0.1f;
+            }
+            if (Input.GetKey(left) && rb.velocity.x > -3)
+            {
+                xIntent -= 0.1f;
+            }
+        }
+
         //Actually moving the player
         wantedDirection = new Vector2(xIntent, yIntent);
         rb.velocity = wantedDirection;
@@ -69,7 +84,17 @@ public class PlayerControls : MonoBehaviour
         }
         if (currentState == PlayerState.HOOK)
         {
+            rb.gravityScale = 0;
             scriptThrough.MoveThrough();
+        }
+    }
+
+    //If the player hits a wall while hooking, they'll fall.
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(currentState == PlayerState.HOOK)
+        {
+            currentState = PlayerState.AIRBORNE;
         }
     }
 
@@ -83,7 +108,7 @@ public class PlayerControls : MonoBehaviour
     public void LeaveHookDrop()
     {
         currentState = PlayerState.AIRBORNE;
-        rb.velocity = new Vector2(0,-20);
+        rb.velocity = new Vector2(0,0);
     }
 
 

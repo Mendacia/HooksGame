@@ -29,7 +29,6 @@ public class HookThrough : MonoBehaviour
         //Exiting the hook function
         if ((destination - gameObject.transform.position).magnitude < (rb.velocity.magnitude*Time.deltaTime))
         {
-            rb.gravityScale = 3;
             if (Input.GetMouseButton(0))
             {
                 movementScript.LeaveHookThrough();
