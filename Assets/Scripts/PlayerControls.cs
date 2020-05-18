@@ -10,15 +10,17 @@ public class PlayerControls : MonoBehaviour
     Vector2 wantedDirection;
     public HookThrough scriptThrough;
 
-    public enum PlayerState
+    private enum PlayerState
     {
         GROUNDED,
         AIRBORNE,
         HOOK,
         SWING,
     }
+    private PlayerState currentState;
 
-    public PlayerState currentState;
+    //Bug Fixing Variables
+    public float xVelocity;
 
     private void Start()
     {
@@ -31,6 +33,7 @@ public class PlayerControls : MonoBehaviour
         //Setting up variables for moving the player later based on inputs
         var xIntent = rb.velocity.x;
         var yIntent = rb.velocity.y;
+        xVelocity = xIntent;
 
         if (currentState == PlayerState.GROUNDED)
         {
@@ -38,33 +41,47 @@ public class PlayerControls : MonoBehaviour
             //Taking inputs for LR player movement intent
             if (Input.GetKey(right))
             {
-                xIntent += 10;
+                xIntent += 20;
             }
             if (Input.GetKey(left))
             {
-                xIntent -= 10;
+                xIntent -= 20;
             }
 
             //Taking inputs for the player's jump
             {
                 if (Input.GetKey(jump))
                 {
-                    yIntent = 20;
+                    yIntent = 30;
                 }
             }
         }
 
         if (currentState == PlayerState.AIRBORNE)
         {
-            rb.gravityScale = 3;
+            rb.gravityScale = 5;
             //Taking inputs for LR player movement intent
-            if (Input.GetKey(right) && rb.velocity.x < 3)
+            if (Input.GetKey(right) && rb.velocity.x < 5)
             {
-                xIntent += 0.1f;
+                xIntent += 0.3f;
             }
-            if (Input.GetKey(left) && rb.velocity.x > -3)
+            if (Input.GetKey(left) && rb.velocity.x > -5)
             {
-                xIntent -= 0.1f;
+                xIntent -= 0.3f;
+            }
+
+            //Artificial Friction
+            if (rb.velocity.x > 5)
+            {
+                xIntent -= 1;
+            }
+            if (rb.velocity.x < -5)
+            {
+                xIntent += 1;
+            }
+            if (rb.velocity.y > 5)
+            {
+                yIntent -= 0.5f;
             }
         }
 
@@ -99,7 +116,7 @@ public class PlayerControls : MonoBehaviour
     }
 
 
-    //Leaving hook styles
+    //Leaving hook styles 
     public void LeaveHookThrough()
     {
         currentState = PlayerState.AIRBORNE;

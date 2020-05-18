@@ -22,12 +22,7 @@ public class HookThrough : MonoBehaviour
 
     public void MoveThrough()
     {
-        //Turns off gravity for the duration of the hook
-        rb.gravityScale = 0;
-        //He goin
-        rb.velocity = (destination - gameObject.transform.position).normalized * 50;
-        //Exiting the hook function
-        if ((destination - gameObject.transform.position).magnitude < (rb.velocity.magnitude*Time.deltaTime))
+        if ((destination - gameObject.transform.position).magnitude < (rb.velocity.magnitude * Time.deltaTime))
         {
             if (Input.GetMouseButton(0))
             {
@@ -37,6 +32,15 @@ public class HookThrough : MonoBehaviour
             {
                 movementScript.LeaveHookDrop();
             }
+        }
+        //This needs to be in the else statement otherwise the player is occasionally sent back the way they came when exiting via LeaveHookThrough
+        else
+        {
+            //Turns off gravity for the duration of the hook
+            rb.gravityScale = 0;
+            //He goin
+            rb.velocity = (destination - gameObject.transform.position).normalized * 50;
+            //Exiting the hook function
         }
     }
 }
