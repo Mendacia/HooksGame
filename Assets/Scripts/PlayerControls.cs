@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameAnalyticsSDK;
 
 public class PlayerControls : MonoBehaviour
 {
@@ -19,13 +20,13 @@ public class PlayerControls : MonoBehaviour
     }
     private PlayerState currentState;
 
-    //Bug Fixing Variables
-    public float xVelocity;
-
     private void Start()
     {
         //accessing the rigidbody
         rb = GetComponent<Rigidbody2D>();
+
+        GameAnalytics.Initialize();
+
     }
 
     private void Update()
@@ -33,7 +34,6 @@ public class PlayerControls : MonoBehaviour
         //Setting up variables for moving the player later based on inputs
         var xIntent = rb.velocity.x;
         var yIntent = rb.velocity.y;
-        xVelocity = xIntent;
 
         if (currentState == PlayerState.GROUNDED)
         {
@@ -93,7 +93,7 @@ public class PlayerControls : MonoBehaviour
         //Hook Controls
         if (currentState == PlayerState.GROUNDED || currentState == PlayerState.AIRBORNE)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && scriptThrough.CanHook())
             {
                 scriptThrough.DestinationSetter();
                 currentState = PlayerState.HOOK;

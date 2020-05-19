@@ -15,9 +15,20 @@ public class HookThrough : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+
+
+    public bool CanHook()
+    {
+        return cursorScript.canHook;
+    } 
+
+
     public void DestinationSetter()
     {
-        destination = cursorScript.aimBot.transform.position;
+        if (cursorScript.aimBot.transform.position != cursorScript.cursor.transform.position)
+        {
+            destination = cursorScript.aimBot.transform.position;
+        }
     }
 
     public void MoveThrough()
