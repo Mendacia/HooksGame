@@ -10,6 +10,8 @@ public class PlayerControls : MonoBehaviour
     private Rigidbody2D rb;
     Vector2 wantedDirection;
     public HookThrough scriptThrough;
+    public float aerialSpeedCap = 5;
+    public Transform currentCheckpoint;
 
     private enum PlayerState
     {
@@ -61,25 +63,25 @@ public class PlayerControls : MonoBehaviour
         {
             rb.gravityScale = 5;
             //Taking inputs for LR player movement intent
-            if (Input.GetKey(right) && rb.velocity.x < 5)
+            if (Input.GetKey(right) && rb.velocity.x < aerialSpeedCap)
             {
                 xIntent += 0.3f;
             }
-            if (Input.GetKey(left) && rb.velocity.x > -5)
+            if (Input.GetKey(left) && rb.velocity.x > -aerialSpeedCap)
             {
                 xIntent -= 0.3f;
             }
 
             //Artificial Friction
-            if (rb.velocity.x > 5)
+            if (rb.velocity.x > aerialSpeedCap)
             {
                 xIntent -= 1;
             }
-            if (rb.velocity.x < -5)
+            if (rb.velocity.x < -aerialSpeedCap)
             {
                 xIntent += 1;
             }
-            if (rb.velocity.y > 5)
+            if (rb.velocity.y > aerialSpeedCap)
             {
                 yIntent -= 0.5f;
             }
@@ -144,5 +146,12 @@ public class PlayerControls : MonoBehaviour
                 currentState = PlayerState.AIRBORNE;
             }
         }
+    }
+
+    //Call on another script to kill the player
+    public void Die()
+    {
+        currentState = PlayerState.GROUNDED;
+        gameObject.transform.position = currentCheckpoint.position;
     }
 }
