@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementScript: {fileID: 2211389441376165957}
-  cursorScript: {fileID: 2211389443058507091}
+  cursorScript: {fileID: 0}
 --- !u!1 &2211389441517984316
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   from: {fileID: 2211389442197694639}
   to: {fileID: 2211389441808443225}
-  lerpDistance: 20
+  lerpDistance: 25
   timeDriven: 1
 --- !u!1 &2211389442323742241
 GameObject:
@@ -626,7 +626,6 @@ GameObject:
   - component: {fileID: 2211389443058507084}
   - component: {fileID: 2211389443058507085}
   - component: {fileID: 2211389443058507086}
-  - component: {fileID: 2211389443058507091}
   - component: {fileID: 2211389443058507090}
   m_Layer: 0
   m_Name: Main Camera
@@ -676,7 +675,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 16.880829
+  orthographic size: 17
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -700,46 +699,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2211389443058507087}
   m_Enabled: 1
---- !u!114 &2211389443058507091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2211389443058507087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1b467e84a8410443a8c4848d1efb915, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursor: {fileID: 2211389442519855364}
-  aimBot: {fileID: 2211389441808443227}
-  player: {fileID: 2211389441376165954}
-  hookTargets:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  mouseTargetingRadius: 50
-  playerTargetingRadius: 10
-  HookTest:
-    serializedVersion: 2
-    m_Bits: 256
-  canHook: 0
 --- !u!114 &2211389443058507090
 MonoBehaviour:
   m_ObjectHideFlags: 0
