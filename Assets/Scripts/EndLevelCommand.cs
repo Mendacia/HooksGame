@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EndGame : MonoBehaviour
+public class EndLevelCommand : MonoBehaviour
 {
     public string nextScene;
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Update()
     {
-        if (collision.gameObject.tag == "Player")
+        if (Input.GetKeyDown(KeyCode.O))
         {
             SceneManager.LoadScene(nextScene);
         }

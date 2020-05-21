@@ -151,7 +151,7 @@ public class PlayerControls : MonoBehaviour
     //Call on another script to kill the player
     public void Die()
     {
-        currentState = PlayerState.GROUNDED;
+        currentState = PlayerState.AIRBORNE;
         gameObject.transform.position = currentCheckpoint.position;
     }
 }
