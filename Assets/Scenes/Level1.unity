@@ -5732,6 +5732,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2211389441376165956, guid: c71dde7da7fb45d46854e80646475657,
+        type: 3}
+      propertyPath: cursorScript
+      value: 
+      objectReference: {fileID: 1462628454}
     - target: {fileID: 2211389442050790537, guid: c71dde7da7fb45d46854e80646475657,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -5747,11 +5752,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.020197451
       objectReference: {fileID: 0}
-    - target: {fileID: 2211389441376165956, guid: c71dde7da7fb45d46854e80646475657,
-        type: 3}
-      propertyPath: cursorScript
-      value: 
-      objectReference: {fileID: 1462628454}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c71dde7da7fb45d46854e80646475657, type: 3}
 --- !u!4 &1533555110 stripped
@@ -8795,6 +8795,11 @@ PrefabInstance:
         type: 3}
       propertyPath: hookTargets.Array.data[42]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6982385896422122692, guid: dc85b4c84d205a546a87af2a1102f464,
+        type: 3}
+      propertyPath: playerTargetingRadius
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc85b4c84d205a546a87af2a1102f464, type: 3}

@@ -33,13 +33,15 @@ public class HookThrough : MonoBehaviour
 
     public void MoveThrough()
     {
+        //Tests if the player will move through the hook on the next frame
         if ((destination - gameObject.transform.position).magnitude < (rb.velocity.magnitude * Time.deltaTime))
         {
-            if (Input.GetMouseButton(0))
+            //Tests the input type and tells PlayerControls to act accordingly
+            if (movementScript.goingThrough == true)
             {
                 movementScript.LeaveHookThrough();
             }
-            else
+            else if (movementScript.goingThrough == false)
             {
                 movementScript.LeaveHookDrop();
             }
@@ -51,7 +53,6 @@ public class HookThrough : MonoBehaviour
             rb.gravityScale = 0;
             //He goin
             rb.velocity = (destination - gameObject.transform.position).normalized * 50;
-            //Exiting the hook function
         }
     }
 }

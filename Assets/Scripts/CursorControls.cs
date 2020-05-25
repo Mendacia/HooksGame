@@ -8,9 +8,11 @@ public class CursorControls : MonoBehaviour
     public GameObject cursor;
     public GameObject aimBot;
     public GameObject player;
+    public PlayerControls playerScript;
     public Transform[] hookTargets;
     public float mouseTargetingRadius = 50f;
     public float playerTargetingRadius = 50f;
+    public float realTargetingRadius;
     public LayerMask HookTest;
     public bool canHook = false;
 
@@ -20,18 +22,28 @@ public class CursorControls : MonoBehaviour
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         cursor.transform.position = new Vector3 (mousePosition.x, mousePosition.y, 0);
 
+        if((playerScript.currentVelocity/50) > 1)
+        {
+            realTargetingRadius = (playerScript.currentVelocity / 50) * playerTargetingRadius;
+        }
+        else
+        {
+            realTargetingRadius = playerTargetingRadius;
+        }
+
+
         //Selects the closest hook location
         var selectedTarget = GetClosestHook(hookTargets);
         if (selectedTarget == null)
         {
             var vector = cursor.transform.position - player.transform.position;
-            if (vector.magnitude < playerTargetingRadius)
+            if (vector.magnitude < realTargetingRadius)
             {
                 aimBot.transform.position = cursor.transform.position;
             }
             else
             {
-                aimBot.transform.position = player.transform.position + vector.normalized * playerTargetingRadius;
+                aimBot.transform.position = player.transform.position + vector.normalized * realTargetingRadius;
             }
             canHook = false;
         }
@@ -58,7 +70,7 @@ public class CursorControls : MonoBehaviour
         foreach (Transform potentialTarget in targets)
         {
             //Raycast that looks for walls and hooks
-            var hookFindingLazer = Physics2D.Raycast(player.transform.position, potentialTarget.transform.position - player.transform.position, playerTargetingRadius, HookTest);
+            var hookFindingLazer = Physics2D.Raycast(player.transform.position, potentialTarget.transform.position - player.transform.position, realTargetingRadius, HookTest);
             //Debug Ray Drawing
             Debug.DrawRay(player.transform.position, potentialTarget.transform.position - player.transform.position, Color.green, 0.017f);
             if (hookFindingLazer.collider == null)

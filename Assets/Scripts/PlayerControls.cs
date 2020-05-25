@@ -7,11 +7,13 @@ public class PlayerControls : MonoBehaviour
 {
     public KeyCode left, right, jump;
     public bool isGrounded;
+    public bool goingThrough;
     private Rigidbody2D rb;
     Vector2 wantedDirection;
     public HookThrough scriptThrough;
     public float aerialSpeedCap = 5;
     public Transform currentCheckpoint;
+    public float currentVelocity;
 
     private enum PlayerState
     {
@@ -65,11 +67,11 @@ public class PlayerControls : MonoBehaviour
             //Taking inputs for LR player movement intent
             if (Input.GetKey(right) && rb.velocity.x < aerialSpeedCap)
             {
-                xIntent += 0.3f;
+                xIntent += 0.5f;
             }
             if (Input.GetKey(left) && rb.velocity.x > -aerialSpeedCap)
             {
-                xIntent -= 0.3f;
+                xIntent -= 0.5f;
             }
 
             //Artificial Friction
@@ -87,6 +89,8 @@ public class PlayerControls : MonoBehaviour
             }
         }
 
+        currentVelocity = rb.velocity.magnitude;
+
         //Actually moving the player
         wantedDirection = new Vector2(xIntent, yIntent);
         rb.velocity = wantedDirection;
@@ -99,6 +103,14 @@ public class PlayerControls : MonoBehaviour
             {
                 scriptThrough.DestinationSetter();
                 currentState = PlayerState.HOOK;
+                goingThrough = true;
+            }
+
+            if (Input.GetMouseButtonDown(2) && scriptThrough.CanHook())
+            {
+                scriptThrough.DestinationSetter();
+                currentState = PlayerState.HOOK;
+                goingThrough = false;
             }
         }
         if (currentState == PlayerState.HOOK)
