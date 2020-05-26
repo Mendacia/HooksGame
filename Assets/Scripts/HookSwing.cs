@@ -9,16 +9,17 @@ public class HookSwing : MonoBehaviour
     public GameObject orbiter;
     public GameObject centre;
     public float rotationalVelocity;
+    public CursorControls mouseControls;
 
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetMouseButton(1))
         {
-            orbiter.transform.SetParent(centre.transform);
-            centre.transform.Rotate(0, 0, 2);
+            orbiter.transform.SetParent(mouseControls.aimBot.transform);
+            mouseControls.aimBot.transform.Rotate(0, 0, rotationalVelocity);
         }
-        if (Input.GetKeyUp(KeyCode.R))
+        if (Input.GetMouseButtonUp(1))
         {
             orbiter.transform.SetParent(null);
         }

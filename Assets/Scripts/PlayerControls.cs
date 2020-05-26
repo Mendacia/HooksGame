@@ -10,7 +10,7 @@ public class PlayerControls : MonoBehaviour
     public bool goingThrough;
     private Rigidbody2D rb;
     Vector2 wantedDirection;
-    public HookThrough scriptThrough;
+    public HookThrough hookControlScript;
     public float aerialSpeedCap = 5;
     public Transform currentCheckpoint;
     public float currentVelocity;
@@ -99,24 +99,36 @@ public class PlayerControls : MonoBehaviour
         //Hook Controls
         if (currentState == PlayerState.GROUNDED || currentState == PlayerState.AIRBORNE)
         {
-            if (Input.GetMouseButtonDown(0) && scriptThrough.CanHook())
+            //Through
+            if (Input.GetMouseButtonDown(0) && hookControlScript.CanHook())
             {
-                scriptThrough.DestinationSetter();
+                hookControlScript.DestinationSetter();
                 currentState = PlayerState.HOOK;
                 goingThrough = true;
             }
-
-            if (Input.GetMouseButtonDown(2) && scriptThrough.CanHook())
+            //To
+            if (Input.GetMouseButtonDown(2) && hookControlScript.CanHook())
             {
-                scriptThrough.DestinationSetter();
+                hookControlScript.DestinationSetter();
                 currentState = PlayerState.HOOK;
                 goingThrough = false;
+            }
+            //Swing
+            if (Input.GetMouseButtonDown(1) && hookControlScript.CanHook())
+            {
+                hookControlScript.DestinationSetter();
+                currentState = PlayerState.SWING;
             }
         }
         if (currentState == PlayerState.HOOK)
         {
             rb.gravityScale = 0;
-            scriptThrough.MoveThrough();
+            hookControlScript.MoveThrough();
+        }
+        if (currentState == PlayerState.SWING)
+        {
+            rb.gravityScale = 0;
+            hookControlScript.Swing();
         }
     }
 
@@ -141,6 +153,14 @@ public class PlayerControls : MonoBehaviour
         currentState = PlayerState.AIRBORNE;
         rb.velocity = new Vector2(0,0);
     }
+
+
+
+    public bool CanRetarget()
+    {
+        return !hookControlScript.currentlySwinging;
+    }
+
 
 
     //referenced in GroundCheck, basically referencing a trigger collider at the player's feet that tells the controller when the player is touching the ground

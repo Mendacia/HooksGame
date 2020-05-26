@@ -33,24 +33,27 @@ public class CursorControls : MonoBehaviour
 
 
         //Selects the closest hook location
-        var selectedTarget = GetClosestHook(hookTargets);
-        if (selectedTarget == null)
+        if (playerScript.CanRetarget())
         {
-            var vector = cursor.transform.position - player.transform.position;
-            if (vector.magnitude < realTargetingRadius)
+            var selectedTarget = GetClosestHook(hookTargets);
+            if (selectedTarget == null)
             {
-                aimBot.transform.position = cursor.transform.position;
+                var vector = cursor.transform.position - player.transform.position;
+                if (vector.magnitude < realTargetingRadius)
+                {
+                    aimBot.transform.position = cursor.transform.position;
+                }
+                else
+                {
+                    aimBot.transform.position = player.transform.position + vector.normalized * realTargetingRadius;
+                }
+                canHook = false;
             }
             else
             {
-                aimBot.transform.position = player.transform.position + vector.normalized * realTargetingRadius;
+                aimBot.transform.position = new Vector3(selectedTarget.position.x, selectedTarget.position.y, 0);
+                canHook = true;
             }
-            canHook = false;
-        }
-        else
-        {
-            aimBot.transform.position = new Vector3(selectedTarget.position.x, selectedTarget.position.y, 0);
-            canHook = true;
         }
      
     }

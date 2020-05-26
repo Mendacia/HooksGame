@@ -8,11 +8,23 @@ public class HookThrough : MonoBehaviour
     private Rigidbody2D rb;
     public PlayerControls movementScript;
     public CursorControls cursorScript;
+    public GameObject swingPositionObject;
+    public GameObject parentOfSwingAnchor;
+    public float rotationalSpeed;
     private Vector3 destination;
+    public bool currentlySwinging;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Update()
+    {
+        if(currentlySwinging == false)
+        {
+            swingPositionObject.transform.position = gameObject.transform.position;
+        }
     }
 
 
@@ -53,6 +65,30 @@ public class HookThrough : MonoBehaviour
             rb.gravityScale = 0;
             //He goin
             rb.velocity = (destination - gameObject.transform.position).normalized * 50;
+        }
+    }
+
+    public void Swing()
+    {
+        //Sets parenting and stops the object from following the player
+        if(swingPositionObject.transform.parent != cursorScript.aimBot.transform)
+        {
+            swingPositionObject.transform.SetParent(cursorScript.aimBot.transform);
+            currentlySwinging = true;
+        }
+        else
+        //move.
+        {
+            cursorScript.aimBot.transform.Rotate(0, 0, rotationalSpeed);
+            rb.transform.position = swingPositionObject.transform.position;
+        }
+
+        if (Input.GetMouseButtonUp(1))
+        //stop move.
+        {
+            currentlySwinging = false;
+            swingPositionObject.transform.SetParent(parentOfSwingAnchor.transform);
+            movementScript.LeaveHookThrough();
         }
     }
 }
