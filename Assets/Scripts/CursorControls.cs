@@ -75,7 +75,7 @@ public class CursorControls : MonoBehaviour
             //Raycast that looks for walls and hooks
             var hookFindingLazer = Physics2D.Raycast(player.transform.position, potentialTarget.transform.position - player.transform.position, realTargetingRadius, HookTest);
             //Debug Ray Drawing
-            Debug.DrawRay(player.transform.position, potentialTarget.transform.position - player.transform.position, Color.green, 0.017f);
+            //Debug.DrawRay(player.transform.position, potentialTarget.transform.position - player.transform.position, Color.green, 0.017f);
             if (hookFindingLazer.collider == null)
             {
                 //Missed

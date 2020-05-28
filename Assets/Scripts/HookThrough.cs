@@ -11,8 +11,12 @@ public class HookThrough : MonoBehaviour
     public GameObject swingPositionObject;
     public GameObject parentOfSwingAnchor;
     public float rotationalSpeed;
-    private Vector3 destination;
+    public float rotationalAcceleration;
+    public float rotationalSpeedCap;
+    public Vector2 destination;
     public bool currentlySwinging;
+    private bool goClockwise;
+    private int accelerationIntent;
 
     private void Start()
     {
@@ -27,8 +31,6 @@ public class HookThrough : MonoBehaviour
         }
     }
 
-
-
     public bool CanHook()
     {
         return cursorScript.canHook;
@@ -41,21 +43,85 @@ public class HookThrough : MonoBehaviour
         {
             destination = cursorScript.aimBot.transform.position;
         }
+
+        if (Mathf.Abs(rb.velocity.x) *1.5 > Mathf.Abs(rb.velocity.y))
+        {
+            var xSigned = Mathf.Sign(rb.velocity.x);
+            if (rb.position.y > destination.y)
+            {
+                if (xSigned > 0)
+                {
+                    goClockwise = true;
+                }
+                else
+                {
+                    goClockwise = false;
+                }
+            }
+            else
+            {
+                if (xSigned < 0)
+                {
+                    goClockwise = true;
+                }
+                else
+                {
+                    goClockwise = false;
+
+                }
+            }
+        }
+        else
+        {
+            var ySigned = Mathf.Sign(rb.velocity.y);
+            if (rb.position.x > destination.x)
+            {
+                if (ySigned > 0)
+                {
+                    goClockwise = false;
+                } 
+                else
+                {
+                    goClockwise = true;
+                 }
+            }
+            else
+            {
+                if (ySigned < 0)
+                {
+                    goClockwise = false;
+                }
+                else
+                {
+                    goClockwise = true;
+                }
+            }
+        }
+
+        // Find Tangent Speed
+        var radius = Vector2.Distance(destination, rb.position);
+        var circumference = Mathf.PI * 2 * radius;
+
+        //rotationalSpeed = rb.velocity.magnitude / circumference * (goClockwise ? -1 : 1) * Mathf.Rad2Deg * 30;
+        rotationalSpeed = circumference * (360 / (circumference / rb.velocity.magnitude)) * Time.deltaTime * (goClockwise? -1 : 1);
+
     }
 
     public void MoveThrough()
     {
         //Tests if the player will move through the hook on the next frame
-        if ((destination - gameObject.transform.position).magnitude < (rb.velocity.magnitude * Time.deltaTime))
+        if ((destination - rb.position).magnitude < (rb.velocity.magnitude * Time.deltaTime))
         {
             //Tests the input type and tells PlayerControls to act accordingly
             if (movementScript.goingThrough == true)
             {
                 movementScript.LeaveHookThrough();
+                Debug.DrawLine(rb.position, destination, Color.red);
             }
             else if (movementScript.goingThrough == false)
             {
                 movementScript.LeaveHookDrop();
+                Debug.DrawLine(rb.position, destination, Color.blue);
             }
         }
         //This needs to be in the else statement otherwise the player is occasionally sent back the way they came when exiting via LeaveHookThrough
@@ -64,23 +130,67 @@ public class HookThrough : MonoBehaviour
             //Turns off gravity for the duration of the hook
             rb.gravityScale = 0;
             //He goin
-            rb.velocity = (destination - gameObject.transform.position).normalized * 50;
+            rb.velocity = (destination - rb.position).normalized * 50;
         }
     }
 
     public void Swing()
     {
         //Sets parenting and stops the object from following the player
-        if(swingPositionObject.transform.parent != cursorScript.aimBot.transform)
+        if (swingPositionObject.transform.parent != cursorScript.aimBot.transform)
         {
             swingPositionObject.transform.SetParent(cursorScript.aimBot.transform);
-            currentlySwinging = true;
         }
         else
-        //move.
         {
-            cursorScript.aimBot.transform.Rotate(0, 0, rotationalSpeed);
-            rb.transform.position = swingPositionObject.transform.position;
+            currentlySwinging = true;
+            if (!(movementScript.lPressed || movementScript.rPressed))
+            {
+                accelerationIntent = 0;
+            } else
+            {
+                if (accelerationIntent == 0)
+                {
+                    accelerationIntent = 0;
+                    if (movementScript.rPressed == true)
+                    {
+                        if (rb.position.y > destination.y)
+                        {
+                            accelerationIntent += 1;
+                        }
+                        else
+                        {
+                            accelerationIntent -= 1;
+                        }
+                    }
+                    if (movementScript.lPressed == true)
+                    {
+                        if (rb.position.y > destination.y)
+                        {
+                            accelerationIntent -= 1;
+                        }
+                        else
+                        {
+                            accelerationIntent += 1;
+                        }
+                    }
+                }
+            }
+            
+            if (accelerationIntent == -1)
+            {
+                rotationalSpeed = rotationalSpeed + rotationalAcceleration * Time.deltaTime;
+            }
+            if (accelerationIntent == 1)
+            {
+                rotationalSpeed = rotationalSpeed - rotationalAcceleration * Time.deltaTime;
+            }
+            rotationalSpeed = Mathf.Clamp(rotationalSpeed, -rotationalSpeedCap, rotationalSpeedCap);
+
+            cursorScript.aimBot.transform.Rotate(0, 0, rotationalSpeed * Time.deltaTime);
+            rb.velocity = (new Vector2(swingPositionObject.transform.position.x, swingPositionObject.transform.position.y) - rb.position) / Time.deltaTime;
+            rb.MovePosition(swingPositionObject.transform.position);
+            Debug.DrawLine(rb.position, destination, Color.green);
         }
 
         if (Input.GetMouseButtonUp(1))
