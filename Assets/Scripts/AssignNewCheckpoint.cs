@@ -7,7 +7,10 @@ public class AssignNewCheckpoint : MonoBehaviour
 {
     public GameObject spawnLocation;
     public bool enableAnalyticsTracking = true;
+    public bool enableStartProgressionTracking = true;
+    public bool enableCompleteProgressionTracking = true;
     public string checkpointName;
+    public string lastCheckpointName;
     private bool triggeredBefore;
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -17,7 +20,14 @@ public class AssignNewCheckpoint : MonoBehaviour
             PlayerControls.currentCheckpoint = spawnLocation.transform;
             if(triggeredBefore == false && enableAnalyticsTracking)
             {
-                GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, checkpointName);
+                if (enableStartProgressionTracking)
+                {
+                    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, checkpointName);
+                }
+                if (enableCompleteProgressionTracking)
+                {
+                    GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, lastCheckpointName);
+                }
                 triggeredBefore = true;
             }
         }

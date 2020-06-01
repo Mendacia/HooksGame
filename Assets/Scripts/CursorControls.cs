@@ -8,9 +8,11 @@ public class CursorControls : MonoBehaviour
     public GameObject cursor;
     public GameObject aimBot;
     public GameObject player;
+    public PlayerControls playerScript;
     public Transform[] hookTargets;
     public float mouseTargetingRadius = 50f;
     public float playerTargetingRadius = 50f;
+    public float realTargetingRadius;
     public LayerMask HookTest;
     public bool canHook = false;
 
@@ -20,25 +22,44 @@ public class CursorControls : MonoBehaviour
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         cursor.transform.position = new Vector3 (mousePosition.x, mousePosition.y, 0);
 
-        //Selects the closest hook location
-        var selectedTarget = GetClosestHook(hookTargets);
-        if (selectedTarget == null)
+        if((playerScript.currentVelocity/50) > 1)
         {
-            var vector = cursor.transform.position - player.transform.position;
-            if (vector.magnitude < playerTargetingRadius)
-            {
-                aimBot.transform.position = cursor.transform.position;
-            }
-            else
-            {
-                aimBot.transform.position = player.transform.position + vector.normalized * playerTargetingRadius;
-            }
-            canHook = false;
+            realTargetingRadius = (playerScript.currentVelocity / 50) * playerTargetingRadius;
         }
         else
         {
-            aimBot.transform.position = new Vector3(selectedTarget.position.x, selectedTarget.position.y, 0);
-            canHook = true;
+            realTargetingRadius = playerTargetingRadius;
+        }
+
+
+        //Selects the closest hook location
+        if (playerScript.CanRetarget())
+        {
+            var selectedTarget = GetClosestHook(hookTargets);
+            if (selectedTarget == null)
+            {
+                var vector = cursor.transform.position - player.transform.position;
+                if (vector.magnitude < realTargetingRadius)
+                {
+                    aimBot.transform.position = cursor.transform.position;
+                }
+                else
+                {
+                    aimBot.transform.position = player.transform.position + vector.normalized * realTargetingRadius;
+                }
+                canHook = false;
+            }
+            else
+            {
+                var line = aimBot.GetComponent<LineRenderer>();
+                line.positionCount = 2;
+                aimBot.transform.position = new Vector3(selectedTarget.position.x, selectedTarget.position.y, 0);
+                var positions = new List<Vector3>();
+                positions.Add(aimBot.transform.position);
+                positions.Add(player.transform.position);
+                line.SetPositions(positions.ToArray());
+                canHook = true;
+            }
         }
      
     }
@@ -58,9 +79,9 @@ public class CursorControls : MonoBehaviour
         foreach (Transform potentialTarget in targets)
         {
             //Raycast that looks for walls and hooks
-            var hookFindingLazer = Physics2D.Raycast(player.transform.position, potentialTarget.transform.position - player.transform.position, playerTargetingRadius, HookTest);
+            var hookFindingLazer = Physics2D.Raycast(player.transform.position, potentialTarget.transform.position - player.transform.position, realTargetingRadius, HookTest);
             //Debug Ray Drawing
-            Debug.DrawRay(player.transform.position, potentialTarget.transform.position - player.transform.position, Color.green, 0.017f);
+            //Debug.DrawRay(player.transform.position, potentialTarget.transform.position - player.transform.position, Color.green, 0.017f);
             if (hookFindingLazer.collider == null)
             {
                 //Missed

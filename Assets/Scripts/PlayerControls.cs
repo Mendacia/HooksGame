@@ -7,12 +7,18 @@ public class PlayerControls : MonoBehaviour
 {
     public KeyCode left, right, jump;
     public bool isGrounded;
+    public bool goingThrough;
     private Rigidbody2D rb;
     Vector2 wantedDirection;
-    public HookThrough scriptThrough;
+    private HookThrough hookControlScript;
+    public CursorControls cursorControlScript;
     public float aerialSpeedCap = 5;
     public Transform currentCheckpoint;
+    public float currentVelocity;
+    public bool rPressed;
+    public bool lPressed;
 
+    //Making a referencable list of player states
     private enum PlayerState
     {
         GROUNDED,
@@ -22,13 +28,14 @@ public class PlayerControls : MonoBehaviour
     }
     private PlayerState currentState;
 
+    //Rigidbody setup and GameAnalytics setup
     private void Start()
     {
         //accessing the rigidbody
         rb = GetComponent<Rigidbody2D>();
+        hookControlScript = GetComponent<HookThrough>();
 
         GameAnalytics.Initialize();
-
     }
 
     private void Update()
@@ -36,6 +43,11 @@ public class PlayerControls : MonoBehaviour
         //Setting up variables for moving the player later based on inputs
         var xIntent = rb.velocity.x;
         var yIntent = rb.velocity.y;
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            KillAll();
+        }
 
         if (currentState == PlayerState.GROUNDED)
         {
@@ -65,11 +77,11 @@ public class PlayerControls : MonoBehaviour
             //Taking inputs for LR player movement intent
             if (Input.GetKey(right) && rb.velocity.x < aerialSpeedCap)
             {
-                xIntent += 0.3f;
+                xIntent += 0.5f;
             }
             if (Input.GetKey(left) && rb.velocity.x > -aerialSpeedCap)
             {
-                xIntent -= 0.3f;
+                xIntent -= 0.5f;
             }
 
             //Artificial Friction
@@ -87,6 +99,28 @@ public class PlayerControls : MonoBehaviour
             }
         }
 
+        if (currentState == PlayerState.SWING)
+        {
+            if (Input.GetKey(right))
+            {
+                rPressed = true;
+            }
+            else
+            {
+                rPressed = false;
+            }
+            if (Input.GetKey(left))
+            {
+                lPressed = true;
+            }
+            else
+            {
+                lPressed = false;
+            }
+        }
+
+        currentVelocity = rb.velocity.magnitude;
+
         //Actually moving the player
         wantedDirection = new Vector2(xIntent, yIntent);
         rb.velocity = wantedDirection;
@@ -95,16 +129,42 @@ public class PlayerControls : MonoBehaviour
         //Hook Controls
         if (currentState == PlayerState.GROUNDED || currentState == PlayerState.AIRBORNE)
         {
-            if (Input.GetMouseButtonDown(0) && scriptThrough.CanHook())
+            //Through
+            if (Input.GetMouseButtonDown(0) && hookControlScript.CanHook())
             {
-                scriptThrough.DestinationSetter();
+                hookControlScript.DestinationSetter();
                 currentState = PlayerState.HOOK;
+                goingThrough = true;
+            }
+            //To
+            if (Input.GetMouseButtonDown(2) && hookControlScript.CanHook())
+            {
+                hookControlScript.DestinationSetter();
+                currentState = PlayerState.HOOK;
+                goingThrough = false;
             }
         }
+
+        //Running the script for Hooking and Swinging code
         if (currentState == PlayerState.HOOK)
         {
             rb.gravityScale = 0;
-            scriptThrough.MoveThrough();
+            hookControlScript.MoveThrough();
+        }
+        if (currentState == PlayerState.SWING)
+        {
+            rb.gravityScale = 0;
+            hookControlScript.Swing();
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        //Swing
+        if (Input.GetMouseButtonDown(1) && hookControlScript.CanHook())
+        {
+            hookControlScript.DestinationSetter();
+            currentState = PlayerState.SWING;
         }
     }
 
@@ -115,20 +175,34 @@ public class PlayerControls : MonoBehaviour
         {
             currentState = PlayerState.AIRBORNE;
         }
+        if(currentState == PlayerState.SWING)
+        {
+            KillAll();
+        }
     }
 
 
     //Leaving hook styles 
     public void LeaveHookThrough()
     {
+        //Note that SWING leaves through here too
         currentState = PlayerState.AIRBORNE;
+        hookControlScript.currentlySwinging = false;
     }
-
     public void LeaveHookDrop()
     {
         currentState = PlayerState.AIRBORNE;
-        rb.velocity = new Vector2(0,0);
+        rb.velocity = Vector2.zero;
+        rb.position = hookControlScript.destination;
     }
+
+
+    //Just for swinging, makes sure that while you're attached, the aimbot doesn't move
+    public bool CanRetarget()
+    {
+        return !hookControlScript.currentlySwinging;
+    }
+
 
 
     //referenced in GroundCheck, basically referencing a trigger collider at the player's feet that tells the controller when the player is touching the ground
@@ -153,5 +227,22 @@ public class PlayerControls : MonoBehaviour
     {
         currentState = PlayerState.AIRBORNE;
         gameObject.transform.position = currentCheckpoint.position;
+        KillAll();
+    }
+
+    public void KillAll()
+    {
+        currentState = PlayerState.AIRBORNE;
+        isGrounded = false;
+        goingThrough = false;
+        currentCheckpoint = null;
+        currentVelocity = 0;
+        rPressed = false;
+        lPressed = false;
+        hookControlScript.currentlySwinging = false;
+        hookControlScript.rotationalSpeed = 0;
+        rb.velocity = Vector2.zero;
+        cursorControlScript.canHook = false;
+        cursorControlScript.aimBot.transform.position = cursorControlScript.cursor.transform.position;
     }
 }
