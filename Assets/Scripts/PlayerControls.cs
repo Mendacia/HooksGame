@@ -278,5 +278,6 @@ public class PlayerControls : MonoBehaviour
         rb.velocity = Vector2.zero;
         cursorControlScript.canHook = false;
         cursorControlScript.aimBot.transform.position = cursorControlScript.cursor.transform.position;
+        hookControlScript.Killhook();
     }
 }
