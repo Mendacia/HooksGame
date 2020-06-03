@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 using GameAnalyticsSDK;
 
 public class PlayerControls : MonoBehaviour
@@ -11,13 +12,14 @@ public class PlayerControls : MonoBehaviour
     private Rigidbody2D rb;
     Vector2 wantedDirection;
     private HookThrough hookControlScript;
+    private Animator anim;
     public CursorControls cursorControlScript;
     public float aerialSpeedCap = 5;
     public Transform currentCheckpoint;
     public float currentVelocity;
     public bool rPressed;
     public bool lPressed;
-
+    private Transform animSprite;
     //Making a referencable list of player states
     private enum PlayerState
     {
@@ -34,6 +36,8 @@ public class PlayerControls : MonoBehaviour
         //accessing the rigidbody
         rb = GetComponent<Rigidbody2D>();
         hookControlScript = GetComponent<HookThrough>();
+        anim = GetComponentInChildren<Animator>();
+        animSprite = gameObject.transform.Find("Sprite").GetComponent<Transform>();
 
         GameAnalytics.Initialize();
     }
@@ -69,6 +73,12 @@ public class PlayerControls : MonoBehaviour
                     yIntent = 30;
                 }
             }
+
+            anim.SetBool("grounded", true);
+        }
+        else
+        {
+            anim.SetBool("grounded", false);
         }
 
         if (currentState == PlayerState.AIRBORNE)
@@ -119,6 +129,30 @@ public class PlayerControls : MonoBehaviour
             }
         }
 
+        if(xIntent != 0)
+        {
+            if(rb.velocity.x < 0)
+            {
+                animSprite.localScale = new Vector3(-1,1,1);
+            }
+            if(rb.velocity.x > 0)
+            {
+                animSprite.localScale = new Vector3(1, 1, 1);
+            }
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
+        }
+        if(rb.velocity.y > 0)
+        {
+            anim.SetBool("movingUp", true);
+        }
+        if (rb.velocity.y < 0)
+        {
+            anim.SetBool("movingUp", false);
+        }
         currentVelocity = rb.velocity.magnitude;
 
         //Actually moving the player
@@ -244,5 +278,6 @@ public class PlayerControls : MonoBehaviour
         rb.velocity = Vector2.zero;
         cursorControlScript.canHook = false;
         cursorControlScript.aimBot.transform.position = cursorControlScript.cursor.transform.position;
+        hookControlScript.Killhook();
     }
 }

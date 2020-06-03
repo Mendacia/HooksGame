@@ -116,11 +116,13 @@ public class HookThrough : MonoBehaviour
             if (movementScript.goingThrough == true)
             {
                 movementScript.LeaveHookThrough();
+                Killhook();
                 Debug.DrawLine(rb.position, destination, Color.red);
             }
             else if (movementScript.goingThrough == false)
             {
                 movementScript.LeaveHookDrop();
+                Killhook();
                 Debug.DrawLine(rb.position, destination, Color.blue);
             }
         }
@@ -131,6 +133,7 @@ public class HookThrough : MonoBehaviour
             rb.gravityScale = 0;
             //He goin
             rb.velocity = (destination - rb.position).normalized * 50;
+            Drawhook();
         }
     }
 
@@ -191,6 +194,7 @@ public class HookThrough : MonoBehaviour
             rb.velocity = (new Vector2(swingPositionObject.transform.position.x, swingPositionObject.transform.position.y) - rb.position) / Time.deltaTime;
             rb.MovePosition(swingPositionObject.transform.position);
             Debug.DrawLine(rb.position, destination, Color.green);
+            Drawhook();
         }
 
         if (Input.GetMouseButtonUp(1))
@@ -199,6 +203,23 @@ public class HookThrough : MonoBehaviour
             currentlySwinging = false;
             swingPositionObject.transform.SetParent(parentOfSwingAnchor.transform);
             movementScript.LeaveHookThrough();
+            Killhook();
         }
+    }
+    void Drawhook()
+    {
+        var line = cursorScript.aimBot.GetComponent<LineRenderer>();
+        cursorScript.aimBot.GetComponent<SpriteRenderer>().enabled = true;
+        cursorScript.aimBot.GetComponent<LineRenderer>().enabled = true;
+        line.positionCount = 2;
+        var positions = new List<Vector3>();
+        positions.Add(cursorScript.aimBot.transform.position);
+        positions.Add(cursorScript.player.transform.position);
+        line.SetPositions(positions.ToArray());
+    }
+    public void Killhook()
+    {
+        cursorScript.aimBot.GetComponent<SpriteRenderer>().enabled = false;
+        cursorScript.aimBot.GetComponent<LineRenderer>().enabled = false;
     }
 }
