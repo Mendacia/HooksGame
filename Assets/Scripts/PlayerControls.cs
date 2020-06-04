@@ -59,10 +59,19 @@ public class PlayerControls : MonoBehaviour
 
         if (currentState == PlayerState.DYING)
         {
-            gameObject.transform.position = currentCheckpoint.transform.position;
-            cursorControlScript.ContinueGame();
-            KillAll();
+            anim.SetBool("isDead", true);
+            Time.timeScale = Mathf.Lerp(Time.timeScale, 0, 10 * Time.unscaledDeltaTime);
+            if (Input.anyKeyDown)
+            {
+                gameObject.transform.position = currentCheckpoint.transform.position;
+                cursorControlScript.ContinueGame();
+                KillAll();
+            }
             return;
+        }
+        else
+        {
+            anim.SetBool("isDead", false);
         }
 
         //Setting up variables for moving the player later based on inputs

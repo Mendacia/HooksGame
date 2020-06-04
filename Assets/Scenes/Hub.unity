@@ -3550,6 +3550,21 @@ PrefabInstance:
       propertyPath: hookTargets.Array.data[31]
       value: 
       objectReference: {fileID: 1199435893}
+    - target: {fileID: 1860174915774735285, guid: 5b4d2aa985bef7848b21bc8849658c99,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860174915774735285, guid: 5b4d2aa985bef7848b21bc8849658c99,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00539
+      objectReference: {fileID: 0}
+    - target: {fileID: 196707222461345554, guid: 5b4d2aa985bef7848b21bc8849658c99,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1251913029, guid: 5b4d2aa985bef7848b21bc8849658c99, type: 3}
       propertyPath: m_Controller
       value: 
