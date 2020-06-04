@@ -105,6 +105,8 @@ public class HookThrough : MonoBehaviour
         //rotationalSpeed = rb.velocity.magnitude / circumference * (goClockwise ? -1 : 1) * Mathf.Rad2Deg * 30;
         rotationalSpeed = circumference * (360 / (circumference / rb.velocity.magnitude)) * Time.deltaTime * (goClockwise? -1 : 1);
 
+        StartCoroutine(Hitfreeze());
+
     }
 
     public void MoveThrough()
@@ -133,7 +135,7 @@ public class HookThrough : MonoBehaviour
             rb.gravityScale = 0;
             //He goin
             rb.velocity = (destination - rb.position).normalized * 50;
-            Drawhook();
+            HookEffects();
         }
     }
 
@@ -194,7 +196,7 @@ public class HookThrough : MonoBehaviour
             rb.velocity = (new Vector2(swingPositionObject.transform.position.x, swingPositionObject.transform.position.y) - rb.position) / Time.deltaTime;
             rb.MovePosition(swingPositionObject.transform.position);
             Debug.DrawLine(rb.position, destination, Color.green);
-            Drawhook();
+            HookEffects();
         }
 
         if (Input.GetMouseButtonUp(1))
@@ -206,17 +208,29 @@ public class HookThrough : MonoBehaviour
             Killhook();
         }
     }
-    void Drawhook()
+    void HookEffects()
     {
-        var line = cursorScript.aimBot.GetComponent<LineRenderer>();
-        cursorScript.aimBot.GetComponent<SpriteRenderer>().enabled = true;
-        cursorScript.aimBot.GetComponent<LineRenderer>().enabled = true;
-        line.positionCount = 2;
-        var positions = new List<Vector3>();
-        positions.Add(cursorScript.aimBot.transform.position);
-        positions.Add(cursorScript.player.transform.position);
-        line.SetPositions(positions.ToArray());
+        if (cursorScript.isPaused == false)
+        {
+            //Drawing the hook
+            var line = cursorScript.aimBot.GetComponent<LineRenderer>();
+            cursorScript.aimBot.GetComponent<SpriteRenderer>().enabled = true;
+            cursorScript.aimBot.GetComponent<LineRenderer>().enabled = true;
+            line.positionCount = 2;
+            var positions = new List<Vector3>();
+            positions.Add(cursorScript.aimBot.transform.position);
+            positions.Add(cursorScript.player.transform.position);
+            line.SetPositions(positions.ToArray());
+        }
     }
+
+    IEnumerator Hitfreeze()
+    {
+        Time.timeScale = 0.5f;
+        yield return new WaitForSecondsRealtime(1 / 10f);
+        Time.timeScale = 1;
+    }
+
     public void Killhook()
     {
         cursorScript.aimBot.GetComponent<SpriteRenderer>().enabled = false;

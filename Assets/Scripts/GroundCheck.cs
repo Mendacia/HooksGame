@@ -8,7 +8,10 @@ public class GroundCheck : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        player.KillAll();
+        if (collision.gameObject.tag == "Ground")
+        {
+            player.KillAll();
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {

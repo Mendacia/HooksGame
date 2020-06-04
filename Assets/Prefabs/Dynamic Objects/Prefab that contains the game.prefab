@@ -5192,7 +5192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   from: {fileID: 2284664179508393555}
   to: {fileID: 2284664178501183263}
-  lerpDistance: 0.2
+  lerpDistance: 0.05
   timeDriven: 0
 --- !u!1 &2284664179104285343
 GameObject:
@@ -5361,7 +5361,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 3
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -5703,7 +5703,7 @@ GameObject:
   - component: {fileID: 3071223456204906597}
   m_Layer: 0
   m_Name: Prefab that contains the game
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6024,7 +6024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eda0ec150dc7534d8636fefc00af75d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: End Screen
+  nextScene: Hub
 --- !u!1 &7926774852396150050
 GameObject:
   m_ObjectHideFlags: 0
