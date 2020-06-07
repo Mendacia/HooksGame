@@ -5361,7 +5361,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 3
+    widthMultiplier: 0.5
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -6012,6 +6012,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   canHook: 0
+  isPaused: 0
 --- !u!114 &73375961588727126
 MonoBehaviour:
   m_ObjectHideFlags: 0
