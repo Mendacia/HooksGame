@@ -15,6 +15,7 @@ public class CursorControls : MonoBehaviour
     public float realTargetingRadius;
     public LayerMask HookTest;
     public bool canHook = false;
+    public bool isPaused = false;
 
     private void Update()
     {
@@ -35,31 +36,33 @@ public class CursorControls : MonoBehaviour
         //Selects the closest hook location
         if (playerScript.CanRetarget())
         {
-            var selectedTarget = GetClosestHook(hookTargets);
-            if (selectedTarget == null)
+            if (isPaused == false)
             {
-                var vector = cursor.transform.position - player.transform.position;
-                if (vector.magnitude < realTargetingRadius)
+                var selectedTarget = GetClosestHook(hookTargets);
+                if (selectedTarget == null)
                 {
-                    aimBot.transform.position = cursor.transform.position;
+                    var vector = cursor.transform.position - player.transform.position;
+                    if (vector.magnitude < realTargetingRadius)
+                    {
+                        aimBot.transform.position = cursor.transform.position;
+                    }
+                    else
+                    {
+                        aimBot.transform.position = player.transform.position + vector.normalized * realTargetingRadius;
+                    }
+                    canHook = false;
                 }
                 else
                 {
-                    aimBot.transform.position = player.transform.position + vector.normalized * realTargetingRadius;
+                    aimBot.transform.position = new Vector3(selectedTarget.position.x, selectedTarget.position.y, 0);
+                    canHook = true;
                 }
-                canHook = false;
             }
-            else
-            {
-                var line = aimBot.GetComponent<LineRenderer>();
-                line.positionCount = 2;
-                aimBot.transform.position = new Vector3(selectedTarget.position.x, selectedTarget.position.y, 0);
-                var positions = new List<Vector3>();
-                positions.Add(aimBot.transform.position);
-                positions.Add(player.transform.position);
-                line.SetPositions(positions.ToArray());
-                canHook = true;
-            }
+        }
+
+        if (canHook)
+        {
+
         }
      
     }
@@ -105,6 +108,19 @@ public class CursorControls : MonoBehaviour
         }
 
         return bestTarget;
+    }
+
+
+    public void PauseGame()
+    {
+        isPaused = true;
+        Time.timeScale = 0;
+    }
+
+    public void ContinueGame()
+    {
+        isPaused = false;
+        Time.timeScale = 1;
     }
 
 }

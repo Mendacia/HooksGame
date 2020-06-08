@@ -5,6 +5,14 @@ using UnityEngine;
 public class GroundCheck : MonoBehaviour
 {
     public PlayerControls player;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            player.KillAll();
+        }
+    }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Ground")

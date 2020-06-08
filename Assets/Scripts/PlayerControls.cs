@@ -27,6 +27,7 @@ public class PlayerControls : MonoBehaviour
         AIRBORNE,
         HOOK,
         SWING,
+        DYING
     }
     private PlayerState currentState;
 
@@ -44,6 +45,35 @@ public class PlayerControls : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (cursorControlScript.isPaused == false)
+            {
+                cursorControlScript.PauseGame();
+            }
+            else
+            {
+                cursorControlScript.ContinueGame();
+            }
+        }
+
+        if (currentState == PlayerState.DYING)
+        {
+            anim.SetBool("isDead", true);
+            Time.timeScale = Mathf.Lerp(Time.timeScale, 0, 10 * Time.unscaledDeltaTime);
+            if (Input.anyKeyDown)
+            {
+                gameObject.transform.position = currentCheckpoint.transform.position;
+                cursorControlScript.ContinueGame();
+                KillAll();
+            }
+            return;
+        }
+        else
+        {
+            anim.SetBool("isDead", false);
+        }
+
         //Setting up variables for moving the player later based on inputs
         var xIntent = rb.velocity.x;
         var yIntent = rb.velocity.y;
@@ -234,7 +264,14 @@ public class PlayerControls : MonoBehaviour
     //Just for swinging, makes sure that while you're attached, the aimbot doesn't move
     public bool CanRetarget()
     {
-        return !hookControlScript.currentlySwinging;
+        if(hookControlScript.currentlySwinging == false && hookControlScript.currentlyGoingTo == false)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
 
@@ -259,9 +296,7 @@ public class PlayerControls : MonoBehaviour
     //Call on another script to kill the player
     public void Die()
     {
-        currentState = PlayerState.AIRBORNE;
-        gameObject.transform.position = currentCheckpoint.position;
-        KillAll();
+        currentState = PlayerState.DYING;
     }
 
     public void KillAll()
@@ -269,7 +304,6 @@ public class PlayerControls : MonoBehaviour
         currentState = PlayerState.AIRBORNE;
         isGrounded = false;
         goingThrough = false;
-        currentCheckpoint = null;
         currentVelocity = 0;
         rPressed = false;
         lPressed = false;
@@ -278,5 +312,6 @@ public class PlayerControls : MonoBehaviour
         rb.velocity = Vector2.zero;
         cursorControlScript.canHook = false;
         cursorControlScript.aimBot.transform.position = cursorControlScript.cursor.transform.position;
+        hookControlScript.Killhook();
     }
 }
