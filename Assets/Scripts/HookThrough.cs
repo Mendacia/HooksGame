@@ -15,6 +15,7 @@ public class HookThrough : MonoBehaviour
     public float rotationalSpeedCap;
     public Vector2 destination;
     public bool currentlySwinging;
+    public bool currentlyGoingTo;
     private bool goClockwise;
     private int accelerationIntent;
 
@@ -119,12 +120,14 @@ public class HookThrough : MonoBehaviour
             {
                 movementScript.LeaveHookThrough();
                 Killhook();
+                currentlyGoingTo = false;
                 Debug.DrawLine(rb.position, destination, Color.red);
             }
             else if (movementScript.goingThrough == false)
             {
                 movementScript.LeaveHookDrop();
                 Killhook();
+                currentlyGoingTo = false;
                 Debug.DrawLine(rb.position, destination, Color.blue);
             }
         }
@@ -135,6 +138,7 @@ public class HookThrough : MonoBehaviour
             rb.gravityScale = 0;
             //He goin
             rb.velocity = (destination - rb.position).normalized * 50;
+            currentlyGoingTo = true;
             HookEffects();
         }
     }
