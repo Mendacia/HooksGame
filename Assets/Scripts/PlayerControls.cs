@@ -304,6 +304,7 @@ public class PlayerControls : MonoBehaviour
         currentState = PlayerState.AIRBORNE;
         isGrounded = false;
         goingThrough = false;
+        hookControlScript.currentlyGoingTo = false;
         currentVelocity = 0;
         rPressed = false;
         lPressed = false;
