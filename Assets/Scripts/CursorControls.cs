@@ -54,16 +54,15 @@ public class CursorControls : MonoBehaviour
                 }
                 else
                 {
-                    //var line = aimBot.GetComponent<LineRenderer>();
-                    // line.positionCount = 2;
                     aimBot.transform.position = new Vector3(selectedTarget.position.x, selectedTarget.position.y, 0);
-                    //var positions = new List<Vector3>();
-                    //positions.Add(aimBot.transform.position);
-                    //positions.Add(player.transform.position);
-                    //line.SetPositions(positions.ToArray());
                     canHook = true;
                 }
             }
+        }
+
+        if (canHook)
+        {
+
         }
      
     }

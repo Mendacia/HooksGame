@@ -264,7 +264,14 @@ public class PlayerControls : MonoBehaviour
     //Just for swinging, makes sure that while you're attached, the aimbot doesn't move
     public bool CanRetarget()
     {
-        return !hookControlScript.currentlySwinging;
+        if(hookControlScript.currentlySwinging == false && hookControlScript.currentlyGoingTo == false)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
 
@@ -297,6 +304,7 @@ public class PlayerControls : MonoBehaviour
         currentState = PlayerState.AIRBORNE;
         isGrounded = false;
         goingThrough = false;
+        hookControlScript.currentlyGoingTo = false;
         currentVelocity = 0;
         rPressed = false;
         lPressed = false;
