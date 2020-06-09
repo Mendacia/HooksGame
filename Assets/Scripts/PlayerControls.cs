@@ -13,6 +13,7 @@ public class PlayerControls : MonoBehaviour
     Vector2 wantedDirection;
     private HookThrough hookControlScript;
     private Animator anim;
+    public PauseMenu PauseScript;
     public CursorControls cursorControlScript;
     public float aerialSpeedCap = 5;
     public Transform currentCheckpoint;
@@ -49,6 +50,7 @@ public class PlayerControls : MonoBehaviour
         {
             if (cursorControlScript.isPaused == false)
             {
+                PauseScript.OpenMenu();
                 cursorControlScript.PauseGame();
             }
             else
