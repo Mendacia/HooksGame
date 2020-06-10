@@ -9,21 +9,15 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseUI;
     public Animator pauseAnims;
 
-    private void Start()
-    {
-        pauseUI.SetActive(false);
-    }
-
     public void OpenMenu()
     {
-        pauseUI.SetActive(true);
         pauseAnims.SetTrigger("OpenPause");
     }
 
     public void MenuContinueGame()
     {
-        pauseUI.SetActive(false);
         Debug.Log("Continue");
+        pauseAnims.SetTrigger("ClosePause");
         cursorControlScript.ContinueGame();
     }
 
