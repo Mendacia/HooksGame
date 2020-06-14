@@ -86,6 +86,7 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             KillAll();
+            gameObject.transform.position = currentCheckpoint.transform.position;
         }
 
         if (currentState == PlayerState.GROUNDED)

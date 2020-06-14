@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Playing Game");
         //SceneManager.LoadScene("Game");
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("toturial-leftclick");
     }
 
     public void QuitGame()
