@@ -20,6 +20,7 @@ public class PlayerControls : MonoBehaviour
     public float currentVelocity;
     public bool rPressed;
     public bool lPressed;
+    public GameObject deadFucker;
     private Transform animSprite;
     //Making a referencable list of player states
     private enum PlayerState
@@ -48,13 +49,14 @@ public class PlayerControls : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (cursorControlScript.isPaused == false)
+            if (cursorControlScript.isPaused == false && Time.timeScale == 1)
             {
                 PauseScript.OpenMenu();
                 cursorControlScript.PauseGame();
             }
-            else
+            else if(Time.timeScale == 0)
             {
+                PauseScript.MenuContinueGame();
                 cursorControlScript.ContinueGame();
             }
         }
@@ -65,6 +67,7 @@ public class PlayerControls : MonoBehaviour
             Time.timeScale = Mathf.Lerp(Time.timeScale, 0, 10 * Time.unscaledDeltaTime);
             if (Input.anyKeyDown)
             {
+                Instantiate(deadFucker, gameObject.transform.position, gameObject.transform.rotation);
                 gameObject.transform.position = currentCheckpoint.transform.position;
                 cursorControlScript.ContinueGame();
                 KillAll();
@@ -193,7 +196,7 @@ public class PlayerControls : MonoBehaviour
 
 
         //Hook Controls
-        if (currentState == PlayerState.GROUNDED || currentState == PlayerState.AIRBORNE)
+        if (currentState == PlayerState.GROUNDED && Time.timeScale == 1  || currentState == PlayerState.AIRBORNE && Time.timeScale == 1)
         {
             //Through
             if (Input.GetMouseButtonDown(0) && hookControlScript.CanHook())
