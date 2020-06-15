@@ -45,7 +45,7 @@ public class HookThrough : MonoBehaviour
             destination = cursorScript.aimBot.transform.position;
         }
 
-        if (Mathf.Abs(rb.velocity.x) *1.5 > Mathf.Abs(rb.velocity.y))
+        if (Mathf.Abs(rb.velocity.x) > Mathf.Abs(rb.velocity.y))
         {
             var xSigned = Mathf.Sign(rb.velocity.x);
             if (rb.position.y > destination.y)

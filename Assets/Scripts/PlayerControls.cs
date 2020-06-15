@@ -285,7 +285,7 @@ public class PlayerControls : MonoBehaviour
     //referenced in GroundCheck, basically referencing a trigger collider at the player's feet that tells the controller when the player is touching the ground
     public void SetGrounded(bool grounded)
     {
-        if (grounded)
+        if (grounded && currentState != (PlayerState.DYING))
         {
             currentState = PlayerState.GROUNDED;
         }
