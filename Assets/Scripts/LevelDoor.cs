@@ -6,14 +6,23 @@ using UnityEngine.SceneManagement;
 public class LevelDoor : MonoBehaviour
 {
     public GameObject player;
+    private PlayerControls playerScript;
+    public HookThrough hookControlScript;
     public string nextScene;
 
-
-    private void Update()
+    private void Start()
     {
-        if (gameObject.transform.position == player.transform.position)
+        playerScript = player.GetComponent<PlayerControls>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (hookControlScript.currentlyGoingTo && playerScript.goingThrough == false)
         {
-            SceneManager.LoadScene(nextScene);
+            if (collision.gameObject.tag == "Player")
+            {
+                SceneManager.LoadScene(nextScene);
+            }
         }
     }
 }

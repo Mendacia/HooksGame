@@ -20,6 +20,7 @@ public class PlayerControls : MonoBehaviour
     public float currentVelocity;
     public bool rPressed;
     public bool lPressed;
+    public bool playerIsDead = false;
     public GameObject deadFucker;
     private Transform animSprite;
     //Making a referencable list of player states
@@ -63,6 +64,7 @@ public class PlayerControls : MonoBehaviour
 
         if (currentState == PlayerState.DYING)
         {
+            playerIsDead = true;
             anim.SetBool("isDead", true);
             Time.timeScale = Mathf.Lerp(Time.timeScale, 0, 10 * Time.unscaledDeltaTime);
             if (Input.anyKeyDown)
@@ -71,6 +73,7 @@ public class PlayerControls : MonoBehaviour
                 gameObject.transform.position = currentCheckpoint.transform.position;
                 cursorControlScript.ContinueGame();
                 KillAll();
+                playerIsDead = false;
             }
             return;
         }

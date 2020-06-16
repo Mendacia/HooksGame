@@ -113,7 +113,7 @@ public class HookThrough : MonoBehaviour
     public void MoveThrough()
     {
         //Tests if the player will move through the hook on the next frame
-        if ((destination - rb.position).magnitude < (rb.velocity.magnitude * Time.deltaTime))
+        if (((destination - rb.position).magnitude < (rb.velocity.magnitude * Time.deltaTime)) || destination == new Vector2(gameObject.transform.position.x, gameObject.transform.position.y))
         {
             //Tests the input type and tells PlayerControls to act accordingly
             if (movementScript.goingThrough == true)

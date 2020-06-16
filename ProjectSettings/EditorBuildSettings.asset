@@ -6,33 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Start Screen.unity
-    guid: 592f9987f7fff7c438936822216ca4b6
+    path: Assets/Scenes/Liam Level Set/Start Screen.unity
+    guid: 79fd3fc61e7e2b74b8d585cad6f0e248
   - enabled: 1
-    path: Assets/Scenes/toturial-leftclick.unity
-    guid: 6f9634baf71b9114199941441d9016f1
+    path: Assets/Scenes/Liam Level Set/Mouse 0 walkthrough.unity
+    guid: dac15d427c0b2264c98f89886d0aad8d
   - enabled: 1
-    path: Assets/Scenes/toturial-middleclick.unity
-    guid: 58ba3b9110b9d224ab3da24dbe85261f
+    path: Assets/Scenes/Liam Level Set/Mouse 2 walkthrough.unity
+    guid: f10eb3baf16113d428e9e9809bb0bdd1
   - enabled: 1
-    path: Assets/Scenes/toturial-rightclick.unity
-    guid: 0cef05ef1499bce4b8d8ff51caa5af99
+    path: Assets/Scenes/Liam Level Set/Mouse 1 walkthrough.unity
+    guid: 05d8caff8609fc042a6acc2fbd287980
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
-    guid: 84f041b378c8eb24e8c0d1f91eb93f74
-  - enabled: 1
-    path: Assets/Scenes/End Screen.unity
-    guid: bae9c7b45d4d5c144a75b71d14cfe0c1
-  - enabled: 0
-    path: Assets/Scenes/1-1.unity
-    guid: d177345fd79f4d543854ec68cecbaa00
-  - enabled: 0
-    path: Assets/Scenes/Hub.unity
-    guid: c98aaaece1e79d24cbf87cf42e478821
-  - enabled: 0
-    path: Assets/Scenes/Playground.unity
-    guid: ae98d663db994224dab752b29985a21d
-  - enabled: 0
-    path: Assets/Scenes/LiamTestingScene.unity
-    guid: 47c781e4d300cb74580b685c3da88634
+    path: Assets/Scenes/Liam Level Set/Old tutorial level.unity
+    guid: c626dd2f576db2c48b083f4421a476d3
   m_configObjects: {}

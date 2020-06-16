@@ -6,7 +6,9 @@ using System;
 
 public class HUD : MonoBehaviour
 {
+    public int coinCount;
     public Text timer;
+    public Text coinDisplay;
     public TimeSpan gameTime;
 
     // Update is called once per frame
@@ -14,5 +16,7 @@ public class HUD : MonoBehaviour
     {
         gameTime += TimeSpan.FromSeconds(Time.deltaTime);
         timer.text = gameTime.ToString(@"mm\:ss\.ff");
+
+        coinDisplay.text = coinCount.ToString();
     }
 }

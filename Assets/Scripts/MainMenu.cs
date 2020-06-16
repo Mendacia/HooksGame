@@ -5,22 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public string loadedScene;
+
     public void PlayGame()
     {
-        Debug.Log("Playing Game");
-        //SceneManager.LoadScene("Game");
-        SceneManager.LoadScene("toturial-leftclick");
+        //Liam code bad. Ook.
+        SceneManager.LoadScene(loadedScene);
     }
 
     public void QuitGame()
     {
-        Debug.Log("Quitting Game");
         Application.Quit();
     }
 
     public void ReturnMainMenu()
     {
-        Debug.Log("Retunring to Main Menu");
         SceneManager.LoadScene("Start Screen");
     }
 }
