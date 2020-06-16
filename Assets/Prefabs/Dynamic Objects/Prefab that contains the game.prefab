@@ -6373,8 +6373,12 @@ MonoBehaviour:
   currentVelocity: 0
   rPressed: 0
   lPressed: 0
+  playerIsDead: 0
   deadFucker: {fileID: 5320466814569464858, guid: 5a01e39bb7b3d614981c54c5f78653f1,
     type: 3}
+  dustEffect: {fileID: 1076604199565238643, guid: 2edf175ca9c139548bbb3f6764b10177,
+    type: 3}
+  dustTriggerOnFast: 0.001
 --- !u!114 &2284664179508393553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6897,7 +6901,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7053417629887716940}
   - component: {fileID: 7053417629887716943}
-  - component: {fileID: 73375961588727126}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6935,60 +6938,7 @@ MonoBehaviour:
   aimBot: {fileID: 2284664179344552270}
   player: {fileID: 2284664179508393559}
   playerScript: {fileID: 2284664179508393552}
-  hookTargets:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  hookTargets: []
   mouseTargetingRadius: 70
   playerTargetingRadius: 10
   realTargetingRadius: 0
@@ -6997,19 +6947,6 @@ MonoBehaviour:
     m_Bits: 256
   canHook: 0
   isPaused: 0
---- !u!114 &73375961588727126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7053417629887716941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eda0ec150dc7534d8636fefc00af75d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextScene: Hub
 --- !u!1 &7926774852396150050
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,6 +22,8 @@ public class PlayerControls : MonoBehaviour
     public bool lPressed;
     public bool playerIsDead = false;
     public GameObject deadFucker;
+    public GameObject dustEffect;
+    public float dustTriggerOnFast;
     private Transform animSprite;
     //Making a referencable list of player states
     private enum PlayerState
@@ -44,6 +46,8 @@ public class PlayerControls : MonoBehaviour
         animSprite = gameObject.transform.Find("Sprite").GetComponent<Transform>();
 
         GameAnalytics.Initialize();
+        Time.timeScale = 1;
+        KillAll();
     }
 
     private void Update()
@@ -244,6 +248,16 @@ public class PlayerControls : MonoBehaviour
     //If the player hits a wall while hooking, they'll fall.
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
+        if(collision.relativeVelocity.magnitude > dustTriggerOnFast)
+        {
+            foreach (ContactPoint2D wallHit in collision.contacts)
+            {
+                Vector2 hitPoint = wallHit.point;
+                Instantiate(dustEffect, new Vector3(hitPoint.x, hitPoint.y, 0), Quaternion.identity);
+            }
+        }
+
         if(currentState == PlayerState.HOOK)
         {
             currentState = PlayerState.AIRBORNE;
