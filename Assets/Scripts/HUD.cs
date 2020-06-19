@@ -10,12 +10,20 @@ public class HUD : MonoBehaviour
     public Text timer;
     public Text coinDisplay;
     public TimeSpan gameTime;
+    public bool updateTimePlease = true;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        updateTimePlease = true;
+    }
     void Update()
     {
         gameTime += TimeSpan.FromSeconds(Time.deltaTime);
-        timer.text = gameTime.ToString(@"mm\:ss\.ff");
+
+        if (updateTimePlease)
+        {
+            timer.text = gameTime.ToString(@"mm\:ss\.ff");
+        }
 
         coinDisplay.text = coinCount.ToString();
     }

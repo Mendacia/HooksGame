@@ -428,6 +428,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1360943961148702843, guid: 87e1bed4bc7a18b4abadca2e69f720c9,
+        type: 3}
+      propertyPath: lastCheckpointName
+      value: TutM2PostDrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360943961148702843, guid: 87e1bed4bc7a18b4abadca2e69f720c9,
+        type: 3}
+      propertyPath: checkpointName
+      value: TutM2Post4Hooks
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360943961148702843, guid: 87e1bed4bc7a18b4abadca2e69f720c9,
+        type: 3}
+      propertyPath: enableCompleteProgressionTracking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360943961148702843, guid: 87e1bed4bc7a18b4abadca2e69f720c9,
+        type: 3}
+      propertyPath: enableStartProgressionTracking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360943961148702843, guid: 87e1bed4bc7a18b4abadca2e69f720c9,
+        type: 3}
+      propertyPath: enableAnalyticsTracking
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87e1bed4bc7a18b4abadca2e69f720c9, type: 3}
 --- !u!1001 &260880666
@@ -103073,6 +103098,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1360943961148702843, guid: 87e1bed4bc7a18b4abadca2e69f720c9,
+        type: 3}
+      propertyPath: checkpointName
+      value: TutM2FinalChallenge
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360943961148702843, guid: 87e1bed4bc7a18b4abadca2e69f720c9,
+        type: 3}
+      propertyPath: lastCheckpointName
+      value: TutM2Post4Hooks
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360943961148702843, guid: 87e1bed4bc7a18b4abadca2e69f720c9,
+        type: 3}
+      propertyPath: enableCompleteProgressionTracking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360943961148702843, guid: 87e1bed4bc7a18b4abadca2e69f720c9,
+        type: 3}
+      propertyPath: enableAnalyticsTracking
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87e1bed4bc7a18b4abadca2e69f720c9, type: 3}
 --- !u!1 &1399960298
@@ -103186,6 +103231,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360943961148702843, guid: 87e1bed4bc7a18b4abadca2e69f720c9,
+        type: 3}
+      propertyPath: enableAnalyticsTracking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360943961148702843, guid: 87e1bed4bc7a18b4abadca2e69f720c9,
+        type: 3}
+      propertyPath: enableStartProgressionTracking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360943961148702843, guid: 87e1bed4bc7a18b4abadca2e69f720c9,
+        type: 3}
+      propertyPath: checkpointName
+      value: TutM2PostDrop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87e1bed4bc7a18b4abadca2e69f720c9, type: 3}
