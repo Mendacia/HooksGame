@@ -25,7 +25,7 @@ PrefabInstance:
     - target: {fileID: 7230973302470837870, guid: a609dd66cd3d7624b95de89f14b0767f,
         type: 3}
       propertyPath: m_Name
-      value: Hook (9) Variant
+      value: LevelEndHook
       objectReference: {fileID: 0}
     - target: {fileID: 7230973302470837869, guid: a609dd66cd3d7624b95de89f14b0767f,
         type: 3}
@@ -90,12 +90,12 @@ PrefabInstance:
     - target: {fileID: 7230973302470837867, guid: a609dd66cd3d7624b95de89f14b0767f,
         type: 3}
       propertyPath: m_Size.x
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7230973302470837867, guid: a609dd66cd3d7624b95de89f14b0767f,
         type: 3}
       propertyPath: m_Size.y
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a609dd66cd3d7624b95de89f14b0767f, type: 3}

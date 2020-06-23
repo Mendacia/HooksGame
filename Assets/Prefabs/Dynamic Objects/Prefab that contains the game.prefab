@@ -5583,6 +5583,7 @@ MonoBehaviour:
   coinCount: 0
   timer: {fileID: 5063252797695855782}
   coinDisplay: {fileID: 2157607792756584962}
+  updateTimePlease: 1
 --- !u!1 &2284664177713392761
 GameObject:
   m_ObjectHideFlags: 0
@@ -5793,7 +5794,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 15, y: 15}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

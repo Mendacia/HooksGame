@@ -261,10 +261,21 @@ public class PlayerControls : MonoBehaviour
         if(currentState == PlayerState.HOOK)
         {
             currentState = PlayerState.AIRBORNE;
+            isGrounded = false;
+            goingThrough = false;
+            hookControlScript.currentlyGoingTo = false;
+            cursorControlScript.canHook = false;
+            hookControlScript.Killhook();
         }
         if(currentState == PlayerState.SWING)
         {
-            KillAll();
+            currentState = PlayerState.AIRBORNE;
+            isGrounded = false;
+            goingThrough = false;
+            hookControlScript.currentlySwinging = false;
+            hookControlScript.rotationalSpeed = 0;
+            cursorControlScript.canHook = false;
+            hookControlScript.Killhook();
         }
     }
 
@@ -280,7 +291,6 @@ public class PlayerControls : MonoBehaviour
     {
         currentState = PlayerState.AIRBORNE;
         rb.velocity = Vector2.zero;
-        rb.position = hookControlScript.destination;
     }
 
 
