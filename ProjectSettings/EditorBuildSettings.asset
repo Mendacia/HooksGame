@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Liam Level Set/Thing.unity
     guid: 879ea2808de55a44c8ef6ae58fae030b
   - enabled: 1
-    path: Assets/Scenes/Liam Level Set/Old tutorial level.unity
+    path: Assets/Scenes/Retired Levels/Old tutorial level.unity
     guid: c626dd2f576db2c48b083f4421a476d3
   m_configObjects: {}
