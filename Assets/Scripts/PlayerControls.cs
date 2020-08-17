@@ -6,7 +6,7 @@ using GameAnalyticsSDK;
 
 public class PlayerControls : MonoBehaviour
 {
-    public KeyCode left, right, jump;
+    public KeyCode left, right, jump, up, down;
     public bool isGrounded;
     public bool goingThrough;
     private Rigidbody2D rb;
@@ -195,6 +195,25 @@ public class PlayerControls : MonoBehaviour
         if (rb.velocity.y < 0)
         {
             anim.SetBool("movingUp", false);
+        }
+        if (rb.velocity.y == 0 && rb.velocity.x == 0)
+        {
+            if (Input.GetKey(up))
+            {
+                anim.SetBool("lookingUp", true);
+            }
+            else
+            {
+                anim.SetBool("lookingUp", false);
+            }
+            if (Input.GetKey(down))
+            {
+                anim.SetBool("lookingDown", true);
+            }
+            else
+            {
+                anim.SetBool("lookingDown", false);
+            }
         }
         currentVelocity = rb.velocity.magnitude;
 

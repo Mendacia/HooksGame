@@ -1,289 +1,307 @@
 fileFormatVersion: 2
-guid: 8e49adc0ccda9cc49a9fe6adebf43437
+guid: 9e3d1b922b398c44b9d339a850298e60
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6831494252515792990
-    second: SpritesSecondPass_0
+      213: 4402570431354654167
+    second: SpritesSecondPassEmmisive_0
   - first:
-      213: -4089334851901198883
-    second: SpritesSecondPass_1
+      213: 7954818403994802349
+    second: SpritesSecondPassEmmisive_1
   - first:
-      213: 3353370163469811241
-    second: SpritesSecondPass_2
+      213: 5656970236467736941
+    second: SpritesSecondPassEmmisive_2
   - first:
-      213: -6236306084200325803
-    second: SpritesSecondPass_3
+      213: -7786067678989938781
+    second: SpritesSecondPassEmmisive_3
   - first:
-      213: -6885720647673248315
-    second: SpritesSecondPass_4
+      213: 7051215437877158660
+    second: SpritesSecondPassEmmisive_4
   - first:
-      213: 7366804703183782521
-    second: SpritesSecondPass_5
+      213: -1187534119261273165
+    second: SpritesSecondPassEmmisive_5
   - first:
-      213: -1034498455700841749
-    second: SpritesSecondPass_6
+      213: -7204058208109855728
+    second: SpritesSecondPassEmmisive_6
   - first:
-      213: 861228252918236417
-    second: SpritesSecondPass_7
+      213: 4086076569656091337
+    second: SpritesSecondPassEmmisive_7
   - first:
-      213: 2693575451502576852
-    second: SpritesSecondPass_8
+      213: 763099978210086392
+    second: SpritesSecondPassEmmisive_8
   - first:
-      213: -2325574557942592750
-    second: SpritesSecondPass_9
+      213: -8546506538451310555
+    second: SpritesSecondPassEmmisive_9
   - first:
-      213: -8452292300195815803
-    second: SpritesSecondPass_10
+      213: 8608597343475800362
+    second: SpritesSecondPassEmmisive_10
   - first:
-      213: -6984050600170554724
-    second: SpritesSecondPass_11
+      213: -8595442392212224180
+    second: SpritesSecondPassEmmisive_11
   - first:
-      213: -5865833062388910358
-    second: SpritesSecondPass_12
+      213: 3757382745526409493
+    second: SpritesSecondPassEmmisive_12
   - first:
-      213: 7115491067028185671
-    second: SpritesSecondPass_13
+      213: 2040229009210260022
+    second: SpritesSecondPassEmmisive_13
   - first:
-      213: -8461146461323102815
-    second: SpritesSecondPass_14
+      213: 7921331546509703755
+    second: SpritesSecondPassEmmisive_14
   - first:
-      213: -1827070728712193901
-    second: SpritesSecondPass_15
+      213: -8628000321463965220
+    second: SpritesSecondPassEmmisive_15
   - first:
-      213: -7895042452195539784
-    second: SpritesSecondPass_16
+      213: 4880057544224084569
+    second: SpritesSecondPassEmmisive_16
   - first:
-      213: -3531822610453596306
-    second: SpritesSecondPass_17
+      213: 8854104491542516126
+    second: SpritesSecondPassEmmisive_17
   - first:
-      213: -2629833658472397151
-    second: SpritesSecondPass_18
+      213: -3401348723214709364
+    second: SpritesSecondPassEmmisive_18
   - first:
-      213: 3716301935708212765
-    second: SpritesSecondPass_19
+      213: -7000087427438884877
+    second: SpritesSecondPassEmmisive_19
   - first:
-      213: 3687184936731499618
-    second: SpritesSecondPass_20
+      213: -2402130898696050685
+    second: SpritesSecondPassEmmisive_20
   - first:
-      213: 6770685532448741745
-    second: SpritesSecondPass_21
+      213: -985366621438260448
+    second: SpritesSecondPassEmmisive_21
   - first:
-      213: 2854410698499698005
-    second: SpritesSecondPass_22
+      213: 962412710866600119
+    second: SpritesSecondPassEmmisive_22
   - first:
-      213: 4415361647605268007
-    second: SpritesSecondPass_23
+      213: 8060096365143992503
+    second: SpritesSecondPassEmmisive_23
   - first:
-      213: -667043248488799103
-    second: SpritesSecondPass_24
+      213: 7350791676344980165
+    second: SpritesSecondPassEmmisive_24
   - first:
-      213: -6772782141028434046
-    second: SpritesSecondPass_25
+      213: -7614627827313095312
+    second: SpritesSecondPassEmmisive_25
   - first:
-      213: 1303920108097206633
-    second: SpritesSecondPass_26
+      213: -2904921287745539548
+    second: SpritesSecondPassEmmisive_26
   - first:
-      213: -2302560660730811385
-    second: SpritesSecondPass_27
+      213: 6090427151029796146
+    second: SpritesSecondPassEmmisive_27
   - first:
-      213: -1135228295066863240
-    second: SpritesSecondPass_28
+      213: -5907295209069655965
+    second: SpritesSecondPassEmmisive_28
   - first:
-      213: -2540406731741457360
-    second: SpritesSecondPass_29
+      213: -2265887886839508436
+    second: SpritesSecondPassEmmisive_29
   - first:
-      213: -1806498523185976058
-    second: SpritesSecondPass_30
+      213: -1159135024805404211
+    second: SpritesSecondPassEmmisive_30
   - first:
-      213: 1089544096813641771
-    second: SpritesSecondPass_31
+      213: 137253635581329409
+    second: SpritesSecondPassEmmisive_31
   - first:
-      213: 7947912259688911583
-    second: SpritesSecondPass_32
+      213: -7810416226877468715
+    second: SpritesSecondPassEmmisive_32
   - first:
-      213: -8821760919635949913
-    second: SpritesSecondPass_33
+      213: 4546540385557277992
+    second: SpritesSecondPassEmmisive_33
   - first:
-      213: -3002489444409328657
-    second: SpritesSecondPass_34
+      213: 4777765295706726268
+    second: SpritesSecondPassEmmisive_34
   - first:
-      213: -4231573122162324823
-    second: SpritesSecondPass_35
+      213: 1720284463314378537
+    second: SpritesSecondPassEmmisive_35
   - first:
-      213: -899566404272046258
-    second: SpritesSecondPass_36
+      213: -8264720569742737265
+    second: SpritesSecondPassEmmisive_36
   - first:
-      213: 7159562576286352863
-    second: SpritesSecondPass_37
+      213: 8368071201659624750
+    second: SpritesSecondPassEmmisive_37
   - first:
-      213: 8253804550899983796
-    second: SpritesSecondPass_38
+      213: 7624554650494304240
+    second: SpritesSecondPassEmmisive_38
   - first:
-      213: 5827763723936897964
-    second: SpritesSecondPass_39
+      213: 2216697796863049002
+    second: SpritesSecondPassEmmisive_39
   - first:
-      213: 368377506714093814
-    second: SpritesSecondPass_40
+      213: 1061685348938851698
+    second: SpritesSecondPassEmmisive_40
   - first:
-      213: 2195769312101685811
-    second: SpritesSecondPass_41
+      213: -349087039253204509
+    second: SpritesSecondPassEmmisive_41
   - first:
-      213: 800781869220682315
-    second: SpritesSecondPass_42
+      213: -6285126408744485280
+    second: SpritesSecondPassEmmisive_42
   - first:
-      213: -4586899165023667598
-    second: SpritesSecondPass_43
+      213: 6237247518768215768
+    second: SpritesSecondPassEmmisive_43
   - first:
-      213: 7429707360512401344
-    second: SpritesSecondPass_44
+      213: -5343623377322218850
+    second: SpritesSecondPassEmmisive_44
   - first:
-      213: -5503608175217382068
-    second: SpritesSecondPass_45
+      213: 2236359494398605623
+    second: SpritesSecondPassEmmisive_45
   - first:
-      213: 2461136790767797075
-    second: SpritesSecondPass_46
+      213: 2683951620812918306
+    second: SpritesSecondPassEmmisive_46
   - first:
-      213: -8848606611839818039
-    second: SpritesSecondPass_47
+      213: 2317341488583107197
+    second: SpritesSecondPassEmmisive_47
   - first:
-      213: -882020292268567313
-    second: SpritesSecondPass_48
+      213: 1073460785918612012
+    second: SpritesSecondPassEmmisive_48
   - first:
-      213: 7556086589026057026
-    second: SpritesSecondPass_49
+      213: -402471482631226960
+    second: SpritesSecondPassEmmisive_49
   - first:
-      213: -635695245755537041
-    second: SpritesSecondPass_50
+      213: 2949754107028949951
+    second: SpritesSecondPassEmmisive_50
   - first:
-      213: -8725791842532975809
-    second: SpritesSecondPass_51
+      213: 1394917374299438763
+    second: SpritesSecondPassEmmisive_51
   - first:
-      213: -4630618725059373144
-    second: SpritesSecondPass_52
+      213: 6820703608702015763
+    second: SpritesSecondPassEmmisive_52
   - first:
-      213: -8549332410865148219
-    second: SpritesSecondPass_53
+      213: 1375246482904960369
+    second: SpritesSecondPassEmmisive_53
   - first:
-      213: 4170475875648578403
-    second: SpritesSecondPass_54
+      213: 2057666663900659317
+    second: SpritesSecondPassEmmisive_54
   - first:
-      213: 1637701791619331792
-    second: SpritesSecondPass_55
+      213: -3103623849961649744
+    second: SpritesSecondPassEmmisive_55
   - first:
-      213: 8681016966273794898
-    second: SpritesSecondPass_56
+      213: -4956563957697413947
+    second: SpritesSecondPassEmmisive_56
   - first:
-      213: -5451503274987993323
-    second: SpritesSecondPass_57
+      213: -1075763217914863516
+    second: SpritesSecondPassEmmisive_57
   - first:
-      213: 248301010121008343
-    second: SpritesSecondPass_58
+      213: 4758338912543007870
+    second: SpritesSecondPassEmmisive_58
   - first:
-      213: 7277034047058093139
-    second: SpritesSecondPass_59
+      213: 3637735474600684139
+    second: SpritesSecondPassEmmisive_59
   - first:
-      213: 363223595108877160
-    second: SpritesSecondPass_60
+      213: 8352959616551077394
+    second: SpritesSecondPassEmmisive_60
   - first:
-      213: -8509313332405854582
-    second: SpritesSecondPass_61
+      213: -8476163688333826574
+    second: SpritesSecondPassEmmisive_61
   - first:
-      213: -7607575399979208188
-    second: SpritesSecondPass_62
+      213: -5894089551140426739
+    second: SpritesSecondPassEmmisive_62
   - first:
-      213: 2003903942352469123
-    second: SpritesSecondPass_63
+      213: 2367441174824420502
+    second: SpritesSecondPassEmmisive_63
   - first:
-      213: 1138642775156625445
-    second: SpritesSecondPass_64
+      213: 6292121619232704047
+    second: SpritesSecondPassEmmisive_64
   - first:
-      213: 4452649913900904319
-    second: SpritesSecondPass_65
+      213: -1673390986552217587
+    second: SpritesSecondPassEmmisive_65
   - first:
-      213: 8888665480561887690
-    second: SpritesSecondPass_66
+      213: 4408465095072899123
+    second: SpritesSecondPassEmmisive_66
   - first:
-      213: -1183870590902865328
-    second: SpritesSecondPass_67
+      213: 5582688608343862023
+    second: SpritesSecondPassEmmisive_67
   - first:
-      213: -3354183973523622073
-    second: SpritesSecondPass_68
+      213: 357610642789148646
+    second: SpritesSecondPassEmmisive_68
   - first:
-      213: 3504115954701102539
-    second: SpritesSecondPass_69
+      213: -4298497736329838034
+    second: SpritesSecondPassEmmisive_69
   - first:
-      213: 7024686721424201337
-    second: SpritesSecondPass_70
+      213: -3822064199254374633
+    second: SpritesSecondPassEmmisive_70
   - first:
-      213: -8828643081333344786
-    second: SpritesSecondPass_71
+      213: -7568893947652685513
+    second: SpritesSecondPassEmmisive_71
   - first:
-      213: -250946938020877574
-    second: SpritesSecondPass_72
+      213: 4049924312513016476
+    second: SpritesSecondPassEmmisive_72
   - first:
-      213: 2000093804374180552
-    second: SpritesSecondPass_73
+      213: 2884426158328511886
+    second: SpritesSecondPassEmmisive_73
   - first:
-      213: -3255902577841905736
-    second: SpritesSecondPass_74
+      213: 2734671699214298344
+    second: SpritesSecondPassEmmisive_74
   - first:
-      213: 120933000923806980
-    second: SpritesSecondPass_75
+      213: 2865926510719133727
+    second: SpritesSecondPassEmmisive_75
   - first:
-      213: 245691261781111050
-    second: SpritesSecondPass_76
+      213: -8233144894718567426
+    second: SpritesSecondPassEmmisive_76
   - first:
-      213: 8851196701152905397
-    second: SpritesSecondPass_77
+      213: 1012571294195742164
+    second: SpritesSecondPassEmmisive_77
   - first:
-      213: -2543206250394710412
-    second: SpritesSecondPass_78
+      213: 3790650482090633909
+    second: SpritesSecondPassEmmisive_78
   - first:
-      213: 1923897621185520503
-    second: SpritesSecondPass_79
+      213: 4283291284331238806
+    second: SpritesSecondPassEmmisive_79
   - first:
-      213: -6469131817094753244
-    second: SpritesSecondPass_80
+      213: -8533260043076046289
+    second: SpritesSecondPassEmmisive_80
   - first:
-      213: -4719648308235704441
-    second: SpritesSecondPass_81
+      213: -5562051046621340767
+    second: SpritesSecondPassEmmisive_81
   - first:
-      213: -1850180262483442109
-    second: SpritesSecondPass_82
+      213: 2885022470849513500
+    second: SpritesSecondPassEmmisive_82
   - first:
-      213: -3623003021779187132
-    second: SpritesSecondPass_83
+      213: -5203681139015102135
+    second: SpritesSecondPassEmmisive_83
   - first:
-      213: -556550030077061908
-    second: SpritesSecondPass_84
+      213: -1656291383297859009
+    second: SpritesSecondPassEmmisive_84
   - first:
-      213: -6535378629022717602
-    second: SpritesSecondPass_85
+      213: -2288784537897720404
+    second: SpritesSecondPassEmmisive_85
   - first:
-      213: -7052184945197101715
-    second: SpritesSecondPass_86
+      213: 8847200423660201920
+    second: SpritesSecondPassEmmisive_86
   - first:
-      213: 7279849555000936575
-    second: SpritesSecondPass_87
+      213: -6622764254558974363
+    second: SpritesSecondPassEmmisive_87
   - first:
-      213: 7839201563083297889
-    second: SpritesSecondPass_88
+      213: 7930873515261974675
+    second: SpritesSecondPassEmmisive_88
   - first:
-      213: -6657157272633639582
-    second: SpritesSecondPass_89
+      213: -2618513259767205566
+    second: SpritesSecondPassEmmisive_89
   - first:
-      213: 3621546922235156188
-    second: SpritesSecondPass_90
+      213: -1878298567486636810
+    second: SpritesSecondPassEmmisive_90
   - first:
-      213: 1760825849281257940
-    second: SpritesSecondPass_91
+      213: 7944674959953295156
+    second: SpritesSecondPassEmmisive_91
   - first:
-      213: 3452207305823326427
-    second: SpritesSecondPass_92
+      213: 4420077999688236985
+    second: SpritesSecondPassEmmisive_92
   - first:
-      213: 8790307934200884558
-    second: SpritesSecondPass_93
+      213: 7761726070005818418
+    second: SpritesSecondPassEmmisive_93
+  - first:
+      213: -7208458911374992807
+    second: SpritesSecondPassEmmisive_94
+  - first:
+      213: 1315424395609781329
+    second: SpritesSecondPassEmmisive_95
+  - first:
+      213: 8073654925219638908
+    second: SpritesSecondPassEmmisive_96
+  - first:
+      213: -5393292449454942511
+    second: SpritesSecondPassEmmisive_97
+  - first:
+      213: -6743805882380666843
+    second: SpritesSecondPassEmmisive_98
+  - first:
+      213: -4263481936748307347
+    second: SpritesSecondPassEmmisive_99
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -404,7 +422,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpritesSecondPass_0
+      name: SpritesSecondPassEmmisive_0
       rect:
         serializedVersion: 2
         x: 0
@@ -412,20 +430,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22cc1682681a8f14086bed67826a65e0
-      internalID: 6831494252515792990
+      spriteID: 8d08cf1f544a93b48bac1341cb220014
+      internalID: 4402570431354654167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_1
+      name: SpritesSecondPassEmmisive_1
       rect:
         serializedVersion: 2
         x: 16
@@ -433,20 +451,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34e7c0a11ad460d4f8c40d9d1d936871
-      internalID: -4089334851901198883
+      spriteID: e1f3e339fcf111b439ece6b28ef36482
+      internalID: 7954818403994802349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_2
+      name: SpritesSecondPassEmmisive_2
       rect:
         serializedVersion: 2
         x: 32
@@ -454,20 +472,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c002c45c1393534fb89b8f73133bb1f
-      internalID: 3353370163469811241
+      spriteID: 6609d018244f34f45a38d3e40932a514
+      internalID: 5656970236467736941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_3
+      name: SpritesSecondPassEmmisive_3
       rect:
         serializedVersion: 2
         x: 48
@@ -475,20 +493,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8243000bb0ed0eb4b81b55902134d77a
-      internalID: -6236306084200325803
+      spriteID: 039e274f3b44f8c4ab4be8cf8c067c1b
+      internalID: -7786067678989938781
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_4
+      name: SpritesSecondPassEmmisive_4
       rect:
         serializedVersion: 2
         x: 64
@@ -496,20 +514,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a546d6c605a19c4d879d1687f2ef9c6
-      internalID: -6885720647673248315
+      spriteID: 562f13dbabb2b1b4a95507dd0711f8ce
+      internalID: 7051215437877158660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_5
+      name: SpritesSecondPassEmmisive_5
       rect:
         serializedVersion: 2
         x: 80
@@ -517,20 +535,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23faecc121e69fe48a866436a25ccf36
-      internalID: 7366804703183782521
+      spriteID: 090f4835f6a75d24ea0bc03de135b5df
+      internalID: -1187534119261273165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_6
+      name: SpritesSecondPassEmmisive_6
       rect:
         serializedVersion: 2
         x: 96
@@ -538,20 +556,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2aaba390663ad843a406e51435306df
-      internalID: -1034498455700841749
+      spriteID: b3c7f4746248b1b44a5f7e827b62d3c5
+      internalID: -7204058208109855728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_7
+      name: SpritesSecondPassEmmisive_7
       rect:
         serializedVersion: 2
         x: 112
@@ -559,20 +577,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1d9e4207749bc5459ece77044710c97
-      internalID: 861228252918236417
+      spriteID: b50f729ce1385c047aa58b7c86de75b2
+      internalID: 4086076569656091337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_8
+      name: SpritesSecondPassEmmisive_8
       rect:
         serializedVersion: 2
         x: 128
@@ -580,20 +598,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfb97ebb38cebb942afb1210e033b5f8
-      internalID: 2693575451502576852
+      spriteID: ee5ec5a30b2199d45b6a4f33b7964436
+      internalID: 763099978210086392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_9
+      name: SpritesSecondPassEmmisive_9
       rect:
         serializedVersion: 2
         x: 144
@@ -601,20 +619,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65d2d7a290491a447b4426e035a011da
-      internalID: -2325574557942592750
+      spriteID: 5ef749e3afcea4a46826713c6b0be3b1
+      internalID: -8546506538451310555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_10
+      name: SpritesSecondPassEmmisive_10
       rect:
         serializedVersion: 2
         x: 0
@@ -622,20 +640,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5418bf0501dd4e4db3e21412ccc5a1b
-      internalID: -8452292300195815803
+      spriteID: 6d7462a3aa23c5848a7ed34d7ab894e1
+      internalID: 8608597343475800362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_11
+      name: SpritesSecondPassEmmisive_11
       rect:
         serializedVersion: 2
         x: 16
@@ -643,20 +661,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6725f43cfd3f68f4b9c31fa3912fe233
-      internalID: -6984050600170554724
+      spriteID: 1a25ce9e5510081488476f1323306c80
+      internalID: -8595442392212224180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_12
+      name: SpritesSecondPassEmmisive_12
       rect:
         serializedVersion: 2
         x: 32
@@ -664,20 +682,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2acb0604bba56ab41ba769994f8a4f19
-      internalID: -5865833062388910358
+      spriteID: c86072f27f790a14b859ffc35c8b3ab6
+      internalID: 3757382745526409493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_13
+      name: SpritesSecondPassEmmisive_13
       rect:
         serializedVersion: 2
         x: 48
@@ -685,20 +703,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df939fbccadfe7549a6b5d65f240f98d
-      internalID: 7115491067028185671
+      spriteID: 5e994e6cb10e9fd468b611b580076f29
+      internalID: 2040229009210260022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_14
+      name: SpritesSecondPassEmmisive_14
       rect:
         serializedVersion: 2
         x: 64
@@ -706,20 +724,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 345396b89ce9d154ca6e5ab2e2710c86
-      internalID: -8461146461323102815
+      spriteID: 1b279581390b8e94c8b92e600f64ea8b
+      internalID: 7921331546509703755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_15
+      name: SpritesSecondPassEmmisive_15
       rect:
         serializedVersion: 2
         x: 80
@@ -727,20 +745,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48869c25cf2af90458d9bb50250231a8
-      internalID: -1827070728712193901
+      spriteID: f1a0542f838c3404885884626bab2490
+      internalID: -8628000321463965220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_16
+      name: SpritesSecondPassEmmisive_16
       rect:
         serializedVersion: 2
         x: 96
@@ -748,20 +766,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f53312af1edb614ca03c2d52a3d9fcd
-      internalID: -7895042452195539784
+      spriteID: ef20526de8231034095a0bd2603a6908
+      internalID: 4880057544224084569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_17
+      name: SpritesSecondPassEmmisive_17
       rect:
         serializedVersion: 2
         x: 112
@@ -769,20 +787,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8a0dc827e7e5e54fb7070f0b4752ff5
-      internalID: -3531822610453596306
+      spriteID: a1e281c571065ba42bf6d2e029b3c87e
+      internalID: 8854104491542516126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_18
+      name: SpritesSecondPassEmmisive_18
       rect:
         serializedVersion: 2
         x: 128
@@ -790,20 +808,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4b4f2fa1365a5f499d78cccb910b567
-      internalID: -2629833658472397151
+      spriteID: 6da6b8079ab9ffd489c0cafdf3fa822b
+      internalID: -3401348723214709364
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_19
+      name: SpritesSecondPassEmmisive_19
       rect:
         serializedVersion: 2
         x: 144
@@ -811,20 +829,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abf0273f48cc93f4cb066384db5be18f
-      internalID: 3716301935708212765
+      spriteID: 14b6bce04f4dc8044ade162c5f301729
+      internalID: -7000087427438884877
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_20
+      name: SpritesSecondPassEmmisive_20
       rect:
         serializedVersion: 2
         x: 0
@@ -832,20 +850,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 545f664053bbc464f8921e2eb3f9569f
-      internalID: 3687184936731499618
+      spriteID: f9c58723efae43c4694e7d0682cec4d3
+      internalID: -2402130898696050685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_21
+      name: SpritesSecondPassEmmisive_21
       rect:
         serializedVersion: 2
         x: 16
@@ -853,20 +871,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9b5071da6ba422408ef0315bee851e9
-      internalID: 6770685532448741745
+      spriteID: 2160888a2e6178e42bb20d45ade42e9b
+      internalID: -985366621438260448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_22
+      name: SpritesSecondPassEmmisive_22
       rect:
         serializedVersion: 2
         x: 32
@@ -874,20 +892,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a58310635183d204abbe3449ff5c32c5
-      internalID: 2854410698499698005
+      spriteID: 0e9f9b48b080eb541b94f7b96159804c
+      internalID: 962412710866600119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_23
+      name: SpritesSecondPassEmmisive_23
       rect:
         serializedVersion: 2
         x: 48
@@ -895,20 +913,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 829dfc125020713418def854824e33f1
-      internalID: 4415361647605268007
+      spriteID: 88a3cf3f6dee419458898a2f4253e09c
+      internalID: 8060096365143992503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_24
+      name: SpritesSecondPassEmmisive_24
       rect:
         serializedVersion: 2
         x: 64
@@ -916,20 +934,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f78699cd174e57344abc7d95606c178c
-      internalID: -667043248488799103
+      spriteID: cc8076dd43ecca942a68302f4e07170f
+      internalID: 7350791676344980165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_25
+      name: SpritesSecondPassEmmisive_25
       rect:
         serializedVersion: 2
         x: 80
@@ -937,20 +955,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9769b8a8658c7434f9f8dc29e8548b83
-      internalID: -6772782141028434046
+      spriteID: baa83510f60ba6b41819119ef95e62ec
+      internalID: -7614627827313095312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_26
+      name: SpritesSecondPassEmmisive_26
       rect:
         serializedVersion: 2
         x: 96
@@ -958,20 +976,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e1ae79769c32d14badc447688e1505c
-      internalID: 1303920108097206633
+      spriteID: f4494ef1dafb8a347880dd9ca4564e06
+      internalID: -2904921287745539548
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_27
+      name: SpritesSecondPassEmmisive_27
       rect:
         serializedVersion: 2
         x: 112
@@ -979,20 +997,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cbbf64639723be4c8492b8a1cf9eacb
-      internalID: -2302560660730811385
+      spriteID: fcb607c226e20a44eb0bf58c5ee5d0a2
+      internalID: 6090427151029796146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_28
+      name: SpritesSecondPassEmmisive_28
       rect:
         serializedVersion: 2
         x: 128
@@ -1000,20 +1018,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66f9035bb3c199742a53529af1781b18
-      internalID: -1135228295066863240
+      spriteID: ddfe1a8ee83fd6847b66053be4975155
+      internalID: -5907295209069655965
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_29
+      name: SpritesSecondPassEmmisive_29
       rect:
         serializedVersion: 2
         x: 144
@@ -1021,20 +1039,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b27718f85770ada44afd3abe729b4dfb
-      internalID: -2540406731741457360
+      spriteID: 83b700ea1fd79ba418412402956fdbd4
+      internalID: -2265887886839508436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_30
+      name: SpritesSecondPassEmmisive_30
       rect:
         serializedVersion: 2
         x: 0
@@ -1042,20 +1060,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6520efd8eea1854f94e1feea1e30e5a
-      internalID: -1806498523185976058
+      spriteID: 37a047dc284d96a47a5a4d31d2140419
+      internalID: -1159135024805404211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_31
+      name: SpritesSecondPassEmmisive_31
       rect:
         serializedVersion: 2
         x: 16
@@ -1063,20 +1081,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 262d59017e145dd4e870b704ed3547f0
-      internalID: 1089544096813641771
+      spriteID: 700a73b17e4462f4b91446084a126c23
+      internalID: 137253635581329409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_32
+      name: SpritesSecondPassEmmisive_32
       rect:
         serializedVersion: 2
         x: 32
@@ -1084,20 +1102,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73abb64a466cd3a4f9b63ef4119d552c
-      internalID: 7947912259688911583
+      spriteID: 93caf22f6b50ca341ae8899b5a72388b
+      internalID: -7810416226877468715
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_33
+      name: SpritesSecondPassEmmisive_33
       rect:
         serializedVersion: 2
         x: 48
@@ -1105,20 +1123,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86f9c3b1f729c7444864f1013782ea8e
-      internalID: -8821760919635949913
+      spriteID: 16a5bc315f553b0478d68e81bb707920
+      internalID: 4546540385557277992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_34
+      name: SpritesSecondPassEmmisive_34
       rect:
         serializedVersion: 2
         x: 64
@@ -1126,20 +1144,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59bfc68b8784ad44692d96bcdadfa150
-      internalID: -3002489444409328657
+      spriteID: c0634d041a6a1b04ba76b75f54837426
+      internalID: 4777765295706726268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_35
+      name: SpritesSecondPassEmmisive_35
       rect:
         serializedVersion: 2
         x: 80
@@ -1147,20 +1165,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef8858d18388faf4a835ce0f42604c76
-      internalID: -4231573122162324823
+      spriteID: 83a78a15c6a3a514bad536e10563734b
+      internalID: 1720284463314378537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_36
+      name: SpritesSecondPassEmmisive_36
       rect:
         serializedVersion: 2
         x: 96
@@ -1168,20 +1186,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a35087d423cc4dd4eb04c004b8c74502
-      internalID: -899566404272046258
+      spriteID: 8209fab9f641b354999e506423c0be6a
+      internalID: -8264720569742737265
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_37
+      name: SpritesSecondPassEmmisive_37
       rect:
         serializedVersion: 2
         x: 112
@@ -1189,20 +1207,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95096de95a7e35b4aae952252351c56e
-      internalID: 7159562576286352863
+      spriteID: 54016c349accef141b5b962d28e898f2
+      internalID: 8368071201659624750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_38
+      name: SpritesSecondPassEmmisive_38
       rect:
         serializedVersion: 2
         x: 128
@@ -1210,20 +1228,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58b6f5f5e79b61a41979c1414912bf09
-      internalID: 8253804550899983796
+      spriteID: 6e9f7908941cb844594cc8c2c52e64c1
+      internalID: 7624554650494304240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_39
+      name: SpritesSecondPassEmmisive_39
       rect:
         serializedVersion: 2
         x: 144
@@ -1231,20 +1249,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8319727bf3659674885551a5201b9354
-      internalID: 5827763723936897964
+      spriteID: 02fcdda79338e8b4c9c54f7478edba59
+      internalID: 2216697796863049002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_40
+      name: SpritesSecondPassEmmisive_40
       rect:
         serializedVersion: 2
         x: 0
@@ -1252,20 +1270,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f23e4016b1f50004d9711f15d22fb94f
-      internalID: 368377506714093814
+      spriteID: ad4936d8eba4e634d94f7415beca161d
+      internalID: 1061685348938851698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_41
+      name: SpritesSecondPassEmmisive_41
       rect:
         serializedVersion: 2
         x: 16
@@ -1273,20 +1291,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c477571cbb6f33244bb1b9c4907e2839
-      internalID: 2195769312101685811
+      spriteID: b7f34232de5f96c4eb08669eb99ea87a
+      internalID: -349087039253204509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_42
+      name: SpritesSecondPassEmmisive_42
       rect:
         serializedVersion: 2
         x: 32
@@ -1294,20 +1312,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0a7c932e5cada44990d4b315d8bb9dc
-      internalID: 800781869220682315
+      spriteID: f43c0ca045cc874428d95d8b4efb74e7
+      internalID: -6285126408744485280
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_43
+      name: SpritesSecondPassEmmisive_43
       rect:
         serializedVersion: 2
         x: 48
@@ -1315,20 +1333,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab032283cd6751d4087b7151b3a17f1a
-      internalID: -4586899165023667598
+      spriteID: 832c7e7d5231f3f43aea05f1aff6e7a5
+      internalID: 6237247518768215768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_44
+      name: SpritesSecondPassEmmisive_44
       rect:
         serializedVersion: 2
         x: 64
@@ -1336,20 +1354,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e13d2cc4bac04c94f9b96eecdc2fb5b2
-      internalID: 7429707360512401344
+      spriteID: f35c22cd9dfd5e24c830a2cfc8e10269
+      internalID: -5343623377322218850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_45
+      name: SpritesSecondPassEmmisive_45
       rect:
         serializedVersion: 2
         x: 80
@@ -1357,20 +1375,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb554c9b3f2280c41841f54f5adf25e3
-      internalID: -5503608175217382068
+      spriteID: 71bf53e1c74714644903db7939b3f864
+      internalID: 2236359494398605623
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_46
+      name: SpritesSecondPassEmmisive_46
       rect:
         serializedVersion: 2
         x: 96
@@ -1378,20 +1396,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64663ead150e8bf4f8a4e80f741b59a8
-      internalID: 2461136790767797075
+      spriteID: 049e56068a7c4da41a1cef08d45a02b5
+      internalID: 2683951620812918306
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_47
+      name: SpritesSecondPassEmmisive_47
       rect:
         serializedVersion: 2
         x: 112
@@ -1399,20 +1417,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62ce3ab21a7be464a887f71e41bdee26
-      internalID: -8848606611839818039
+      spriteID: f7a13fd239f65b24bb64438a59bf262f
+      internalID: 2317341488583107197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_48
+      name: SpritesSecondPassEmmisive_48
       rect:
         serializedVersion: 2
         x: 128
@@ -1420,20 +1438,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a42872098a8dd3340832dec13db6ff91
-      internalID: -882020292268567313
+      spriteID: b7684e0618485df4cb284de5d3f1d3df
+      internalID: 1073460785918612012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_49
+      name: SpritesSecondPassEmmisive_49
       rect:
         serializedVersion: 2
         x: 144
@@ -1441,20 +1459,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4ce18389c042884a8565261eb57b0fd
-      internalID: 7556086589026057026
+      spriteID: b44ef5fc7757a9244bdd42933915fac9
+      internalID: -402471482631226960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_50
+      name: SpritesSecondPassEmmisive_50
       rect:
         serializedVersion: 2
         x: 0
@@ -1462,20 +1480,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c394b9c9732ab46468cd6a2121d2639b
-      internalID: -635695245755537041
+      spriteID: 2af2e27ca546c0343b96d096983975a4
+      internalID: 2949754107028949951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_51
+      name: SpritesSecondPassEmmisive_51
       rect:
         serializedVersion: 2
         x: 16
@@ -1483,20 +1501,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b933a423a7311f4599431e44898b414
-      internalID: -8725791842532975809
+      spriteID: 1998792bfcd67fa44b5a883e828fdeb8
+      internalID: 1394917374299438763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_52
+      name: SpritesSecondPassEmmisive_52
       rect:
         serializedVersion: 2
         x: 32
@@ -1504,20 +1522,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c0cbc35ead44e94182ff7eb66bf52a0
-      internalID: -4630618725059373144
+      spriteID: 4d65f21889f5ceb47b95deab521df028
+      internalID: 6820703608702015763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_53
+      name: SpritesSecondPassEmmisive_53
       rect:
         serializedVersion: 2
         x: 48
@@ -1525,20 +1543,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d1be104c401c6949b5a033fe1be79c3
-      internalID: -8549332410865148219
+      spriteID: 371f7d6ab359ee54eb679d30281b55b8
+      internalID: 1375246482904960369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_54
+      name: SpritesSecondPassEmmisive_54
       rect:
         serializedVersion: 2
         x: 64
@@ -1546,20 +1564,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f04c13ebac069a94cb74ac2c935151a9
-      internalID: 4170475875648578403
+      spriteID: 44bacb9bdd23a7543a2cd385faec825c
+      internalID: 2057666663900659317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_55
+      name: SpritesSecondPassEmmisive_55
       rect:
         serializedVersion: 2
         x: 80
@@ -1567,20 +1585,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72d04b351d31a8546a1206df5dfbf59b
-      internalID: 1637701791619331792
+      spriteID: 7b2e274ed65db91449189918cdef2c70
+      internalID: -3103623849961649744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_56
+      name: SpritesSecondPassEmmisive_56
       rect:
         serializedVersion: 2
         x: 96
@@ -1588,20 +1606,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14c64412c2bae0648bbf2a342228c317
-      internalID: 8681016966273794898
+      spriteID: 4f445dc1739b6dc4e8b135c0214ce157
+      internalID: -4956563957697413947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_57
+      name: SpritesSecondPassEmmisive_57
       rect:
         serializedVersion: 2
         x: 112
@@ -1609,20 +1627,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a9a3ba1925e51d498ce8a3aa2512aa1
-      internalID: -5451503274987993323
+      spriteID: 42614877505655a4ead154c1447795b3
+      internalID: -1075763217914863516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_58
+      name: SpritesSecondPassEmmisive_58
       rect:
         serializedVersion: 2
         x: 128
@@ -1630,20 +1648,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed7b20316c0503d4783a123bd50e3587
-      internalID: 248301010121008343
+      spriteID: 1cf2996f9a83dfb44811ab64d4d425c6
+      internalID: 4758338912543007870
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_59
+      name: SpritesSecondPassEmmisive_59
       rect:
         serializedVersion: 2
         x: 144
@@ -1651,20 +1669,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c6985e14760b04418de134a3720a0fb
-      internalID: 7277034047058093139
+      spriteID: 9839e657122a39045846e173a5e7ec78
+      internalID: 3637735474600684139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_60
+      name: SpritesSecondPassEmmisive_60
       rect:
         serializedVersion: 2
         x: 0
@@ -1672,20 +1690,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50a44b4ebf60cda49bc3fef76ec2bc49
-      internalID: 363223595108877160
+      spriteID: ab5c3fe56c639f14d94b66463be465b9
+      internalID: 8352959616551077394
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_61
+      name: SpritesSecondPassEmmisive_61
       rect:
         serializedVersion: 2
         x: 16
@@ -1693,20 +1711,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f1f9f078904163439e22d8c86e18f5f
-      internalID: -8509313332405854582
+      spriteID: 0dbf456c4f4ba0749af7d9739d9b8c2e
+      internalID: -8476163688333826574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_62
+      name: SpritesSecondPassEmmisive_62
       rect:
         serializedVersion: 2
         x: 32
@@ -1714,20 +1732,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab66adf916b71fe4eb200ffcb3e3b6c8
-      internalID: -7607575399979208188
+      spriteID: 667f0a49fdf29bc40a53846736f2c15f
+      internalID: -5894089551140426739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_63
+      name: SpritesSecondPassEmmisive_63
       rect:
         serializedVersion: 2
         x: 48
@@ -1735,20 +1753,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d94fbad4d4b0d24eba3e6f8a59bd7de
-      internalID: 2003903942352469123
+      spriteID: 5b31135af49308f42828ec45fbd4e6bf
+      internalID: 2367441174824420502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_64
+      name: SpritesSecondPassEmmisive_64
       rect:
         serializedVersion: 2
         x: 64
@@ -1756,20 +1774,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a50dd7524d312a14d858b5fe49f95935
-      internalID: 1138642775156625445
+      spriteID: 777639f849050514484a78b422208de4
+      internalID: 6292121619232704047
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_65
+      name: SpritesSecondPassEmmisive_65
       rect:
         serializedVersion: 2
         x: 80
@@ -1777,20 +1795,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f8eeb2253eac5440b0ffbba155a8170
-      internalID: 4452649913900904319
+      spriteID: dd3f784b554514c409cbff5d96c7f9c5
+      internalID: -1673390986552217587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_66
+      name: SpritesSecondPassEmmisive_66
       rect:
         serializedVersion: 2
         x: 96
@@ -1798,20 +1816,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cfc3f5cfb972164094bec69c3fc46d9
-      internalID: 8888665480561887690
+      spriteID: 59618428710f83f4998e9b278355304e
+      internalID: 4408465095072899123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_67
+      name: SpritesSecondPassEmmisive_67
       rect:
         serializedVersion: 2
         x: 112
@@ -1819,20 +1837,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab40e4e6f64e81e4ea984209532abce3
-      internalID: -1183870590902865328
+      spriteID: 82a92a4a8f1011d44995e6396df45c88
+      internalID: 5582688608343862023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_68
+      name: SpritesSecondPassEmmisive_68
       rect:
         serializedVersion: 2
         x: 128
@@ -1840,20 +1858,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa83781a60431ea4bbca4244f77c2969
-      internalID: -3354183973523622073
+      spriteID: 402ebaaa646c28445bcdc8ab78ce0bf7
+      internalID: 357610642789148646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_69
+      name: SpritesSecondPassEmmisive_69
       rect:
         serializedVersion: 2
         x: 144
@@ -1861,20 +1879,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb60f8c9085e1774ea3424cf74367f50
-      internalID: 3504115954701102539
+      spriteID: 20ea4cccf90ae134392da945c8f6babf
+      internalID: -4298497736329838034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_70
+      name: SpritesSecondPassEmmisive_70
       rect:
         serializedVersion: 2
         x: 0
@@ -1882,20 +1900,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f8f33cee3fb14249a6767613e0d74f9
-      internalID: 7024686721424201337
+      spriteID: 107fd693ade307f4b87da02df42f327b
+      internalID: -3822064199254374633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_71
+      name: SpritesSecondPassEmmisive_71
       rect:
         serializedVersion: 2
         x: 16
@@ -1903,20 +1921,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7844200147869f478bdfc8b19e4aaf0
-      internalID: -8828643081333344786
+      spriteID: 45f1746cd7470ac4ea50821a613eb097
+      internalID: -7568893947652685513
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_72
+      name: SpritesSecondPassEmmisive_72
       rect:
         serializedVersion: 2
         x: 32
@@ -1924,20 +1942,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9baba75d467d45f4782d21122eae93aa
-      internalID: -250946938020877574
+      spriteID: 4b3c58082269eb040949275d0f945e34
+      internalID: 4049924312513016476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_73
+      name: SpritesSecondPassEmmisive_73
       rect:
         serializedVersion: 2
         x: 48
@@ -1945,20 +1963,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 661fe2124ecbbe443921c8686dc82a69
-      internalID: 2000093804374180552
+      spriteID: 340b3e9ad7fcb9349950b4eebc4d93f2
+      internalID: 2884426158328511886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_74
+      name: SpritesSecondPassEmmisive_74
       rect:
         serializedVersion: 2
         x: 64
@@ -1966,20 +1984,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ba319296177ef244972efc99cdb6538
-      internalID: -3255902577841905736
+      spriteID: ff67d298083e7cf469a1bc25ed9a2a26
+      internalID: 2734671699214298344
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_75
+      name: SpritesSecondPassEmmisive_75
       rect:
         serializedVersion: 2
         x: 80
@@ -1987,20 +2005,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94546739c1f7c7b45b6bdbc88a033ce9
-      internalID: 120933000923806980
+      spriteID: 9197a02d7ace6164bb0a42aadafb7e19
+      internalID: 2865926510719133727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_76
+      name: SpritesSecondPassEmmisive_76
       rect:
         serializedVersion: 2
         x: 96
@@ -2008,20 +2026,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4965d32a774c854baca0c50577c92b8
-      internalID: 245691261781111050
+      spriteID: fbd089bc0567ca94e87bc2910ad2e34c
+      internalID: -8233144894718567426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_77
+      name: SpritesSecondPassEmmisive_77
       rect:
         serializedVersion: 2
         x: 112
@@ -2029,20 +2047,62 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 582a98d82d5573341b66f719b290b9b2
-      internalID: 8851196701152905397
+      spriteID: 64e23cd8870bafa459d196aef3df320f
+      internalID: 1012571294195742164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_78
+      name: SpritesSecondPassEmmisive_78
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d2c54ce5d13df54ba5669c55d525272
+      internalID: 3790650482090633909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesSecondPassEmmisive_79
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91d7dc5fc56763409a7cf4d8b0a7824
+      internalID: 4283291284331238806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesSecondPassEmmisive_80
       rect:
         serializedVersion: 2
         x: 0
@@ -2050,20 +2110,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75f1f08a220a5f84c84aba4ba0de79d2
-      internalID: -2543206250394710412
+      spriteID: fe8613db1e1a72f4e84c67fb7746cd9f
+      internalID: -8533260043076046289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_79
+      name: SpritesSecondPassEmmisive_81
       rect:
         serializedVersion: 2
         x: 16
@@ -2071,20 +2131,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 444cdbae6fee59640b5ef9eef93699e7
-      internalID: 1923897621185520503
+      spriteID: ada7427482206ad468f82642b9b8d226
+      internalID: -5562051046621340767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_80
+      name: SpritesSecondPassEmmisive_82
       rect:
         serializedVersion: 2
         x: 32
@@ -2092,20 +2152,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b674f986dac203429be10e7f9b95a06
-      internalID: -6469131817094753244
+      spriteID: 429c644e7e826e645b9e683fc5d822fb
+      internalID: 2885022470849513500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_81
+      name: SpritesSecondPassEmmisive_83
       rect:
         serializedVersion: 2
         x: 48
@@ -2113,20 +2173,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f76f6e070eeacbc4fa9e171d563b0983
-      internalID: -4719648308235704441
+      spriteID: 47d4e0b53c389f247bb458a6cd92f432
+      internalID: -5203681139015102135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_82
+      name: SpritesSecondPassEmmisive_84
       rect:
         serializedVersion: 2
         x: 64
@@ -2134,20 +2194,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82512dfd0294240478944ae8cd7eb6b0
-      internalID: -1850180262483442109
+      spriteID: 8647edea3dab3b94cbdd9b15b83fc288
+      internalID: -1656291383297859009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_83
+      name: SpritesSecondPassEmmisive_85
       rect:
         serializedVersion: 2
         x: 80
@@ -2155,20 +2215,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80333d44a0254f14a8ab4572202592e9
-      internalID: -3623003021779187132
+      spriteID: c007d18a4397c5146afe266d6bc23e03
+      internalID: -2288784537897720404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_84
+      name: SpritesSecondPassEmmisive_86
       rect:
         serializedVersion: 2
         x: 96
@@ -2176,20 +2236,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eedef7bb4eb85494db8f2bc58b66a1ed
-      internalID: -556550030077061908
+      spriteID: ec3e26b8f7e5db34f84a4f8ce3b03d06
+      internalID: 8847200423660201920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_85
+      name: SpritesSecondPassEmmisive_87
       rect:
         serializedVersion: 2
         x: 112
@@ -2197,20 +2257,62 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f43c5fd12fb2c2d4f87e1a2d07653d33
-      internalID: -6535378629022717602
+      spriteID: 0c1bd47658e83034282edfa85c347b04
+      internalID: -6622764254558974363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_86
+      name: SpritesSecondPassEmmisive_88
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f57883a049bd84185145ee3b5a6164
+      internalID: 7930873515261974675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesSecondPassEmmisive_89
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c6835c082320a45a44e4fbe881444c
+      internalID: -2618513259767205566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesSecondPassEmmisive_90
       rect:
         serializedVersion: 2
         x: 0
@@ -2218,20 +2320,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3be686eff79d2fc4c9845a84c10e0a69
-      internalID: -7052184945197101715
+      spriteID: 1b47a698d4042754a9c7d89428c3f663
+      internalID: -1878298567486636810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_87
+      name: SpritesSecondPassEmmisive_91
       rect:
         serializedVersion: 2
         x: 16
@@ -2239,20 +2341,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa8e85e2d5bf5754fb10aec228c692eb
-      internalID: 7279849555000936575
+      spriteID: fa02e8b250088494f8ddbc18fc1d4c73
+      internalID: 7944674959953295156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_88
+      name: SpritesSecondPassEmmisive_92
       rect:
         serializedVersion: 2
         x: 32
@@ -2260,20 +2362,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56aa471e70d159d4d80248439d4a76e7
-      internalID: 7839201563083297889
+      spriteID: 6265d96d3632bd040a13d111ee343041
+      internalID: 4420077999688236985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_89
+      name: SpritesSecondPassEmmisive_93
       rect:
         serializedVersion: 2
         x: 48
@@ -2281,20 +2383,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86b8d5ef26e1aca4699815eabebf39ce
-      internalID: -6657157272633639582
+      spriteID: 2111cf17ddf99b64f8d2aa7a0957cc16
+      internalID: 7761726070005818418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_90
+      name: SpritesSecondPassEmmisive_94
       rect:
         serializedVersion: 2
         x: 64
@@ -2302,20 +2404,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a6b8b3b2a327c340beb10605784a7f9
-      internalID: 3621546922235156188
+      spriteID: 574377a6f0dbf4c4fbc9c99f19c4b152
+      internalID: -7208458911374992807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_91
+      name: SpritesSecondPassEmmisive_95
       rect:
         serializedVersion: 2
         x: 80
@@ -2323,20 +2425,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1eba1799b7fd337499a5766a8b7d9485
-      internalID: 1760825849281257940
+      spriteID: 5c64c03913bd2a14ebfa08581209f0fe
+      internalID: 1315424395609781329
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_92
+      name: SpritesSecondPassEmmisive_96
       rect:
         serializedVersion: 2
         x: 96
@@ -2344,20 +2446,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49ae9d3833f89024f9e8fcf4135c4fb7
-      internalID: 3452207305823326427
+      spriteID: 658ea36a24865b347aacfd4c715d9ab1
+      internalID: 8073654925219638908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesSecondPass_93
+      name: SpritesSecondPassEmmisive_97
       rect:
         serializedVersion: 2
         x: 112
@@ -2365,14 +2467,56 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 608042e4669e3264faa171c7fa7877a4
-      internalID: 8790307934200884558
+      spriteID: b539b49fad9bac94dae635a42abbe6a6
+      internalID: -5393292449454942511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesSecondPassEmmisive_98
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d83d81cfa4ce124885ebc471a3d3563
+      internalID: -6743805882380666843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesSecondPassEmmisive_99
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 741d95493f4ede244a2f06a0dacceb74
+      internalID: -4263481936748307347
       vertices: []
       indices: 
       edges: []
@@ -2386,12 +2530,10 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures:
-    - texture: {fileID: 2800000, guid: 9e3d1b922b398c44b9d339a850298e60, type: 3}
-      name: _Emission
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 1
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
