@@ -8,6 +8,7 @@ public class CursorControls : MonoBehaviour
     public GameObject cursor;
     public GameObject aimBot;
     public GameObject player;
+    public Animator aimIndicator;
     public PlayerControls playerScript;
     public Transform[] hookTargets;
     public float mouseTargetingRadius = 50f;
@@ -51,11 +52,13 @@ public class CursorControls : MonoBehaviour
                         aimBot.transform.position = player.transform.position + vector.normalized * realTargetingRadius;
                     }
                     canHook = false;
+                    aimIndicator.SetBool("ShouldRotate", false);
                 }
                 else
                 {
                     aimBot.transform.position = new Vector3(selectedTarget.position.x, selectedTarget.position.y, 0);
                     canHook = true;
+                    aimIndicator.SetBool("ShouldRotate", true);
                 }
             }
         }
