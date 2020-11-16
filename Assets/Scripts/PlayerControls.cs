@@ -6,7 +6,7 @@ using GameAnalyticsSDK;
 
 public class PlayerControls : MonoBehaviour
 {
-    public KeyCode left, right, jump, up, down;
+    [SerializeField] private KeyCode left, right, jump, up, down;
     public bool isGrounded;
     public bool goingThrough;
     private Rigidbody2D rb;
@@ -23,7 +23,7 @@ public class PlayerControls : MonoBehaviour
     public bool playerIsDead = false;
     public GameObject deadFucker;
     public GameObject dustEffect;
-    public float dustTriggerOnFast;
+    [SerializeField] private float dustTriggerOnFast = 0f;
     private Transform animSprite;
     //Making a referencable list of player states
     private enum PlayerState
@@ -219,7 +219,6 @@ public class PlayerControls : MonoBehaviour
 
         //Actually moving the player
         wantedDirection = new Vector2(xIntent, yIntent);
-        rb.velocity = wantedDirection;
 
 
         //Hook Controls
@@ -262,6 +261,7 @@ public class PlayerControls : MonoBehaviour
             hookControlScript.DestinationSetter();
             currentState = PlayerState.SWING;
         }
+        rb.velocity = wantedDirection;
     }
 
     //If the player hits a wall while hooking, they'll fall.

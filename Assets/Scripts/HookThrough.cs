@@ -6,8 +6,8 @@ public class HookThrough : MonoBehaviour
 {
 
     private Rigidbody2D rb;
-    public PlayerControls movementScript;
-    public CursorControls cursorScript;
+    [SerializeField] private PlayerControls movementScript;
+    [SerializeField] private CursorControls cursorScript;
     public GameObject swingPositionObject;
     public GameObject parentOfSwingAnchor;
     public float rotationalSpeed;
@@ -223,7 +223,7 @@ public class HookThrough : MonoBehaviour
             line.positionCount = 2;
             var positions = new List<Vector3>();
             positions.Add(cursorScript.aimBot.transform.position);
-            positions.Add(cursorScript.player.transform.position);
+            positions.Add(movementScript.transform.position);
             line.SetPositions(positions.ToArray());
         }
     }

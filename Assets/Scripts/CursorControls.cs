@@ -7,7 +7,7 @@ public class CursorControls : MonoBehaviour
     private Vector3 mousePosition;
     public GameObject cursor;
     public GameObject aimBot;
-    public GameObject player;
+    [SerializeField] private GameObject player = null;
     public Animator aimIndicator;
     public PlayerControls playerScript;
     public Transform[] hookTargets;
