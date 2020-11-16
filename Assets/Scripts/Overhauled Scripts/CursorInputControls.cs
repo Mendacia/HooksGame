@@ -9,15 +9,17 @@ public class CursorInputControls : MonoBehaviour
     [SerializeField] private PlayerHookController hookController;
     [SerializeField] private GameObject cursorObject = null;
     [SerializeField] private GameObject cursorTargetingSnapper = null;
-    [SerializeField] private float snappingRadius = 50;
+    [SerializeField] private float playerTargetingRange = 50;
+    [SerializeField] private float cursorTargetingRange = 50;
     [SerializeField] private GameObject aimIndicatorObject = null;
-    private float updatedSnappingRadius = 0;
+    private float updatedTargetingRange = 0;
 
 
     private void Update()
     {
         //This puts the rhetical on top of the player's mouse.
         var currentMouseLocation = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        hooksScript. updateCursorLocationInHookManagerScript(currentMouseLocation);
         cursorObject.transform.position = new Vector3(currentMouseLocation.x, currentMouseLocation.y, 0);
 
         UpdateCursorSnappingRadius();
@@ -28,13 +30,13 @@ public class CursorInputControls : MonoBehaviour
     {
         if ((player.GetPlayerVelocity() / 50) > 1)
         {
-            updatedSnappingRadius = (player.GetPlayerVelocity() / 50) * snappingRadius;
+            updatedTargetingRange = (player.GetPlayerVelocity() / 50) * playerTargetingRange;
         }
         else
         {
-            updatedSnappingRadius = snappingRadius;
+            updatedTargetingRange = playerTargetingRange;
         }
-        hooksScript.TellHookManagerWhatTheTargetingRadiusAre(snappingRadius, updatedSnappingRadius);
+        hooksScript.TellHookManagerWhatTheTargetingRadiusAre(updatedTargetingRange, cursorTargetingRange);
     }
 
     private void MoveTheCursorTargetingSnapperToTheNearestInRangeHook()
@@ -43,21 +45,21 @@ public class CursorInputControls : MonoBehaviour
         if (selectedTarget == null)
         {
             var vector = cursorObject.transform.position - player.transform.position;
-            if (vector.magnitude<updatedSnappingRadius)
+            if (vector.magnitude < updatedTargetingRange)
             {
                 cursorTargetingSnapper.transform.position = cursorObject.transform.position;
             }
             else
             {
-                cursorTargetingSnapper.transform.position = player.transform.position + vector.normalized* updatedSnappingRadius;
+                cursorTargetingSnapper.transform.position = player.transform.position + vector.normalized * updatedTargetingRange;
             }
-            //canHook = false;
+            player.CanPlayerHook(false);
             aimIndicatorObject.GetComponent<Animator>().SetBool("ShouldRotate", false);
         }
         else
         {
             cursorTargetingSnapper.transform.position = new Vector3(selectedTarget.position.x, selectedTarget.position.y, 0);
-            //canHook = true;
+            player.CanPlayerHook(true);
             aimIndicatorObject.GetComponent<Animator>().SetBool("ShouldRotate", true);
         }
         hookController.giveTheHookControllerTheSelectedTarget(selectedTarget);

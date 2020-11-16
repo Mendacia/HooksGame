@@ -18,10 +18,12 @@ public class PlayerControlsNew : MonoBehaviour
     private float xIntent;
     private float yIntent;
     private Vector2 wantedDirection;
+    [SerializeField]private bool canHookFromThisState = true;
 
     [Header("Set these to their respective scripts")]
     [SerializeField] private InputGod inputScript;
     private PlayerHookController hookController;
+    private CursorInputControls cursorControls;
 
     [Header("Visible in inspector for tweaking purposes")]
     [SerializeField] private float airborneSpeedCap = 5;
@@ -79,6 +81,24 @@ public class PlayerControlsNew : MonoBehaviour
     private void FixedUpdate()
     {
         myRigidBody.velocity = wantedDirection;
+        //Running a switch again to run physics calculations in fixedUpdate
+        switch (currentState)
+        {
+            case PlayerState.HOOK:
+                {
+                    HookControlsFixedUpdate();
+                    break;
+                }
+            case PlayerState.SWING:
+                {
+                    SwingControlsFixedUpdate();
+                    break;
+                }
+            default:
+                {
+                    break;
+                }
+        }
     }
 
     public void LeaveHookThrough()
@@ -108,7 +128,14 @@ public class PlayerControlsNew : MonoBehaviour
         }
     }
 
+    public void CanPlayerHook(bool canHook)
+    {
+        canHookFromThisState = canHook;
+    }
+
     public float GetPlayerVelocity() => myRigidBody.velocity.magnitude;
+
+    public bool GetPlayerCanHookFromState() => canHookFromThisState;
 
 
     //Everything after this is statemachine update functions
@@ -116,6 +143,7 @@ public class PlayerControlsNew : MonoBehaviour
 
     private void GroundedControlsUpdate()
     {
+        
         xIntent = 0; //Player Stops on a dime if they aren't making inputs.
         if (Input.GetKey(inputScript.right))
         {
@@ -130,13 +158,13 @@ public class PlayerControlsNew : MonoBehaviour
                 yIntent = 30;
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0) && canHookFromThisState)
         {
             currentState = PlayerState.HOOK;
             hookController.InitiateHook();
             hookController.playerIsHookingThrough = true;
         }
-        if (Input.GetMouseButton(2))
+        if (Input.GetMouseButtonDown(2) && canHookFromThisState)
         {
             currentState = PlayerState.HOOK;
             hookController.InitiateHook();
@@ -171,12 +199,12 @@ public class PlayerControlsNew : MonoBehaviour
             yIntent -= 0.5f;
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0) && canHookFromThisState)
         {
             currentState = PlayerState.HOOK;
             hookController.playerIsHookingThrough = true;
         }
-        if (Input.GetMouseButton(2))
+        if (Input.GetMouseButtonDown(2) && canHookFromThisState)
         {
             currentState = PlayerState.HOOK;
             hookController.playerIsHookingThrough = false;
@@ -185,18 +213,28 @@ public class PlayerControlsNew : MonoBehaviour
 
     private void HookControlsUpdate()
     {
+        canHookFromThisState = false;
         myRigidBody.gravityScale = 0;
-        hookController.MoveThrough();
     }
 
     private void SwingControlsUpdate()
     {
+        canHookFromThisState = false;
         myRigidBody.gravityScale = 0;
-        hookController.Swing();
     }
 
     private void DyingUpdate()
     {
+        canHookFromThisState = false;
+    }
 
+    private void HookControlsFixedUpdate()
+    {
+        hookController.MoveThrough();
+    }
+
+    private void SwingControlsFixedUpdate()
+    {
+        hookController.Swing();
     }
 }

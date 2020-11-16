@@ -6,11 +6,11 @@ public class HookManager : MonoBehaviour
 {
     public List<Transform> hooks;
     [Header("Set these to their corresponding objects")]
-    [SerializeField] private Transform player;
-    private float targetingRadius;
-    private float realTargetingRadius;
-    [SerializeField] private LayerMask hookFinder;
-    [SerializeField] private Vector3 cursorLocation = Vector3.zero;
+    [SerializeField] private Transform player = null;
+    private float realPlayerTargetingRadius;
+    private float cursorTargetingRadius;
+    [SerializeField] private LayerMask hookFinder = 0;
+    [System.NonSerialized] public Vector3 cursorLocation = Vector3.zero;
     void Start()
     {
         foreach (Transform child in gameObject.transform)
@@ -19,20 +19,25 @@ public class HookManager : MonoBehaviour
         }
     }
 
-    public void TellHookManagerWhatTheTargetingRadiusAre(float temp, float real)
+    public void updateCursorLocationInHookManagerScript(Vector3 location)
     {
-        targetingRadius = temp;
-        realTargetingRadius = real;
+        cursorLocation = location;
+    }
+
+    public void TellHookManagerWhatTheTargetingRadiusAre(float real, float cursor)
+    {
+        realPlayerTargetingRadius = real;
+        cursorTargetingRadius = cursor;
     }
 
     public Transform GetClosestHook(Transform[] targets)
     {
         Transform bestTarget = null;
-        float closestDistanceSqr = targetingRadius;
+        float closestDistanceSqr = cursorTargetingRadius;
         foreach (Transform potentialTarget in targets)
         {
-            var hookAndWallDetectionRaycast = Physics2D.Raycast(player.transform.position, potentialTarget.transform.position - player.transform.position, realTargetingRadius, hookFinder);
-
+            var hookAndWallDetectionRaycast = Physics2D.Raycast(player.transform.position, potentialTarget.transform.position - player.transform.position, realPlayerTargetingRadius, hookFinder);
+            Debug.DrawRay(player.transform.position, potentialTarget.transform.position - player.transform.position);
             if (hookAndWallDetectionRaycast.collider == null)
             {
                 //Missed
