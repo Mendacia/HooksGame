@@ -57,19 +57,13 @@ public class PlayerControlsNew : MonoBehaviour
                     AirborneControlsUpdate();
                     break;
                 }
-            case PlayerState.HOOK:
-                {
-                    HookControlsUpdate();
-                    break;
-                }
-            case PlayerState.SWING:
-                {
-                    SwingControlsUpdate();
-                    break;
-                }
             case PlayerState.DYING:
                 {
                     DyingUpdate();
+                    break;
+                }
+            default:
+                {
                     break;
                 }
         }
