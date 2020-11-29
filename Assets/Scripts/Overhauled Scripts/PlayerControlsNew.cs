@@ -55,19 +55,13 @@ public class PlayerControlsNew : MonoBehaviour
                     AirborneControlsUpdate();
                     break;
                 }
-            case PlayerState.HOOK:
-                {
-                    HookControlsUpdate();
-                    break;
-                }
-            case PlayerState.SWING:
-                {
-                    SwingControlsUpdate();
-                    break;
-                }
             case PlayerState.DYING:
                 {
                     DyingUpdate();
+                    break;
+                }
+            default:
+                {
                     break;
                 }
         }
@@ -79,6 +73,24 @@ public class PlayerControlsNew : MonoBehaviour
     private void FixedUpdate()
     {
         myRigidBody.velocity = wantedDirection;
+
+        switch (currentState)
+        {
+            case PlayerState.HOOK:
+                {
+                    HookControlsUpdate();
+                    break;
+                }
+            case PlayerState.SWING:
+                {
+                    SwingControlsUpdate();
+                    break;
+                }
+            default:
+                {
+                    break;
+                }
+        }
     }
 
     public void LeaveHookThrough()
@@ -130,7 +142,7 @@ public class PlayerControlsNew : MonoBehaviour
                 yIntent = 30;
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             currentState = PlayerState.HOOK;
             hookController.InitiateHook();

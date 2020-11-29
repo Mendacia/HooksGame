@@ -19,6 +19,11 @@ public class HookManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        cursorLocation = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    }
+
     public void TellHookManagerWhatTheTargetingRadiusAre(float temp, float real)
     {
         targetingRadius = temp;
