@@ -196,11 +196,13 @@ public class PlayerControlsNew : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && canHookFromThisState)
         {
             currentState = PlayerState.HOOK;
+            hookController.InitiateHook();
             hookController.playerIsHookingThrough = true;
         }
         if (Input.GetMouseButtonDown(2) && canHookFromThisState)
         {
             currentState = PlayerState.HOOK;
+            hookController.InitiateHook();
             hookController.playerIsHookingThrough = false;
         }
     }

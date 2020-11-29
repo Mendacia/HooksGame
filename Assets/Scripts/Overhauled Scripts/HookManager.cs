@@ -24,7 +24,7 @@ public class HookManager : MonoBehaviour
         cursorLocation = location;
     }
 
-    public void TellHookManagerWhatTheTargetingRadiusAre(float real, float cursor)
+    public void TellHookManagerWhatTheTargetingRadiiAre(float real, float cursor)
     {
         realPlayerTargetingRadius = real;
         cursorTargetingRadius = cursor;

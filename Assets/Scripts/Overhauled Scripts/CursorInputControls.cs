@@ -36,7 +36,7 @@ public class CursorInputControls : MonoBehaviour
         {
             updatedTargetingRange = playerTargetingRange;
         }
-        hooksScript.TellHookManagerWhatTheTargetingRadiusAre(updatedTargetingRange, cursorTargetingRange);
+        hooksScript.TellHookManagerWhatTheTargetingRadiiAre(updatedTargetingRange, cursorTargetingRange);
     }
 
     private void MoveTheCursorTargetingSnapperToTheNearestInRangeHook()
@@ -63,5 +63,6 @@ public class CursorInputControls : MonoBehaviour
             aimIndicatorObject.GetComponent<Animator>().SetBool("ShouldRotate", true);
         }
         hookController.giveTheHookControllerTheSelectedTarget(selectedTarget);
+        //Selected Target is correct
     }
 }

@@ -129,7 +129,6 @@ public class PlayerHookController : MonoBehaviour
             myRigidbody.gravityScale = 0;
             //This is where the player actually finally moves
             myRigidbody.velocity = (destination - myRigidbody.position).normalized * hookingSpeed;
-            Debug.Log("He should absolutely be moving right now");
             //HookEffects();
         }
     }
