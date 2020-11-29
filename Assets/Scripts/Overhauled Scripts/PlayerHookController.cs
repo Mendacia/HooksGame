@@ -25,6 +25,9 @@ public class PlayerHookController : MonoBehaviour
     private GameObject selectedTargetAnchor;
     private bool goClockwise = true;
 
+    private GameObject myAnchor = null;
+    private GameObject mySelectedTargetAnchor = null;
+
     private void Start()
     {
         myRigidbody = gameObject.GetComponent<Rigidbody2D>();
@@ -133,14 +136,18 @@ public class PlayerHookController : MonoBehaviour
         }
     }
 
-    public void Swing()
+    public void SwingSetup()
     {
         //Spawns 2 objects, 1 which the player will follow and will be parented to the other, and the other stays at the selected target
-        var myAnchor = Instantiate(swingAnchor, player.transform.position, Quaternion.identity);
-        var mySelectedTargetAnchor = Instantiate(selectedTargetAnchor, selectedTarget.position, Quaternion.identity);
+        myAnchor = Instantiate(swingAnchor, player.transform.position, Quaternion.identity);
+        mySelectedTargetAnchor = Instantiate(selectedTargetAnchor, selectedTarget.position, Quaternion.identity);
         myAnchor.transform.SetParent(mySelectedTargetAnchor.transform);
+    }
 
-        if (!(Input.GetKey(inputScript.left) || Input.GetKey(inputScript.right)))
+    public void Swing()
+    {
+
+        if (!Input.GetKey(inputScript.left) && !Input.GetKey(inputScript.right))
         {
             accelerationIntent = 0;
         }
@@ -163,16 +170,15 @@ public class PlayerHookController : MonoBehaviour
         myRigidbody.velocity = (new Vector2(myAnchor.transform.position.x, myAnchor.transform.position.y) - myRigidbody.position) / Time.deltaTime;
         myRigidbody.MovePosition(myAnchor.transform.position);
         Debug.DrawLine(myRigidbody.position, destination, Color.green);
-        //HookEffects();
+    }
 
-        if (Input.GetMouseButtonUp(1))
-        {
-            myAnchor.transform.SetParent(null);
-            Destroy(myAnchor);
-            Destroy(mySelectedTargetAnchor);
-            player.LeaveHookThrough();
-            //Killhook();
-        }
+    public void SwingKiller()
+    {
+        myAnchor.transform.SetParent(null);
+        Destroy(myAnchor);
+        Destroy(mySelectedTargetAnchor);
+        player.LeaveHookThrough();
+        //Killhook();
     }
 
     IEnumerator Hitfreeze()

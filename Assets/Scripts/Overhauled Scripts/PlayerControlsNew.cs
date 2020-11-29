@@ -62,8 +62,14 @@ public class PlayerControlsNew : MonoBehaviour
                     DyingUpdate();
                     break;
                 }
-            default:
+            case PlayerState.SWING:
                 {
+                    SwingControlsUpdate();
+                    break;
+                }
+            case PlayerState.HOOK:
+                {
+                    HookControlsUpdate();
                     break;
                 }
         }
@@ -164,6 +170,12 @@ public class PlayerControlsNew : MonoBehaviour
             hookController.InitiateHook();
             hookController.playerIsHookingThrough = false;
         }
+        if (Input.GetMouseButtonDown(1) && canHookFromThisState)
+        {
+            currentState = PlayerState.SWING;
+            hookController.InitiateHook();
+            hookController.SwingSetup();
+        }
     }
 
     private void AirborneControlsUpdate()
@@ -205,6 +217,12 @@ public class PlayerControlsNew : MonoBehaviour
             hookController.InitiateHook();
             hookController.playerIsHookingThrough = false;
         }
+        if (Input.GetMouseButtonDown(1) && canHookFromThisState)
+        {
+            currentState = PlayerState.SWING;
+            hookController.InitiateHook();
+            hookController.SwingSetup();
+        }
     }
 
     private void HookControlsUpdate()
@@ -217,6 +235,10 @@ public class PlayerControlsNew : MonoBehaviour
     {
         canHookFromThisState = false;
         myRigidBody.gravityScale = 0;
+        if (Input.GetMouseButtonUp(1))
+        {
+            hookController.SwingKiller();
+        }
     }
 
     private void DyingUpdate()
