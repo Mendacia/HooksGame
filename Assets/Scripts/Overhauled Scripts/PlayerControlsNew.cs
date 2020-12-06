@@ -18,16 +18,21 @@ public class PlayerControlsNew : MonoBehaviour
     private float xIntent;
     private float yIntent;
     private Vector2 wantedDirection;
+    [System.NonSerialized] public bool playerIsCurrentlyInSomeKindOfHookState = false;
     [SerializeField]private bool canHookFromThisState = true;
 
     [Header("Set these to their respective scripts")]
     [SerializeField] private InputGod inputScript;
     private PlayerHookController hookController;
-    private CursorInputControls cursorControls;
+    private PlayerAnimatorController animScript;
 
     [Header("Visible in inspector for tweaking purposes")]
+    [SerializeField] private float playerGroundedForce = 20;
+    [SerializeField] private float playerJumpForce = 30;
     [SerializeField] private float airborneSpeedCap = 5;
     [SerializeField] private float defaultGravityScale = 5;
+
+    [SerializeField] private float myMagnitude;
 
 
 
@@ -36,11 +41,13 @@ public class PlayerControlsNew : MonoBehaviour
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         hookController = GetComponent<PlayerHookController>();
+        animScript = GetComponent<PlayerAnimatorController>();
         Time.timeScale = 1;
     }
 
     private void Update()
     {
+        myMagnitude = myRigidBody.velocity.magnitude;
         xIntent = myRigidBody.velocity.x;
         yIntent = myRigidBody.velocity.y;
 
@@ -147,15 +154,15 @@ public class PlayerControlsNew : MonoBehaviour
         xIntent = 0; //Player Stops on a dime if they aren't making inputs.
         if (Input.GetKey(inputScript.right))
         {
-            xIntent += 20;
+            xIntent += playerGroundedForce;
         }
         if (Input.GetKey(inputScript.left))
         {
-            xIntent -= 20;
+            xIntent -= playerGroundedForce;
         }
         if (Input.GetKey(inputScript.jump))
         {
-                yIntent = 30;
+                yIntent = playerJumpForce;
         }
 
         if (Input.GetMouseButtonDown(0) && canHookFromThisState)
@@ -175,6 +182,21 @@ public class PlayerControlsNew : MonoBehaviour
             currentState = PlayerState.SWING;
             hookController.InitiateHook();
             hookController.SwingSetup();
+        }
+
+        playerIsCurrentlyInSomeKindOfHookState = false;
+
+        if(xIntent == 0 && yIntent == 0)
+        {
+            animScript.PlayIdleAnimation();
+        }
+        else if(xIntent > 0)
+        {
+            animScript.PlayWalkingAnimation(true);
+        }
+        else if (xIntent < 0)
+        {
+            animScript.PlayWalkingAnimation(false);
         }
     }
 
@@ -223,17 +245,36 @@ public class PlayerControlsNew : MonoBehaviour
             hookController.InitiateHook();
             hookController.SwingSetup();
         }
+
+        if (xIntent == 0)
+        {
+            animScript.PlayJumpingAnimation(true, true);
+        }
+        else if (xIntent > 0)
+        {
+            animScript.PlayJumpingAnimation(true, false);
+        }
+        else if (xIntent < 0)
+        {
+            animScript.PlayJumpingAnimation(false, false);
+        }
+
+
+        playerIsCurrentlyInSomeKindOfHookState = false;
+
     }
 
     private void HookControlsUpdate()
     {
         canHookFromThisState = false;
+        playerIsCurrentlyInSomeKindOfHookState = true;
         myRigidBody.gravityScale = 0;
     }
 
     private void SwingControlsUpdate()
     {
         canHookFromThisState = false;
+        playerIsCurrentlyInSomeKindOfHookState = true;
         myRigidBody.gravityScale = 0;
         if (Input.GetMouseButtonUp(1))
         {
@@ -244,6 +285,7 @@ public class PlayerControlsNew : MonoBehaviour
     private void DyingUpdate()
     {
         canHookFromThisState = false;
+        playerIsCurrentlyInSomeKindOfHookState = true;
     }
 
     private void HookControlsFixedUpdate()

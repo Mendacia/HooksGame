@@ -7,6 +7,7 @@ public class CursorInputControls : MonoBehaviour
     [SerializeField] private PlayerControlsNew player = null;
     [SerializeField] private HookManager hooksScript = null;
     [SerializeField] private PlayerHookController hookController;
+    [SerializeField] private PlayerHookVisuals hookVisuals;
     [SerializeField] private GameObject cursorObject = null;
     [SerializeField] private GameObject cursorTargetingSnapper = null;
     [SerializeField] private float playerTargetingRange = 50;
@@ -23,7 +24,11 @@ public class CursorInputControls : MonoBehaviour
         cursorObject.transform.position = new Vector3(currentMouseLocation.x, currentMouseLocation.y, 0);
 
         UpdateCursorSnappingRadius();
-        MoveTheCursorTargetingSnapperToTheNearestInRangeHook();
+
+        if (player.playerIsCurrentlyInSomeKindOfHookState == false)
+        {
+            MoveTheCursorTargetingSnapperToTheNearestInRangeHook();
+        }
     }
 
     private void UpdateCursorSnappingRadius()
@@ -63,6 +68,7 @@ public class CursorInputControls : MonoBehaviour
             aimIndicatorObject.GetComponent<Animator>().SetBool("ShouldRotate", true);
         }
         hookController.giveTheHookControllerTheSelectedTarget(selectedTarget);
+        hookVisuals.GiveTheHookVisualsScriptTheSelectedTarget(selectedTarget);
         //Selected Target is correct
     }
 }

@@ -7,6 +7,7 @@ public class PlayerHookController : MonoBehaviour
     [Header("Set these up please and thankyou")]
     private PlayerControlsNew player = null;
     [SerializeField] private InputGod inputScript = null;
+    [SerializeField] private PlayerHookVisuals hookVisualsScript = null;
 
     [Header("Variables for swing function, these are scary, name them better later")]
     [SerializeField] private float rotationalSpeed = 5;
@@ -104,9 +105,10 @@ public class PlayerHookController : MonoBehaviour
 
         // Find Tangent Speed
         var radius = Vector2.Distance(destination, myRigidbody.position);
-        var circumference = Mathf.PI * 2 * radius;
+        var circumference = 2 * Mathf.PI * radius;
 
         rotationalSpeed = circumference * (360 / (circumference / myRigidbody.velocity.magnitude)) * Time.deltaTime * (goClockwise ? -1 : 1);
+        //rotationalSpeed = 360 * circumference / myRigidbody.velocity.magnitude * Time.deltaTime * (goClockwise ? -1 : 1);
 
         StartCoroutine(Hitfreeze());
     }
@@ -114,25 +116,24 @@ public class PlayerHookController : MonoBehaviour
     public void MoveThrough()
     {
         //Tests if the player will move through the hook on the next frame
-        if (((destination - myRigidbody.position).magnitude < (myRigidbody.velocity.magnitude * Time.deltaTime)) || destination == new Vector2(gameObject.transform.position.x, gameObject.transform.position.y))
+        if (((destination - myRigidbody.position).magnitude < (myRigidbody.velocity.magnitude * Time.deltaTime)) || destination == new Vector2(transform.position.x, transform.position.y))
         {
             if (playerIsHookingThrough)
             {
                 player.LeaveHookThrough();
-                //Killhook();
             }
             else if (!playerIsHookingThrough)
             {
                 player.LeaveHookDrop();
-                //Killhook();
             }
+            hookVisualsScript.KillHook();
         }
         else
         {
             myRigidbody.gravityScale = 0;
             //This is where the player actually finally moves
             myRigidbody.velocity = (destination - myRigidbody.position).normalized * hookingSpeed;
-            //HookEffects();
+            hookVisualsScript.DrawHook();
         }
     }
 
@@ -170,6 +171,7 @@ public class PlayerHookController : MonoBehaviour
         myRigidbody.velocity = (new Vector2(myAnchor.transform.position.x, myAnchor.transform.position.y) - myRigidbody.position) / Time.deltaTime;
         myRigidbody.MovePosition(myAnchor.transform.position);
         Debug.DrawLine(myRigidbody.position, destination, Color.green);
+        hookVisualsScript.DrawHook();
     }
 
     public void SwingKiller()
@@ -178,7 +180,7 @@ public class PlayerHookController : MonoBehaviour
         Destroy(myAnchor);
         Destroy(mySelectedTargetAnchor);
         player.LeaveHookThrough();
-        //Killhook();
+        hookVisualsScript.KillHook();
     }
 
     IEnumerator Hitfreeze()
@@ -186,10 +188,5 @@ public class PlayerHookController : MonoBehaviour
         Time.timeScale = 0.5f;
         yield return new WaitForSecondsRealtime(1 / 10f);
         Time.timeScale = 1;
-    }
-
-    private void FixedUpdate()
-    {
-        
     }
 }
