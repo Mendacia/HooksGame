@@ -29,6 +29,8 @@ public class PlayerHookController : MonoBehaviour
     private GameObject myAnchor = null;
     private GameObject mySelectedTargetAnchor = null;
 
+    [SerializeField] private float myRadius = 0;
+
     private void Start()
     {
         myRigidbody = gameObject.GetComponent<Rigidbody2D>();
@@ -105,10 +107,10 @@ public class PlayerHookController : MonoBehaviour
 
         // Find Tangent Speed
         var radius = Vector2.Distance(destination, myRigidbody.position);
-        var circumference = 2 * Mathf.PI * radius;
+        myRadius = radius;
 
-        rotationalSpeed = circumference * (360 / (circumference / myRigidbody.velocity.magnitude)) * Time.deltaTime * (goClockwise ? -1 : 1);
-        //rotationalSpeed = 360 * circumference / myRigidbody.velocity.magnitude * Time.deltaTime * (goClockwise ? -1 : 1);
+
+        rotationalSpeed = (((myRigidbody.velocity.magnitude / radius) / (Mathf.PI/30)) * 6) * (goClockwise ? -1 : 1);
 
         StartCoroutine(Hitfreeze());
     }
