@@ -18,15 +18,20 @@ public class PlayerControlsNew : MonoBehaviour
     private float xIntent;
     private float yIntent;
     private Vector2 wantedDirection;
+    private Vector3 currentCheckpoint = Vector3.zero;
     [System.NonSerialized] public bool playerIsCurrentlyInSomeKindOfHookState = false;
-    [SerializeField]private bool canHookFromThisState = true;
+    private bool canHookFromThisState = true;
+    private bool isSwinging = false;
 
-    [Header("Set these to their respective scripts")]
+    [Header("Set these to their respective things")]
     [SerializeField] private InputGod inputScript;
+    [SerializeField] private GameObject deadClone = null;
+    [SerializeField] private GameObject dustEffect = null;
     private PlayerHookController hookController;
     private PlayerAnimatorController animScript;
 
     [Header("Visible in inspector for tweaking purposes")]
+    [SerializeField] private float requiredMagnitudeForDustOnCollision = 50;
     [SerializeField] private float playerGroundedForce = 20;
     [SerializeField] private float playerJumpForce = 30;
     [SerializeField] private float airborneSpeedCap = 5;
@@ -108,14 +113,21 @@ public class PlayerControlsNew : MonoBehaviour
         }
     }
 
+    public void Die()
+    {
+        currentState = PlayerState.DYING;
+    }
+
     public void LeaveHookThrough()
     {
         //Note that SWING leaves through here too
         currentState = PlayerState.AIRBORNE;
+        hookController.killHookVisuals();
     }
     public void LeaveHookDrop()
     {
         currentState = PlayerState.AIRBORNE;
+        hookController.killHookVisuals();
         myRigidBody.velocity = Vector2.zero;
     }
 
@@ -124,6 +136,12 @@ public class PlayerControlsNew : MonoBehaviour
         if (grounded && currentState != (PlayerState.DYING))
         {
             currentState = PlayerState.GROUNDED;
+            if (isSwinging)
+            {
+                hookController.SwingKiller(true);
+                isSwinging = false;
+                hookController.killHookVisuals();
+            }
         }
 
         if (grounded == false)
@@ -131,6 +149,40 @@ public class PlayerControlsNew : MonoBehaviour
             if (currentState == PlayerState.GROUNDED)
             {
                 currentState = PlayerState.AIRBORNE;
+            }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        switch (currentState)
+        {
+            case PlayerState.HOOK:
+                {
+                    currentState = PlayerState.AIRBORNE;
+                    hookController.killHookVisuals();
+                    break;
+                }
+            case PlayerState.SWING:
+                {
+                    currentState = PlayerState.AIRBORNE;
+                    hookController.SwingKiller(true);
+                    isSwinging = false;
+                    hookController.killHookVisuals();
+                    break;
+                }
+            default:
+                {
+                    break;
+                }
+        }
+
+        if (collision.relativeVelocity.magnitude > requiredMagnitudeForDustOnCollision)
+        {
+            foreach (ContactPoint2D wallHit in collision.contacts)
+            {
+                Vector2 hitPoint = wallHit.point;
+                Instantiate(dustEffect, new Vector3(hitPoint.x, hitPoint.y, 0), Quaternion.identity);
             }
         }
     }
@@ -198,6 +250,8 @@ public class PlayerControlsNew : MonoBehaviour
         {
             animScript.PlayWalkingAnimation(false);
         }
+
+        hookController.killHookVisuals();
     }
 
     private void AirborneControlsUpdate()
@@ -276,16 +330,36 @@ public class PlayerControlsNew : MonoBehaviour
         canHookFromThisState = false;
         playerIsCurrentlyInSomeKindOfHookState = true;
         myRigidBody.gravityScale = 0;
+        isSwinging = true;
         if (Input.GetMouseButtonUp(1))
         {
-            hookController.SwingKiller();
+            hookController.SwingKiller(false);
+            isSwinging = false;
         }
     }
 
     private void DyingUpdate()
     {
+        if (isSwinging)
+        {
+            hookController.SwingKiller(true);
+            isSwinging = false;
+            hookController.killHookVisuals();
+        }
+        hookController.killHookVisuals();
+
+        playerIsCurrentlyInSomeKindOfHookState = false;
         canHookFromThisState = false;
-        playerIsCurrentlyInSomeKindOfHookState = true;
+        Time.timeScale = Mathf.Lerp(Time.timeScale, 0, 10 * Time.unscaledDeltaTime);
+
+        if (Input.anyKeyDown)
+        {
+            Instantiate(deadClone, gameObject.transform.position, gameObject.transform.rotation);
+            myRigidBody.velocity = Vector3.zero;
+            gameObject.transform.position = currentCheckpoint;
+            Time.timeScale = 1;
+            currentState = PlayerState.AIRBORNE;
+        }
     }
 
     private void HookControlsFixedUpdate()

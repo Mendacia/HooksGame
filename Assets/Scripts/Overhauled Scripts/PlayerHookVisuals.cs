@@ -25,7 +25,7 @@ public class PlayerHookVisuals : MonoBehaviour
         chainLineRenderer.enabled = true;
         chainLineRenderer.positionCount = 2;
         var positions = new List<Vector3>();
-        positions.Add(targetHook.position);
+        positions.Add(new Vector2(targetHook.position.x, targetHook.position.y));
         positions.Add(player.position);
         chainLineRenderer.SetPositions(positions.ToArray());
     }
@@ -33,6 +33,6 @@ public class PlayerHookVisuals : MonoBehaviour
     public void KillHook()
     {
         chainLineRenderer.enabled = false;
-        chainLineRenderer.enabled = false;
+        chainEndSpriteRenderer.enabled = false;
     }
 }

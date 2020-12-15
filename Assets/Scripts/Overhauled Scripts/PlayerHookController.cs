@@ -25,6 +25,7 @@ public class PlayerHookController : MonoBehaviour
     private GameObject swingAnchor;
     private GameObject selectedTargetAnchor;
     private bool goClockwise = true;
+    [SerializeField] private bool shouldDrawHook = false;
 
     private GameObject myAnchor = null;
     private GameObject mySelectedTargetAnchor = null;
@@ -37,6 +38,14 @@ public class PlayerHookController : MonoBehaviour
         swingAnchor = new GameObject();
         selectedTargetAnchor = new GameObject();
         player = gameObject.GetComponent<PlayerControlsNew>();
+    }
+
+    private void Update()
+    {
+        if (shouldDrawHook)
+        {
+            hookVisualsScript.DrawHook();
+        }
     }
 
     public void giveTheHookControllerTheSelectedTarget(Transform theTarget)
@@ -135,7 +144,7 @@ public class PlayerHookController : MonoBehaviour
             myRigidbody.gravityScale = 0;
             //This is where the player actually finally moves
             myRigidbody.velocity = (destination - myRigidbody.position).normalized * hookingSpeed;
-            hookVisualsScript.DrawHook();
+            shouldDrawHook = true;
         }
     }
 
@@ -173,16 +182,25 @@ public class PlayerHookController : MonoBehaviour
         myRigidbody.velocity = (new Vector2(myAnchor.transform.position.x, myAnchor.transform.position.y) - myRigidbody.position) / Time.deltaTime;
         myRigidbody.MovePosition(myAnchor.transform.position);
         Debug.DrawLine(myRigidbody.position, destination, Color.green);
-        hookVisualsScript.DrawHook();
+        shouldDrawHook = true;
     }
 
-    public void SwingKiller()
+    public void SwingKiller(bool isDead)
     {
         myAnchor.transform.SetParent(null);
         Destroy(myAnchor);
         Destroy(mySelectedTargetAnchor);
-        player.LeaveHookThrough();
+        if (!isDead)
+        {
+            player.LeaveHookThrough();
+        }
         hookVisualsScript.KillHook();
+    }
+
+    public void killHookVisuals()
+    {
+        hookVisualsScript.KillHook();
+        shouldDrawHook = false;
     }
 
     IEnumerator Hitfreeze()
