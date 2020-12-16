@@ -131,6 +131,11 @@ public class PlayerControlsNew : MonoBehaviour
         myRigidBody.velocity = Vector2.zero;
     }
 
+    public void SetCheckPointToThis(Vector3 here)
+    {
+        currentCheckpoint = here;
+    }
+
     public void SetGrounded(bool grounded)
     {
         if (grounded && currentState != (PlayerState.DYING))

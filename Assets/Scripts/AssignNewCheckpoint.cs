@@ -14,10 +14,10 @@ public class AssignNewCheckpoint : MonoBehaviour
     private bool triggeredBefore;
     private void OnTriggerStay2D(Collider2D collision)
     {
-        var PlayerControls = collision.gameObject.GetComponent<PlayerControls>();
+        var PlayerControls = collision.gameObject.GetComponent<PlayerControlsNew>();
         if (PlayerControls != null)
         {
-            PlayerControls.currentCheckpoint = spawnLocation.transform;
+            PlayerControls.SetCheckPointToThis(spawnLocation.transform.position);
             if(triggeredBefore == false && enableAnalyticsTracking)
             {
                 if (enableStartProgressionTracking)
