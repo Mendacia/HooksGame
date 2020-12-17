@@ -33,11 +33,12 @@ public class PlayerControlsNew : MonoBehaviour
     [Header("Visible in inspector for tweaking purposes")]
     [SerializeField] private float requiredMagnitudeForDustOnCollision = 50;
     [SerializeField] private float playerGroundedForce = 20;
+    [SerializeField] private float playerAirborneMoveSpeed = 0.5f;
     [SerializeField] private float playerJumpForce = 30;
     [SerializeField] private float airborneSpeedCap = 5;
     [SerializeField] private float defaultGravityScale = 5;
 
-    [SerializeField] private float myMagnitude;
+    [SerializeField] private float myMagnitude = 0;
 
 
 
@@ -197,6 +198,18 @@ public class PlayerControlsNew : MonoBehaviour
         canHookFromThisState = canHook;
     }
 
+    public bool ShouldILoadScene()
+    {
+        if (currentState == PlayerState.HOOK && hookController.playerIsHookingThrough == false)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     public float GetPlayerVelocity() => myRigidBody.velocity.magnitude;
 
     public bool GetPlayerCanHookFromState() => canHookFromThisState;
@@ -265,11 +278,11 @@ public class PlayerControlsNew : MonoBehaviour
 
         if (Input.GetKey(inputScript.right) && myRigidBody.velocity.x < airborneSpeedCap)
         {
-            xIntent += 0.5f;
+            xIntent += playerAirborneMoveSpeed;
         }
         if (Input.GetKey(inputScript.left) && myRigidBody.velocity.x > -airborneSpeedCap)
         {
-            xIntent -= 0.5f;
+            xIntent -= playerAirborneMoveSpeed;
         }
 
         //Artificial Friction

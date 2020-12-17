@@ -183,6 +183,8 @@ public class PlayerHookController : MonoBehaviour
         myRigidbody.MovePosition(myAnchor.transform.position);
         Debug.DrawLine(myRigidbody.position, destination, Color.green);
         shouldDrawHook = true;
+        //Watch this intently, it's worrying
+        hookVisualsScript.GiveTheHookVisualsScriptTheSelectedTarget(selectedTarget);
     }
 
     public void SwingKiller(bool isDead)
