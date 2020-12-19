@@ -43,12 +43,19 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 096357dc698f27f408fd5f8269ebeeea, type: 3}
-    totalSpriteSurfaceArea: 38656
+    totalSpriteSurfaceArea: 51456
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 1597356546601532498, guid: 0ccf7c6246e315a4f87654d11392bfd8, type: 3}
+  - {fileID: -3954783662540861956, guid: 0ccf7c6246e315a4f87654d11392bfd8, type: 3}
+  - {fileID: -8466922166565029272, guid: 0ccf7c6246e315a4f87654d11392bfd8, type: 3}
+  - {fileID: 5183995428388549095, guid: 0ccf7c6246e315a4f87654d11392bfd8, type: 3}
+  - {fileID: -4080352280602649766, guid: 0ccf7c6246e315a4f87654d11392bfd8, type: 3}
+  - {fileID: 1016106083187156251, guid: 0ccf7c6246e315a4f87654d11392bfd8, type: 3}
+  - {fileID: 3776004224571983712, guid: 0ccf7c6246e315a4f87654d11392bfd8, type: 3}
   - {fileID: -4685391132033899694, guid: a42ce6871726b5d4cbc28087602bbbb6, type: 3}
   - {fileID: -2411247445559563415, guid: a42ce6871726b5d4cbc28087602bbbb6, type: 3}
   - {fileID: 6680675988988378581, guid: a42ce6871726b5d4cbc28087602bbbb6, type: 3}
@@ -120,12 +127,35 @@ SpriteAtlas:
   - {fileID: 603062320218229911, guid: 3208dd09337a74140852ec4f13dbc276, type: 3}
   - {fileID: -6831608585380166586, guid: 3208dd09337a74140852ec4f13dbc276, type: 3}
   - {fileID: -5314283192140629482, guid: 3208dd09337a74140852ec4f13dbc276, type: 3}
+  - {fileID: 2154354070547591868, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: -2575624384435570894, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: -3109598706305350065, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: -2420733723310505027, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: 643026830021983264, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: 7037294829258797629, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: -6372381315443390776, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: 7937679643918884610, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: 9186986013565626927, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: -8517628323373608805, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: 7783064014514345779, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: -2890519634419017922, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: -1743910211655090841, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: 25613678197067853, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: -2151749326789677483, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: 3663108726175087911, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: 5350013615617467145, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: 4997604141864298340, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: -1934967207427958193, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
   - {fileID: -2852588338525221161, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
   - {fileID: -1093244752496285998, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
   - {fileID: 3605998720921712576, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
   - {fileID: -4499234164932062347, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
   - {fileID: 3227659380832050438, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
   - {fileID: -5987594689168082498, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: -1376962645582146073, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: -7296043135306282469, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: 1963391582241298177, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
+  - {fileID: 9208360748203320987, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
   - {fileID: 3463362831289052904, guid: 0d026c5c07c34ae438ff95d3f20eaa34, type: 3}
   - {fileID: -4984614665777643913, guid: 0d026c5c07c34ae438ff95d3f20eaa34, type: 3}
   - {fileID: 4843572397536088946, guid: 0d026c5c07c34ae438ff95d3f20eaa34, type: 3}
@@ -151,6 +181,26 @@ SpriteAtlas:
   - {fileID: -4261531379009258343, guid: 0d026c5c07c34ae438ff95d3f20eaa34, type: 3}
   - {fileID: 4077443710405884951, guid: 0d026c5c07c34ae438ff95d3f20eaa34, type: 3}
   - {fileID: -2000176433679708693, guid: 0d026c5c07c34ae438ff95d3f20eaa34, type: 3}
+  - {fileID: 4236776655368602199, guid: 7627e09c399c4b14ebccca6ba8b0e4d6, type: 3}
+  - {fileID: 6742029299873374112, guid: 7627e09c399c4b14ebccca6ba8b0e4d6, type: 3}
+  - {fileID: -5082129550251406414, guid: 7627e09c399c4b14ebccca6ba8b0e4d6, type: 3}
+  - {fileID: 1833508720835068712, guid: 7627e09c399c4b14ebccca6ba8b0e4d6, type: 3}
+  - {fileID: -8319562898065256717, guid: 7627e09c399c4b14ebccca6ba8b0e4d6, type: 3}
+  - {fileID: 4468026849933760229, guid: 7627e09c399c4b14ebccca6ba8b0e4d6, type: 3}
+  - {fileID: 4394095091161024613, guid: 7627e09c399c4b14ebccca6ba8b0e4d6, type: 3}
+  - {fileID: 7276357067355513395, guid: 7627e09c399c4b14ebccca6ba8b0e4d6, type: 3}
+  - {fileID: 611127463528630921, guid: 7627e09c399c4b14ebccca6ba8b0e4d6, type: 3}
+  - {fileID: -5738275928522688273, guid: 7627e09c399c4b14ebccca6ba8b0e4d6, type: 3}
+  - {fileID: 1742314798572191124, guid: 7627e09c399c4b14ebccca6ba8b0e4d6, type: 3}
+  - {fileID: 9146815136839861458, guid: 7627e09c399c4b14ebccca6ba8b0e4d6, type: 3}
+  - {fileID: 4176969978732014051, guid: 7627e09c399c4b14ebccca6ba8b0e4d6, type: 3}
+  - {fileID: 6872487924899027207, guid: 7627e09c399c4b14ebccca6ba8b0e4d6, type: 3}
+  - {fileID: 7738669000874745516, guid: 7627e09c399c4b14ebccca6ba8b0e4d6, type: 3}
+  - {fileID: 737052587956928007, guid: 7627e09c399c4b14ebccca6ba8b0e4d6, type: 3}
+  - {fileID: 574556408825127622, guid: 7627e09c399c4b14ebccca6ba8b0e4d6, type: 3}
+  - {fileID: -9150938650654150008, guid: 7627e09c399c4b14ebccca6ba8b0e4d6, type: 3}
+  - {fileID: 5895573284403040671, guid: 7627e09c399c4b14ebccca6ba8b0e4d6, type: 3}
+  - {fileID: 1639038157238777911, guid: 7627e09c399c4b14ebccca6ba8b0e4d6, type: 3}
   - {fileID: -7406969764619419047, guid: f26061af814f03f40a6867d6533e78c9, type: 3}
   - {fileID: -2238827322822127518, guid: f26061af814f03f40a6867d6533e78c9, type: 3}
   - {fileID: 584973040747271269, guid: f26061af814f03f40a6867d6533e78c9, type: 3}
@@ -201,6 +251,13 @@ SpriteAtlas:
   - {fileID: -4297968543785810427, guid: f26061af814f03f40a6867d6533e78c9, type: 3}
   - {fileID: 6474258808727852491, guid: f26061af814f03f40a6867d6533e78c9, type: 3}
   m_PackedSpriteNamesToIndex:
+  - Semisolid Floor_2
+  - Semisolid Floor_5
+  - Semisolid Floor_4
+  - Semisolid Floor_6
+  - Semisolid Floor_1
+  - Semisolid Floor_0
+  - Semisolid Floor_3
   - Dirt_9
   - Dirt_8
   - Dirt_5
@@ -272,12 +329,35 @@ SpriteAtlas:
   - Bouncey_15
   - Bouncey_16
   - Bouncey_17
+  - Background Details_13
+  - Background Details_12
+  - Background Details_11
+  - Background Details_10
+  - Background Details_26
+  - Background Details_17
+  - Background Details_27
+  - Background Details_16
+  - Background Details_24
+  - Background Details_15
+  - Background Details_25
+  - Background Details_14
+  - Background Details_22
+  - Background Details_23
+  - Background Details_20
+  - Background Details_19
+  - Background Details_21
+  - Background Details_18
+  - Background Details_28
   - Background Details_0
   - Background Details_1
   - Background Details_2
   - Background Details_3
   - Background Details_4
   - Background Details_5
+  - Background Details_6
+  - Background Details_7
+  - Background Details_8
+  - Background Details_9
   - Floating Spikes_23
   - Floating Spikes_22
   - Floating Spikes_18
@@ -303,6 +383,26 @@ SpriteAtlas:
   - Floating Spikes_6
   - Floating Spikes_5
   - Floating Spikes_4
+  - Wall Mounted Spikes_9
+  - Wall Mounted Spikes_8
+  - Wall Mounted Spikes_1
+  - Wall Mounted Spikes_0
+  - Wall Mounted Spikes_3
+  - Wall Mounted Spikes_2
+  - Wall Mounted Spikes_5
+  - Wall Mounted Spikes_4
+  - Wall Mounted Spikes_7
+  - Wall Mounted Spikes_6
+  - Wall Mounted Spikes_18
+  - Wall Mounted Spikes_19
+  - Wall Mounted Spikes_10
+  - Wall Mounted Spikes_11
+  - Wall Mounted Spikes_12
+  - Wall Mounted Spikes_13
+  - Wall Mounted Spikes_14
+  - Wall Mounted Spikes_15
+  - Wall Mounted Spikes_16
+  - Wall Mounted Spikes_17
   - Flooring_22
   - Flooring_23
   - Flooring_20

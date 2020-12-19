@@ -14,13 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_DefaultSprite: {fileID: -2852588338525221161, guid: 0b9d938bda5fd4f49a0b9057058bbe1f,
     type: 3}
-  m_DefaultGameObject: {fileID: 0}
+  m_DefaultGameObject: {fileID: 6113616087963577897, guid: e4be0c11fc7c91e47bbdd01e9b237382,
+    type: 3}
   m_DefaultColliderType: 1
   m_TilingRules:
   - m_Id: 0
     m_Sprites:
     - {fileID: -2852588338525221161, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
-    m_GameObject: {fileID: 0}
+    m_GameObject: {fileID: 6113616087963577897, guid: e4be0c11fc7c91e47bbdd01e9b237382,
+      type: 3}
     m_AnimationSpeed: 1
     m_PerlinScale: 0.5
     m_Output: 0

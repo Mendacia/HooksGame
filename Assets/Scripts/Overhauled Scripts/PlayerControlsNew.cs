@@ -27,6 +27,7 @@ public class PlayerControlsNew : MonoBehaviour
     [SerializeField] private InputGod inputScript;
     [SerializeField] private GameObject deadClone = null;
     [SerializeField] private GameObject dustEffect = null;
+    private List<DisableSemisolidWhileHooking> disableSemisolidScript = new List<DisableSemisolidWhileHooking>();
     private PlayerHookController hookController;
     private PlayerAnimatorController animScript;
 
@@ -49,6 +50,12 @@ public class PlayerControlsNew : MonoBehaviour
         hookController = GetComponent<PlayerHookController>();
         animScript = GetComponent<PlayerAnimatorController>();
         Time.timeScale = 1;
+    }
+
+    public void addMeToTheSemiSolidList(DisableSemisolidWhileHooking script)
+    {
+        disableSemisolidScript.Add(script);
+        Debug.Log(disableSemisolidScript.Count);
     }
 
     private void Update()
@@ -107,8 +114,26 @@ public class PlayerControlsNew : MonoBehaviour
                     SwingControlsFixedUpdate();
                     break;
                 }
+            case PlayerState.DYING:
+            {
+                break;
+            }
             default:
                 {
+                    if (yIntent > 0.01)
+                    {
+                        foreach (DisableSemisolidWhileHooking script in disableSemisolidScript)
+                        {
+                            script.DisablePlatform();
+                        }
+                    }
+                    else
+                    {
+                        foreach (DisableSemisolidWhileHooking script in disableSemisolidScript)
+                        {
+                            script.EnablePlatform();
+                        }
+                    }
                     break;
                 }
         }
@@ -124,12 +149,20 @@ public class PlayerControlsNew : MonoBehaviour
         //Note that SWING leaves through here too
         currentState = PlayerState.AIRBORNE;
         hookController.killHookVisuals();
+        foreach(DisableSemisolidWhileHooking script in disableSemisolidScript)
+        {
+            script.EnablePlatform();
+        }
     }
     public void LeaveHookDrop()
     {
         currentState = PlayerState.AIRBORNE;
         hookController.killHookVisuals();
         myRigidBody.velocity = Vector2.zero;
+        foreach (DisableSemisolidWhileHooking script in disableSemisolidScript)
+        {
+            script.EnablePlatform();
+        }
     }
 
     public void SetCheckPointToThis(Vector3 here)
@@ -147,6 +180,10 @@ public class PlayerControlsNew : MonoBehaviour
                 hookController.SwingKiller(true);
                 isSwinging = false;
                 hookController.killHookVisuals();
+                foreach (DisableSemisolidWhileHooking script in disableSemisolidScript)
+                {
+                    script.EnablePlatform();
+                }
             }
         }
 
@@ -167,6 +204,10 @@ public class PlayerControlsNew : MonoBehaviour
                 {
                     currentState = PlayerState.AIRBORNE;
                     hookController.killHookVisuals();
+                    foreach (DisableSemisolidWhileHooking script in disableSemisolidScript)
+                    {
+                        script.EnablePlatform();
+                    }
                     break;
                 }
             case PlayerState.SWING:
@@ -175,6 +216,10 @@ public class PlayerControlsNew : MonoBehaviour
                     hookController.SwingKiller(true);
                     isSwinging = false;
                     hookController.killHookVisuals();
+                    foreach (DisableSemisolidWhileHooking script in disableSemisolidScript)
+                    {
+                        script.EnablePlatform();
+                    }
                     break;
                 }
             default:
@@ -240,18 +285,30 @@ public class PlayerControlsNew : MonoBehaviour
             currentState = PlayerState.HOOK;
             hookController.InitiateHook();
             hookController.playerIsHookingThrough = true;
+            foreach (DisableSemisolidWhileHooking script in disableSemisolidScript)
+            {
+                script.DisablePlatform();
+            }
         }
         if (Input.GetMouseButtonDown(2) && canHookFromThisState)
         {
             currentState = PlayerState.HOOK;
             hookController.InitiateHook();
             hookController.playerIsHookingThrough = false;
+            foreach (DisableSemisolidWhileHooking script in disableSemisolidScript)
+            {
+                script.DisablePlatform();
+            }
         }
         if (Input.GetMouseButtonDown(1) && canHookFromThisState)
         {
             currentState = PlayerState.SWING;
             hookController.InitiateHook();
             hookController.SwingSetup();
+            foreach (DisableSemisolidWhileHooking script in disableSemisolidScript)
+            {
+                script.DisablePlatform();
+            }
         }
 
         playerIsCurrentlyInSomeKindOfHookState = false;
@@ -304,18 +361,30 @@ public class PlayerControlsNew : MonoBehaviour
             currentState = PlayerState.HOOK;
             hookController.InitiateHook();
             hookController.playerIsHookingThrough = true;
+            foreach (DisableSemisolidWhileHooking script in disableSemisolidScript)
+            {
+                script.DisablePlatform();
+            }
         }
         if (Input.GetMouseButtonDown(2) && canHookFromThisState)
         {
             currentState = PlayerState.HOOK;
             hookController.InitiateHook();
             hookController.playerIsHookingThrough = false;
+            foreach (DisableSemisolidWhileHooking script in disableSemisolidScript)
+            {
+                script.DisablePlatform();
+            }
         }
         if (Input.GetMouseButtonDown(1) && canHookFromThisState)
         {
             currentState = PlayerState.SWING;
             hookController.InitiateHook();
             hookController.SwingSetup();
+            foreach (DisableSemisolidWhileHooking script in disableSemisolidScript)
+            {
+                script.DisablePlatform();
+            }
         }
 
         if (xIntent == 0)
@@ -362,9 +431,12 @@ public class PlayerControlsNew : MonoBehaviour
         {
             hookController.SwingKiller(true);
             isSwinging = false;
-            hookController.killHookVisuals();
         }
         hookController.killHookVisuals();
+        foreach (DisableSemisolidWhileHooking script in disableSemisolidScript)
+        {
+            script.EnablePlatform();
+        }
 
         playerIsCurrentlyInSomeKindOfHookState = false;
         canHookFromThisState = false;

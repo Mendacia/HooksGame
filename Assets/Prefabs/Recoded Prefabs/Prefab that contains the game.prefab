@@ -1308,7 +1308,8 @@ MonoBehaviour:
     type: 3}
   requiredMagnitudeForDustOnCollision: 21
   playerGroundedForce: 20
-  playerJumpForce: 30
+  playerAirborneMoveSpeed: 1
+  playerJumpForce: 25
   airborneSpeedCap: 15
   defaultGravityScale: 5
   myMagnitude: 0
@@ -1329,7 +1330,7 @@ MonoBehaviour:
   rotationalSpeed: 5
   maximumRotationalSpeed: 750
   rotationalAcceleration: 1
-  hookingSpeed: 50
+  hookingSpeed: 40
   shouldDrawHook: 0
   myRadius: 0
 --- !u!114 &7079023072346389104
