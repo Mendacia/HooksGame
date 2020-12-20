@@ -57,7 +57,6 @@ public class CursorInputControls : MonoBehaviour
             else
             {
                 cursorTargetingSnapper.transform.position = player.transform.position + vector.normalized * updatedTargetingRange;
-                Debug.Log(updatedTargetingRange);
             }
             player.CanPlayerHook(false);
             aimIndicatorObject.GetComponent<Animator>().SetBool("ShouldRotate", false);

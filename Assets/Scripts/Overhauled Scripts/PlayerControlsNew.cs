@@ -22,6 +22,7 @@ public class PlayerControlsNew : MonoBehaviour
     [System.NonSerialized] public bool playerIsCurrentlyInSomeKindOfHookState = false;
     private bool canHookFromThisState = true;
     private bool isSwinging = false;
+    private bool collidedWithTheFloorLastFrame = true;
 
     [Header("Set these to their respective things")]
     [SerializeField] private InputGod inputScript;
@@ -198,6 +199,7 @@ public class PlayerControlsNew : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        collidedWithTheFloorLastFrame = true;
         switch (currentState)
         {
             case PlayerState.HOOK:
@@ -235,6 +237,29 @@ public class PlayerControlsNew : MonoBehaviour
                 Vector2 hitPoint = wallHit.point;
                 Instantiate(dustEffect, new Vector3(hitPoint.x, hitPoint.y, 0), Quaternion.identity);
             }
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if(currentState == PlayerState.SWING && collidedWithTheFloorLastFrame == false)
+        {
+            currentState = PlayerState.AIRBORNE;
+            hookController.SwingKiller(true);
+            isSwinging = false;
+            hookController.killHookVisuals();
+            foreach (DisableSemisolidWhileHooking script in disableSemisolidScript)
+            {
+                script.EnablePlatform();
+            }
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (currentState == PlayerState.SWING)
+        {
+            collidedWithTheFloorLastFrame = false;
         }
     }
 
@@ -387,18 +412,24 @@ public class PlayerControlsNew : MonoBehaviour
             }
         }
 
+        bool isMovingRight =false;
+        bool isntMoving = false;
+        bool isMovingUp = true;
         if (xIntent == 0)
         {
-            animScript.PlayJumpingAnimation(true, true);
+            isMovingRight = true;
+            isntMoving = true;
         }
         else if (xIntent > 0)
         {
-            animScript.PlayJumpingAnimation(true, false);
+            isMovingRight = true;
         }
-        else if (xIntent < 0)
+
+        if(yIntent < 0)
         {
-            animScript.PlayJumpingAnimation(false, false);
+            isMovingUp = false;
         }
+        animScript.PlayJumpingAnimation(isMovingRight, isntMoving, isMovingUp);
 
 
         playerIsCurrentlyInSomeKindOfHookState = false;
@@ -410,6 +441,25 @@ public class PlayerControlsNew : MonoBehaviour
         canHookFromThisState = false;
         playerIsCurrentlyInSomeKindOfHookState = true;
         myRigidBody.gravityScale = 0;
+
+        bool isMovingRight = false;
+        bool isntMoving = false;
+        bool isMovingUp = true;
+        if (xIntent == 0)
+        {
+            isMovingRight = true;
+            isntMoving = true;
+        }
+        else if (xIntent > 0)
+        {
+            isMovingRight = true;
+        }
+
+        if (yIntent < 0)
+        {
+            isMovingUp = false;
+        }
+        animScript.PlayJumpingAnimation(isMovingRight, isntMoving, isMovingUp);
     }
 
     private void SwingControlsUpdate()
@@ -418,11 +468,33 @@ public class PlayerControlsNew : MonoBehaviour
         playerIsCurrentlyInSomeKindOfHookState = true;
         myRigidBody.gravityScale = 0;
         isSwinging = true;
+
+        bool isMovingRight = false;
+        bool isntMoving = false;
+        bool isMovingUp = true;
+        if (xIntent == 0)
+        {
+            isMovingRight = false;
+            isntMoving = true;
+        }
+        else if (xIntent > 0)
+        {
+            isMovingRight = true;
+        }
+
+        if (yIntent < 0)
+        {
+            isMovingUp = false;
+        }
+        animScript.PlayJumpingAnimation(isMovingRight, isntMoving, isMovingUp);
+
         if (Input.GetMouseButtonUp(1))
         {
             hookController.SwingKiller(false);
             isSwinging = false;
         }
+
+
     }
 
     private void DyingUpdate()

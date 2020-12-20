@@ -7,11 +7,14 @@ public class PlayerAnimatorController : MonoBehaviour
     [SerializeField] private Animator playerAnimator = null;
     private string currentAnimation;
     private Vector3 myScale;
-    private bool wasGroundedLastFrame = true;
+    [SerializeField] private bool wasGroundedLastFrame = true;
+    [SerializeField] private bool switcher = false;
 
     const string PLAYER_IDLE = "ScholarIdle";
     const string PLAYER_WALK = "ScholarWalk";
     const string PLAYER_JUMP = "ScholarTakeOff";
+    const string PLAYER_ASCENDING = "ScholarJumping";
+    const string PLAYER_FALLING = "ScholarFalling";
 
     private void Start()
     {
@@ -39,7 +42,8 @@ public class PlayerAnimatorController : MonoBehaviour
         wasGroundedLastFrame = true;
     }
 
-    public void PlayJumpingAnimation(bool isMovingRight, bool isntMoving)
+
+    public void PlayJumpingAnimation(bool isMovingRight, bool isntMoving, bool isMovingUp)
     {
         if (wasGroundedLastFrame)
         {
@@ -57,6 +61,17 @@ public class PlayerAnimatorController : MonoBehaviour
         else  if (!isMovingRight)
         {
             playerAnimator.gameObject.transform.localScale = myScale;
+        }
+
+        if (isMovingUp == true && switcher == true)
+        {
+            playerAnimator.Play(PLAYER_ASCENDING);
+            switcher = false;
+        }
+        if (isMovingUp == false && switcher == false)
+        {
+            playerAnimator.Play(PLAYER_FALLING);
+            switcher = true;
         }
     }
 }

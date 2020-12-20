@@ -5,6 +5,7 @@ using UnityEngine;
 public class GroundCheckNew : MonoBehaviour
 {
     public PlayerControlsNew player;
+
     private bool iAmStillGroundedTheresJustMoreThanOneColliderHereDickhead;
 
     private void Update()
@@ -19,7 +20,6 @@ public class GroundCheckNew : MonoBehaviour
             iAmStillGroundedTheresJustMoreThanOneColliderHereDickhead = true;
         }
     }
-
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Ground" && iAmStillGroundedTheresJustMoreThanOneColliderHereDickhead == false)

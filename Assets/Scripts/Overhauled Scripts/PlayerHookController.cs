@@ -8,6 +8,7 @@ public class PlayerHookController : MonoBehaviour
     private PlayerControlsNew player = null;
     [SerializeField] private InputGod inputScript = null;
     [SerializeField] private PlayerHookVisuals hookVisualsScript = null;
+    [SerializeField] private AudioClip chainClinkSound = null;
 
     [Header("Variables for swing function, these are scary, name them better later")]
     [SerializeField] private float rotationalSpeed = 5;
@@ -27,13 +28,16 @@ public class PlayerHookController : MonoBehaviour
     private bool goClockwise = true;
     [SerializeField] private bool shouldDrawHook = false;
 
+    private AudioSource myAudioScource;
     private GameObject myAnchor = null;
     private GameObject mySelectedTargetAnchor = null;
+    private bool overrideSwingControls = false;
 
     [SerializeField] private float myRadius = 0;
 
     private void Start()
     {
+        myAudioScource = gameObject.GetComponent<AudioSource>();
         myRigidbody = gameObject.GetComponent<Rigidbody2D>();
         swingAnchor = new GameObject();
         selectedTargetAnchor = new GameObject();
@@ -60,18 +64,27 @@ public class PlayerHookController : MonoBehaviour
             destination = selectedTarget.position;
         }
 
-        if (Mathf.Abs(myRigidbody.velocity.x) > Mathf.Abs(myRigidbody.velocity.y))
+        if (Mathf.Abs(myRigidbody.velocity.x * 1.5f) > Mathf.Abs(myRigidbody.velocity.y))
         {
+            Debug.Log("Higher X Speed");
             var xSigned = Mathf.Sign(myRigidbody.velocity.x);
             if (myRigidbody.position.y > destination.y)
             {
                 if (xSigned > 0)
                 {
                     goClockwise = true;
+                    if (Input.GetKey(inputScript.right))
+                    {
+                        overrideSwingControls = true;
+                    }
                 }
                 else
                 {
                     goClockwise = false;
+                    if (Input.GetKey(inputScript.left))
+                    {
+                        overrideSwingControls = true;
+                    }
                 }
             }
             else
@@ -79,26 +92,43 @@ public class PlayerHookController : MonoBehaviour
                 if (xSigned < 0)
                 {
                     goClockwise = true;
+                    if (Input.GetKey(inputScript.left))
+                    {
+                        overrideSwingControls = false;
+                    }
                 }
                 else
                 {
                     goClockwise = false;
+                    if (Input.GetKey(inputScript.left))
+                    {
+                        overrideSwingControls = false;
+                    }
 
                 }
             }
         }
         else
         {
+            Debug.Log("Higher Y Speed");
             var ySigned = Mathf.Sign(myRigidbody.velocity.y);
             if (myRigidbody.position.x > destination.x)
             {
                 if (ySigned > 0)
                 {
                     goClockwise = false;
+                    if (Input.GetKey(inputScript.right))
+                    {
+                        overrideSwingControls = false;
+                    }
                 }
                 else
                 {
                     goClockwise = true;
+                    if (Input.GetKey(inputScript.left))
+                    {
+                        overrideSwingControls = false;
+                    }
                 }
             }
             else
@@ -106,12 +136,24 @@ public class PlayerHookController : MonoBehaviour
                 if (ySigned < 0)
                 {
                     goClockwise = false;
+                    if (Input.GetKey(inputScript.left))
+                    {
+                        overrideSwingControls = false;
+                    }
                 }
                 else
                 {
                     goClockwise = true;
+                    if (Input.GetKey(inputScript.left))
+                    {
+                        overrideSwingControls = false;
+                    }
                 }
             }
+        }
+        if(!Input.GetKey(inputScript.left) && !Input.GetKey(inputScript.right))
+        {
+            overrideSwingControls = false;
         }
 
         // Find Tangent Speed
@@ -121,6 +163,7 @@ public class PlayerHookController : MonoBehaviour
 
         rotationalSpeed = (((myRigidbody.velocity.magnitude / radius) / (Mathf.PI/30)) * 6) * (goClockwise ? -1 : 1);
 
+        myAudioScource.PlayOneShot(chainClinkSound);
         StartCoroutine(Hitfreeze());
     }
 
@@ -145,6 +188,7 @@ public class PlayerHookController : MonoBehaviour
             //This is where the player actually finally moves
             myRigidbody.velocity = (destination - myRigidbody.position).normalized * hookingSpeed;
             shouldDrawHook = true;
+            myAudioScource.PlayOneShot(chainClinkSound);
         }
     }
 
@@ -158,23 +202,41 @@ public class PlayerHookController : MonoBehaviour
 
     public void Swing()
     {
-
-        if (!Input.GetKey(inputScript.left) && !Input.GetKey(inputScript.right))
+        if (!overrideSwingControls)
         {
-            accelerationIntent = 0;
+            if (!Input.GetKey(inputScript.left) && !Input.GetKey(inputScript.right))
+            {
+                accelerationIntent = 0;
+            }
+            else if (Input.GetKey(inputScript.left))
+            {
+                accelerationIntent += -1;
+            }
+            else if (Input.GetKey(inputScript.right))
+            {
+                accelerationIntent += 1;
+            }
         }
-        else if (Input.GetKey(inputScript.left))
+        else if (overrideSwingControls)
         {
-            accelerationIntent += -1;
-        }
-        else if (Input.GetKey(inputScript.right))
-        {
-            accelerationIntent += 1;
+            if (!Input.GetKey(inputScript.right) && !Input.GetKey(inputScript.left))
+            {
+                accelerationIntent = 0;
+            }
+            else if (Input.GetKey(inputScript.right))
+            {
+                accelerationIntent += -1;
+            }
+            else if (Input.GetKey(inputScript.left))
+            {
+                accelerationIntent += 1;
+            }
         }
 
         if (accelerationIntent != 0)
         {
             rotationalSpeed = rotationalSpeed + (rotationalAcceleration * accelerationIntent) * Time.deltaTime;
+            accelerationIntent -= 0.75f;
         }
         rotationalSpeed = Mathf.Clamp(rotationalSpeed, -maximumRotationalSpeed, maximumRotationalSpeed);
 
@@ -192,6 +254,7 @@ public class PlayerHookController : MonoBehaviour
         myAnchor.transform.SetParent(null);
         Destroy(myAnchor);
         Destroy(mySelectedTargetAnchor);
+        accelerationIntent = 0;
         if (!isDead)
         {
             player.LeaveHookThrough();

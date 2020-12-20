@@ -5,25 +5,44 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public CursorControls cursorControlScript;
+    private InputGod inputGodScript;
     public GameObject pauseUI;
     public Animator pauseAnims;
+    private bool menuIsOpen = false;
+    private bool menuIsOpenStalled = false;
+
+    private void Awake()
+    {
+        inputGodScript = GameObject.Find("Prefab that contains the game").GetComponent<InputGod>();
+    }
+
+    private void LateUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)&& menuIsOpenStalled)
+        {
+            MenuContinueGame();
+        }
+
+        menuIsOpenStalled = menuIsOpen;
+    }
 
     public void OpenMenu()
     {
-        pauseAnims.SetTrigger("OpenPause");
+        pauseAnims.Play("UI Pause Initialize");
+        menuIsOpen = true;
+        Cursor.visible = true;
     }
 
     public void MenuContinueGame()
     {
-        Debug.Log("Continue");
-        pauseAnims.SetTrigger("ClosePause");
-        cursorControlScript.ContinueGame();
+        pauseAnims.Play("UI Pause Close");
+        menuIsOpen = false;
+        Cursor.visible = false;
+        inputGodScript.Resume();
     }
 
     public void QuitGame()
     {
-        Debug.Log("Quitting Game");
         Application.Quit();
     }
 }
