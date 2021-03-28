@@ -43,7 +43,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 096357dc698f27f408fd5f8269ebeeea, type: 3}
-    totalSpriteSurfaceArea: 51456
+    totalSpriteSurfaceArea: 60672
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -127,6 +127,42 @@ SpriteAtlas:
   - {fileID: 603062320218229911, guid: 3208dd09337a74140852ec4f13dbc276, type: 3}
   - {fileID: -6831608585380166586, guid: 3208dd09337a74140852ec4f13dbc276, type: 3}
   - {fileID: -5314283192140629482, guid: 3208dd09337a74140852ec4f13dbc276, type: 3}
+  - {fileID: 4665754814192634931, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: 7276821006272191640, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: 4723860378933722594, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: 7115444729201417543, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: -2053567543937156365, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: 6606519196741083199, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: -4735023578549478121, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: 5698421050025523998, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: -7898607062563059996, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: 1445607782161402794, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: 4151796607520628503, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: 1029764728456043167, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: 8889201150957715166, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: -1847556566084190151, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: -345945969064842238, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: -4850723767118306123, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: 6113850143395535456, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: 9189716506864644732, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: 6027523223127536178, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: 6803873404882588446, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: -4025644675222363007, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: -1732287868377070896, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: -4789920915832460895, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: 3413917792567487076, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: 8774771162297685231, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: -8715313298101062840, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: 2396687116580100762, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: -7760689114061062891, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: 2009837758580240588, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: -8029605084744564836, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: -7499623508142435001, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: -5230742613190594963, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: 3104028354595253596, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: 8485152486424521904, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: 8440829703748779819, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
+  - {fileID: -8205160038121189728, guid: ca47a01a7f79ff946a9d85dcd405ffc0, type: 3}
   - {fileID: 2154354070547591868, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
   - {fileID: -2575624384435570894, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
   - {fileID: -3109598706305350065, guid: 0b9d938bda5fd4f49a0b9057058bbe1f, type: 3}
@@ -329,6 +365,42 @@ SpriteAtlas:
   - Bouncey_15
   - Bouncey_16
   - Bouncey_17
+  - Conveyor_18
+  - Conveyor_19
+  - Conveyor_10
+  - Conveyor_11
+  - Conveyor_12
+  - Conveyor_13
+  - Conveyor_14
+  - Conveyor_15
+  - Conveyor_16
+  - Conveyor_17
+  - Conveyor_34
+  - Conveyor_35
+  - Conveyor_32
+  - Conveyor_33
+  - Conveyor_30
+  - Conveyor_31
+  - Conveyor_9
+  - Conveyor_8
+  - Conveyor_1
+  - Conveyor_0
+  - Conveyor_3
+  - Conveyor_2
+  - Conveyor_5
+  - Conveyor_4
+  - Conveyor_7
+  - Conveyor_6
+  - Conveyor_21
+  - Conveyor_20
+  - Conveyor_23
+  - Conveyor_22
+  - Conveyor_25
+  - Conveyor_24
+  - Conveyor_27
+  - Conveyor_26
+  - Conveyor_29
+  - Conveyor_28
   - Background Details_13
   - Background Details_12
   - Background Details_11
