@@ -5,16 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    private InputGod inputGodScript;
+    [SerializeField] private InputGod inputGodScript;
     public GameObject pauseUI;
     public Animator pauseAnims;
     private bool menuIsOpen = false;
     private bool menuIsOpenStalled = false;
-
-    private void Awake()
-    {
-        inputGodScript = GameObject.Find("Prefab that contains the game").GetComponent<InputGod>();
-    }
 
     private void LateUpdate()
     {
