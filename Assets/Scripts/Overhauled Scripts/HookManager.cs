@@ -48,7 +48,7 @@ public class HookManager : MonoBehaviour
                 //Hit Wall
                 continue;
             }
-            if (hookAndWallDetectionRaycast.collider.gameObject.tag == "Hook")
+            if (hookAndWallDetectionRaycast.collider.gameObject.transform == potentialTarget)
             {
                 Vector2 directionToTarget = potentialTarget.position - cursorLocation;
                 float dSqrToTarget = directionToTarget.sqrMagnitude;

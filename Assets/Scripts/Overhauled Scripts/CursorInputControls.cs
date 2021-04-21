@@ -13,7 +13,7 @@ public class CursorInputControls : MonoBehaviour
     [SerializeField] private float playerTargetingRange = 50;
     [SerializeField] private float cursorTargetingRange = 50;
     [SerializeField] private GameObject aimIndicatorObject = null;
-    private float updatedTargetingRange = 0;
+    [SerializeField] private float updatedTargetingRange = 0;
 
 
     private void Update()
