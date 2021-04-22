@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    [SerializeField] private bool isInLevelSelect = false;
     [SerializeField] private InputGod inputGodScript;
     public GameObject pauseUI;
     public Animator pauseAnims;
@@ -36,8 +37,20 @@ public class PauseMenu : MonoBehaviour
         inputGodScript.Resume();
     }
 
+    public void returnToLevelSelect()
+    {
+        SceneManager.LoadScene("Template Scene");
+    }
+
     public void QuitGame()
     {
-        Application.Quit();
+        if (isInLevelSelect)
+        {
+            Application.Quit();
+        }
+        else
+        {
+            returnToLevelSelect();
+        }
     }
 }
