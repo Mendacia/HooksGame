@@ -17,9 +17,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Hooks Recoded Levels/Hooks Recoded Testing.unity
     guid: 51b66067a83893d4a9c6828c052fb6ce
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Liam Level Set/Start Screen.unity
     guid: 79fd3fc61e7e2b74b8d585cad6f0e248
+  - enabled: 1
+    path: Assets/Scenes/Hooks Recoded Levels/Template Scene.unity
+    guid: 273dfa62156d5c44d81761535199d968
   - enabled: 1
     path: Assets/Scenes/Hooks Recoded Levels/Hooks Recoded Tutorial.unity
     guid: 0e4afa54d2e17eb409e72d53af759572
@@ -33,6 +36,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Hooks Recoded Levels/Hooks Recoded L3.unity
     guid: 74b1e09bedaf7944b9f73e2adb6d7148
   - enabled: 1
+    path: Assets/Scenes/Hooks Recoded Levels/Exhibition Scene.unity
+    guid: 3922d075de07fb341b1334cd18fe2157
+  - enabled: 0
     path: Assets/Scenes/Hooks Recoded Levels/Hooks Recoded Post.unity
     guid: 82d468d2825d390479aa49a82962126f
   m_configObjects: {}
