@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfa5d994d3008aa499cc263dce4b544f, type: 3}
+  m_Name: NemLines
+  m_EditorClassIdentifier: 
+  myLines:
+  - 'WHO THE FUCK ARE YOU!?
+
+    SHIT THE FUCK OFF KID.'
+  - 'I AM FILLING THIS TEXT BOX WITH
+
+    LETTERS TO SEE IF THIS WORKS
+
+    CORRECTLY
+    AND I WILL BE SO HAPPY
+
+    IF IT DOES'
+  currentDialogue: 1
