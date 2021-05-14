@@ -12,16 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfa5d994d3008aa499cc263dce4b544f, type: 3}
   m_Name: NemLines
   m_EditorClassIdentifier: 
-  myLines:
-  - 'WHO THE FUCK ARE YOU!?
-
-    SHIT THE FUCK OFF KID.'
-  - 'I AM FILLING THIS TEXT BOX WITH
-
-    LETTERS TO SEE IF THIS WORKS
-
-    CORRECTLY
-    AND I WILL BE SO HAPPY
-
-    IF IT DOES'
-  currentDialogue: 1
+  characterName: NEMESIA
+  characterSprite: {fileID: 21300000, guid: b1770226dd1e8864c9fd83c794ad92a8, type: 3}
+  textColor:
+    serializedVersion: 2
+    rgba: 4294311680

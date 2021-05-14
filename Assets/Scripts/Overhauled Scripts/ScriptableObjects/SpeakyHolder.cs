@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class SpeakyHolder : ScriptableObject
 {
-    [TextArea(7, 7)]public string[] myLines;
+    /*[TextArea(7, 7)]public string[] myLines;
     [SerializeField] private int currentDialogue = 0;
     private int thisLineCharacterCount = 0;
 
@@ -26,5 +26,8 @@ public class SpeakyHolder : ScriptableObject
         }
         currentDialogue++;
         return (myLines[currentDialogue-1]);
-    }
+    }*/
+    public string characterName;
+    public Sprite characterSprite;
+    public Color32 textColor;
 }

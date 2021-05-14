@@ -5,25 +5,35 @@ using UnityEngine.UI;
 
 public class Speaky : MonoBehaviour
 {
-    [SerializeField] private GameObject textbox;
-    [SerializeField] private Text text;
-    private bool playerInRange = false;
+    [Header("Set this to the appropriate character")]
     public SpeakyHolder mySpeaky = null;
 
+    [Header("This character's Lines in this instance")]
+    [TextArea(7, 7)] public string[] myLines;
+    [SerializeField] private int currentDialogue = 0;
+
+    [Header("Dialogue UI locations")]
+    [SerializeField] private GameObject textbox;
+    [SerializeField] private Text text;
+    [SerializeField] private Image portrait;
+    [SerializeField] private Text namePlate;
+
+
+    private bool playerInRange = false;
+    [Header("Visible for debug purposes")]
     [SerializeField] private string fullText = null;
     [SerializeField] private string displayedText = null;
-
-    private void Start()
-    {
-        mySpeaky.InitializeMe();
-    }
 
     private void Update()
     {
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
             textbox.SetActive(true);
-            fullText = mySpeaky.SetNextText();
+            portrait.sprite = mySpeaky.characterSprite;
+            namePlate.text = mySpeaky.characterName;
+            text.color = mySpeaky.textColor;
+            fullText = myLines[currentDialogue];
+            currentDialogue++;
             StartCoroutine(TextPopulator());
         }
     }
