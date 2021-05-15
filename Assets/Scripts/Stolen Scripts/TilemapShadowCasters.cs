@@ -15,6 +15,8 @@ public class TilemapShadowCasters : MonoBehaviour
     public string ShadowCasterContainerName = "shadow_casters";
     public List<GameObject> shadowCasters = new List<GameObject>();
     private int previousPointCount;
+    [SerializeField] private bool shouldShadeSelf = false;
+    [SerializeField] private Transform rootGeometryFolder = null;
 
     public void Start()
     {
@@ -88,7 +90,12 @@ public class TilemapShadowCasters : MonoBehaviour
             shadowPolygon.points = pathVertices;
             shadowPolygon.enabled = false;
             ShadowCaster2D shadowCasterComponent = shadowCaster.AddComponent<ShadowCaster2D>();
-            shadowCasterComponent.selfShadows = true;
+            shadowCasterComponent.selfShadows = shouldShadeSelf;
+            if(rootGeometryFolder != null)
+            {
+                shadowCaster.transform.position = rootGeometryFolder.transform.position;
+            }
+
         }
     }
 }
