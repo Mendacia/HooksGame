@@ -1,0 +1,2068 @@
+fileFormatVersion: 2
+guid: 7479fe8bb69e9f74cac53a8ec80b0734
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9182779858081454930
+    second: GrassEmission_0
+  - first:
+      213: -1445908738672454393
+    second: GrassEmission_1
+  - first:
+      213: 2044871727622185254
+    second: GrassEmission_2
+  - first:
+      213: 889960862374622081
+    second: GrassEmission_3
+  - first:
+      213: -7189373900577577843
+    second: GrassEmission_4
+  - first:
+      213: -3878716375972123067
+    second: GrassEmission_5
+  - first:
+      213: -2861700961970306505
+    second: GrassEmission_6
+  - first:
+      213: -6439527021011221226
+    second: GrassEmission_7
+  - first:
+      213: -2982362519240535662
+    second: GrassEmission_8
+  - first:
+      213: -5667376605813544649
+    second: GrassEmission_9
+  - first:
+      213: 1413329848869515620
+    second: GrassEmission_10
+  - first:
+      213: -2709162110647036119
+    second: GrassEmission_11
+  - first:
+      213: 1917306558096514736
+    second: GrassEmission_12
+  - first:
+      213: -2000376625704319944
+    second: GrassEmission_13
+  - first:
+      213: 4726108205297582405
+    second: GrassEmission_14
+  - first:
+      213: -5202454884158968014
+    second: GrassEmission_15
+  - first:
+      213: -8592466157040951821
+    second: GrassEmission_16
+  - first:
+      213: 9696279436345606
+    second: GrassEmission_17
+  - first:
+      213: 5811148518300790489
+    second: GrassEmission_18
+  - first:
+      213: -8623087321292495601
+    second: GrassEmission_19
+  - first:
+      213: 8347303439287797953
+    second: GrassEmission_20
+  - first:
+      213: 4377976921071964645
+    second: GrassEmission_21
+  - first:
+      213: -409106265710442660
+    second: GrassEmission_22
+  - first:
+      213: -3390993789264575214
+    second: GrassEmission_23
+  - first:
+      213: -4027404214136996301
+    second: GrassEmission_24
+  - first:
+      213: 310884042336124056
+    second: GrassEmission_25
+  - first:
+      213: 9037884707206587621
+    second: GrassEmission_26
+  - first:
+      213: -6919539334199661997
+    second: GrassEmission_27
+  - first:
+      213: -7997891215313399658
+    second: GrassEmission_28
+  - first:
+      213: 9106937230118744731
+    second: GrassEmission_29
+  - first:
+      213: -8439507619448603316
+    second: GrassEmission_30
+  - first:
+      213: -4141407105425121841
+    second: GrassEmission_31
+  - first:
+      213: -8223044114117015095
+    second: GrassEmission_32
+  - first:
+      213: 6216328671042644599
+    second: GrassEmission_33
+  - first:
+      213: 7836001776947182329
+    second: GrassEmission_34
+  - first:
+      213: 7371494904493904786
+    second: GrassEmission_35
+  - first:
+      213: -1366502434135587195
+    second: GrassEmission_36
+  - first:
+      213: -4872430360657659607
+    second: GrassEmission_37
+  - first:
+      213: 5605547675275621563
+    second: GrassEmission_38
+  - first:
+      213: -5165557293609271157
+    second: GrassEmission_39
+  - first:
+      213: 564658746763185646
+    second: GrassEmission_40
+  - first:
+      213: -8138120764208265036
+    second: GrassEmission_41
+  - first:
+      213: 7063924518816553219
+    second: GrassEmission_42
+  - first:
+      213: 8865907629294171492
+    second: GrassEmission_43
+  - first:
+      213: -661824757869830879
+    second: GrassEmission_44
+  - first:
+      213: -8509100858477544660
+    second: GrassEmission_45
+  - first:
+      213: -5631494012237959940
+    second: GrassEmission_46
+  - first:
+      213: 7351954754245723708
+    second: GrassEmission_47
+  - first:
+      213: 8791812160692891320
+    second: GrassEmission_48
+  - first:
+      213: 5743188172231737722
+    second: GrassEmission_49
+  - first:
+      213: 2211183464779556438
+    second: GrassEmission_50
+  - first:
+      213: -8122222874371534459
+    second: GrassEmission_51
+  - first:
+      213: -6204103343564259058
+    second: GrassEmission_52
+  - first:
+      213: 2607887912692692234
+    second: GrassEmission_53
+  - first:
+      213: -6915694549528958533
+    second: Grass Emission_0
+  - first:
+      213: -5956088531290913371
+    second: Grass Emission_1
+  - first:
+      213: -7463899972437092888
+    second: Grass Emission_2
+  - first:
+      213: -1980973494641888892
+    second: Grass Emission_3
+  - first:
+      213: 6954278765116207697
+    second: Grass Emission_4
+  - first:
+      213: -7601506798493863765
+    second: Grass Emission_5
+  - first:
+      213: -3041488985680344321
+    second: Grass Emission_6
+  - first:
+      213: -8359402225782015572
+    second: Grass Emission_7
+  - first:
+      213: 2685781149387143411
+    second: Grass Emission_8
+  - first:
+      213: -8119463151092787430
+    second: Grass Emission_9
+  - first:
+      213: -5077859761167851432
+    second: Grass Emission_10
+  - first:
+      213: -5791350738687761968
+    second: Grass Emission_11
+  - first:
+      213: 5758786078034485459
+    second: Grass Emission_12
+  - first:
+      213: 764246917020332586
+    second: Grass Emission_13
+  - first:
+      213: -7169794011746927071
+    second: Grass Emission_14
+  - first:
+      213: -7597451950576732192
+    second: Grass Emission_15
+  - first:
+      213: -8450220358547371586
+    second: Grass Emission_16
+  - first:
+      213: -124285173598796481
+    second: Grass Emission_17
+  - first:
+      213: -6064838556587194776
+    second: Grass Emission_18
+  - first:
+      213: -6556002232727973436
+    second: Grass Emission_19
+  - first:
+      213: 440417504461867138
+    second: Grass Emission_20
+  - first:
+      213: -1575403764827804079
+    second: Grass Emission_21
+  - first:
+      213: -9045446967013942241
+    second: Grass Emission_22
+  - first:
+      213: 6069269541392055931
+    second: Grass Emission_23
+  - first:
+      213: -6398466604620012560
+    second: Grass Emission_24
+  - first:
+      213: 7445748689663275250
+    second: Grass Emission_25
+  - first:
+      213: -1015814089527010454
+    second: Grass Emission_26
+  - first:
+      213: 6168671189001260538
+    second: Grass Emission_27
+  - first:
+      213: -1815442855410984754
+    second: Grass Emission_28
+  - first:
+      213: -774709679215663730
+    second: Grass Emission_29
+  - first:
+      213: 3235028663012062520
+    second: Grass Emission_30
+  - first:
+      213: -8888997970093932109
+    second: Grass Emission_31
+  - first:
+      213: 3119788169210474746
+    second: Grass Emission_32
+  - first:
+      213: 5492309480840401663
+    second: Grass Emission_33
+  - first:
+      213: -2106095045518147201
+    second: Grass Emission_34
+  - first:
+      213: -3282835813574642439
+    second: Grass Emission_35
+  - first:
+      213: -5095316985953216026
+    second: Grass Emission_36
+  - first:
+      213: -792423777687632265
+    second: Grass Emission_37
+  - first:
+      213: -4327898153820361599
+    second: Grass Emission_38
+  - first:
+      213: -1683562323641981719
+    second: Grass Emission_39
+  - first:
+      213: -4060461268727607635
+    second: Grass Emission_40
+  - first:
+      213: 4372480959142209210
+    second: Grass Emission_41
+  - first:
+      213: 4067022233322210044
+    second: Grass Emission_42
+  - first:
+      213: -634794176778178652
+    second: Grass Emission_43
+  - first:
+      213: 4996336713636800547
+    second: Grass Emission_44
+  - first:
+      213: -8533366058406771166
+    second: Grass Emission_45
+  - first:
+      213: -4316793917299055197
+    second: Grass Emission_46
+  - first:
+      213: -8601307717905863326
+    second: Grass Emission_47
+  - first:
+      213: 7007787522615888754
+    second: Grass Emission_48
+  - first:
+      213: -3962554792674252951
+    second: Grass Emission_0
+  - first:
+      213: 6896662226702398701
+    second: Grass Emission_1
+  - first:
+      213: -322302129486390478
+    second: Grass Emission_2
+  - first:
+      213: 5630485552999284180
+    second: Grass Emission_3
+  - first:
+      213: -6500357791738046729
+    second: Grass Emission_4
+  - first:
+      213: 3442394459559804913
+    second: Grass Emission_5
+  - first:
+      213: -4212533230409317272
+    second: Grass Emission_6
+  - first:
+      213: 3441315648675409121
+    second: Grass Emission_7
+  - first:
+      213: -8936977838795505944
+    second: Grass Emission_8
+  - first:
+      213: 2944367412331177227
+    second: Grass Emission_9
+  - first:
+      213: 3231847335713405424
+    second: Grass Emission_10
+  - first:
+      213: -1002075248308938002
+    second: Grass Emission_11
+  - first:
+      213: 2940758243626423533
+    second: Grass Emission_12
+  - first:
+      213: 6950887269802424902
+    second: Grass Emission_13
+  - first:
+      213: -6107675756968524075
+    second: Grass Emission_14
+  - first:
+      213: -6558041782542522417
+    second: Grass Emission_15
+  - first:
+      213: 8458301408970842041
+    second: Grass Emission_16
+  - first:
+      213: -5013761124811652784
+    second: Grass Emission_17
+  - first:
+      213: -1982826118348468862
+    second: Grass Emission_18
+  - first:
+      213: 565492430544524381
+    second: Grass Emission_19
+  - first:
+      213: 5986079818982476172
+    second: Grass Emission_20
+  - first:
+      213: -3995511893406217380
+    second: Grass Emission_21
+  - first:
+      213: -6799248751086512043
+    second: Grass Emission_22
+  - first:
+      213: 5928329749930948140
+    second: Grass Emission_23
+  - first:
+      213: 5700118810660569156
+    second: Grass Emission_24
+  - first:
+      213: 4543161035647006452
+    second: Grass Emission_25
+  - first:
+      213: -4033263905669386792
+    second: Grass Emission_26
+  - first:
+      213: -7729761534835771388
+    second: Grass Emission_27
+  - first:
+      213: -8142862829309804239
+    second: Grass Emission_28
+  - first:
+      213: 5939661569997168606
+    second: Grass Emission_29
+  - first:
+      213: 9219155915692637734
+    second: Grass Emission_30
+  - first:
+      213: -362565383143928928
+    second: Grass Emission_31
+  - first:
+      213: 8916531774642500942
+    second: Grass Emission_32
+  - first:
+      213: -1712585963431156373
+    second: Grass Emission_33
+  - first:
+      213: -1598817434760115838
+    second: Grass Emission_34
+  - first:
+      213: -8968521811589031513
+    second: Grass Emission_35
+  - first:
+      213: 6289836106051774279
+    second: Grass Emission_36
+  - first:
+      213: 7993843876043173179
+    second: Grass Emission_37
+  - first:
+      213: 4118589170581946939
+    second: Grass Emission_38
+  - first:
+      213: -3069787672725885660
+    second: Grass Emission_39
+  - first:
+      213: 874848902746973849
+    second: Grass Emission_40
+  - first:
+      213: -5726866333451743785
+    second: Grass Emission_41
+  - first:
+      213: 6166492965598444000
+    second: Grass Emission_42
+  - first:
+      213: -7227476025028663372
+    second: Grass Emission_43
+  - first:
+      213: 7127855383473548555
+    second: Grass Emission_44
+  - first:
+      213: -6671752443832709275
+    second: Grass Emission_45
+  - first:
+      213: -6808617853051006176
+    second: Grass Emission_46
+  - first:
+      213: -3228365097387627016
+    second: Grass Emission_47
+  - first:
+      213: -252708562003282712
+    second: Grass Emission_48
+  - first:
+      213: 8673694483796998588
+    second: Grass Emission_49
+  - first:
+      213: 881959369187906335
+    second: Grass Emission_50
+  - first:
+      213: 7415005039070429416
+    second: Grass Emission_51
+  - first:
+      213: -1599226112520451449
+    second: Grass Emission_52
+  - first:
+      213: 2382109689198596897
+    second: Grass Emission_53
+  - first:
+      213: -8383313164370748536
+    second: Grass Emission_49
+  - first:
+      213: 6554550609714949946
+    second: Grass Emission_50
+  - first:
+      213: -3986038019097616719
+    second: Grass Emission_51
+  - first:
+      213: -3345723680639698207
+    second: Grass Emission_52
+  - first:
+      213: -8792252592915288595
+    second: Grass Emission_53
+  - first:
+      213: -5655335573126141269
+    second: Grass Emission_54
+  - first:
+      213: -2088407355136069947
+    second: Grass Emission_55
+  - first:
+      213: -5756795349064204498
+    second: Grass Emission_54
+  - first:
+      213: 2316310146584949173
+    second: Grass Emission_55
+  - first:
+      213: 3272402927609133837
+    second: Grass Emission_56
+  - first:
+      213: -6347851144016994709
+    second: Grass Emission_57
+  - first:
+      213: 4870929497044875941
+    second: Grass Emission_58
+  - first:
+      213: -4782292283840374628
+    second: Grass Emission_59
+  - first:
+      213: 5894275522379801038
+    second: Grass Emission_60
+  - first:
+      213: 7783464558398411544
+    second: Grass Emission_61
+  - first:
+      213: -7615535904104098713
+    second: Grass Emission_62
+  - first:
+      213: -6411427835154237979
+    second: Grass Emission_63
+  - first:
+      213: -4611635530338522348
+    second: Grass Emission_56
+  - first:
+      213: -2987753721352129593
+    second: Grass Emission_57
+  - first:
+      213: -8747648340334261161
+    second: Grass Emission_58
+  - first:
+      213: 7038904939088282396
+    second: Grass Emission_59
+  - first:
+      213: 6994763678931062191
+    second: Grass Emission_60
+  - first:
+      213: -6137294957521075262
+    second: Grass Emission_61
+  - first:
+      213: -7168614316259461976
+    second: Grass Emission_62
+  - first:
+      213: 6958133055096881450
+    second: Grass Emission_63
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Grass Emission_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf94e4415ce16570800000000000000
+      internalID: 8458301408970842041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_17
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05140fe22da8b6ab0800000000000000
+      internalID: -5013761124811652784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_18
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d097c96269b74e0800000000000000
+      internalID: -1982826118348468862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_19
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5457c59e5809d700800000000000000
+      internalID: 565492430544524381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_20
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c89c59731e3d21350800000000000000
+      internalID: 5986079818982476172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_21
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b8ca12a171d88c0800000000000000
+      internalID: -3995511893406217380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55858fbe84734a1a0800000000000000
+      internalID: -6799248751086512043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_23
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26b3087f78a54250800000000000000
+      internalID: 5928329749930948140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44002f69bd3ea1f40800000000000000
+      internalID: 5700118810660569156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_25
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f6b22724ec8c0f30800000000000000
+      internalID: 4543161035647006452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_26
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ddeb21d8d7f608c0800000000000000
+      internalID: -4033263905669386792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_27
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408b2ad86de5ab490800000000000000
+      internalID: -7729761534835771388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131c144466dbefe80800000000000000
+      internalID: -8142862829309804239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_29
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf58bd6abaed6250800000000000000
+      internalID: 5939661569997168606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_30
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62efccbc57501ff70800000000000000
+      internalID: 9219155915692637734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_31
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ab4ad974b8e7faf0800000000000000
+      internalID: -362565383143928928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45bc004862edbb70800000000000000
+      internalID: 8916531774642500942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_33
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b65ad52d32cab38e0800000000000000
+      internalID: -1712585963431156373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_34
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2890c64930cdfc9e0800000000000000
+      internalID: -1598817434760115838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_35
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a994ebfde8698380800000000000000
+      internalID: -8968521811589031513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_36
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74764ac0d9cf94750800000000000000
+      internalID: 6289836106051774279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_37
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d2c7de6a6dfee60800000000000000
+      internalID: 7993843876043173179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_38
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b32ce48870b282930800000000000000
+      internalID: 4118589170581946939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_39
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42dec47406ce565d0800000000000000
+      internalID: -3069787672725885660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 996af502176142c00800000000000000
+      internalID: 874848902746973849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_41
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd077679651680b0800000000000000
+      internalID: -5726866333451743785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_42
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9b0744ea8c39550800000000000000
+      internalID: 6166492965598444000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_43
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7a38919d8d2bb90800000000000000
+      internalID: -7227476025028663372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_44
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0deb4ec4ba3be260800000000000000
+      internalID: 7127855383473548555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_45
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56fc104308c2963a0800000000000000
+      internalID: -6671752443832709275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_46
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0231381e22ee281a0800000000000000
+      internalID: -6808617853051006176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_47
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fde0fc6c0b8233d0800000000000000
+      internalID: -3228365097387627016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4381ad6e23e7cf0800000000000000
+      internalID: -252708562003282712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_49
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b53dcf71d78ab80800000000000000
+      internalID: -8383313164370748536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_50
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f21625d0176fa50800000000000000
+      internalID: 6554550609714949946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_51
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be1c726a8fbea8c0800000000000000
+      internalID: -3986038019097616719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_52
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eabbd2f90a9191d0800000000000000
+      internalID: -3345723680639698207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_53
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dede6cf99d4abf580800000000000000
+      internalID: -8792252592915288595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_54
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2f386e7121cb10b0800000000000000
+      internalID: -5756795349064204498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_55
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b134d45ecf252020800000000000000
+      internalID: 2316310146584949173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96721ab196d2209c0800000000000000
+      internalID: -3962554792674252951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de4737e41cdd5bf50800000000000000
+      internalID: 6896662226702398701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b9c9dbbe3f68bf0800000000000000
+      internalID: -322302129486390478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ddbd7367c0832e40800000000000000
+      internalID: 5630485552999284180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6d28e57071ac5a0800000000000000
+      internalID: -6500357791738046729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ffb5dab587d5cf20800000000000000
+      internalID: 3442394459559804913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8648cec88531a85c0800000000000000
+      internalID: -4212533230409317272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ec6a4f795202cf20800000000000000
+      internalID: 3441315648675409121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee3e09710a79f380800000000000000
+      internalID: -8936977838795505944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b056c34cf8e7cd820800000000000000
+      internalID: 2944367412331177227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f97d7d5704d9dc20800000000000000
+      internalID: 3231847335713405424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea9552fed9e712f0800000000000000
+      internalID: -1002075248308938002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de497a1ba0cafc820800000000000000
+      internalID: 2940758243626423533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_13
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64abb5ef423867060800000000000000
+      internalID: 6950887269802424902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d640a6424d2d3ba0800000000000000
+      internalID: -6107675756968524075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_15
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc72269aeb72df4a0800000000000000
+      internalID: -6558041782542522417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b2a9c2bed2000c0800000000000000
+      internalID: -4611635530338522348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_57
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3747af1dd5986d0800000000000000
+      internalID: -2987753721352129593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_58
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c47567e2c1a9680800000000000000
+      internalID: -8747648340334261161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_59
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1389169fb63fa160800000000000000
+      internalID: 7038904939088282396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_60
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad8d729184621160800000000000000
+      internalID: 6994763678931062191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_61
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3092fb0c2f3daa0800000000000000
+      internalID: -6137294957521075262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_62
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a43393a247f38c90800000000000000
+      internalID: -7168614316259461976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass Emission_63
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2104f8d521409060800000000000000
+      internalID: 6958133055096881450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
