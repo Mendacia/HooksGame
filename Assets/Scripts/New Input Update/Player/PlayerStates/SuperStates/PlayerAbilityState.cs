@@ -7,45 +7,35 @@ public class PlayerAbilityState : PlayerState
     protected bool isAbilityDone;
     private bool isGrounded;
 
-    public PlayerAbilityState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+    public PlayerAbilityState(string animBoolName) : base(animBoolName)
     {
     }
 
-    public override void DoChecks()
+    public override void DoChecks(Player player)
     {
-        base.DoChecks();
+        base.DoChecks(player);
         isGrounded = player.CheckIfGrounded();
     }
 
-    public override void Enter()
+    public override void Enter(Player player)
     {
-        base.Enter();
+        base.Enter(player);
         isAbilityDone = false;
     }
 
-    public override void Exit()
+    public override void LogicUpdate(Player player)
     {
-        base.Exit();
-    }
-
-    public override void LogicUpdate()
-    {
-        base.LogicUpdate();
+        base.LogicUpdate(player);
         if (isAbilityDone)
         {
             if (isGrounded && player.CurrentVelocity.y < 0.01f)
             {
-                stateMachine.ChangeState(player.IdleState);
+                player.ChangeState(new PlayerIdleState("idle"));
             }
             else
             {
-                stateMachine.ChangeState(player.InAirState);
+                player.ChangeState(new PlayerInAirState("inAir", false));
             }
         }
-    }
-
-    public override void PhysicsUpdate()
-    {
-        base.PhysicsUpdate();
     }
 }

@@ -4,26 +4,26 @@ using UnityEngine;
 
 public class PlayerLandState : PlayerGroundedState
 {
-    public PlayerLandState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+    public PlayerLandState(string animBoolName) : base(animBoolName)
     {
     }
 
-    public override void LogicUpdate()
+    public override void LogicUpdate(Player player)
     {
-        base.LogicUpdate();
+        base.LogicUpdate(player);
         if (input.x != 0)
         {
-            stateMachine.ChangeState(player.MoveState);
+            player.ChangeState(new PlayerMoveState("move"));
         }
         else if(isAnimationFinished)
         {
-            stateMachine.ChangeState(player.IdleState);
+            player.ChangeState(new PlayerIdleState("idle"));
         }
     }
 
-    public override void PhysicsUpdate()
+    public override void PhysicsUpdate(Player player)
     {
-        base.PhysicsUpdate();
+        base.PhysicsUpdate(player);
         player.StopThePlayer();
     }
 }

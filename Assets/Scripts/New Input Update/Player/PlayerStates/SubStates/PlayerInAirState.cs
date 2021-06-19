@@ -7,48 +7,41 @@ public class PlayerInAirState : PlayerState
     private bool allowMovement;
     private bool isGrounded;
     private bool coyoteTime;
-    public PlayerInAirState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+    public PlayerInAirState(string animBoolName, bool fromGrounded) : base(animBoolName)
     {
+        if (fromGrounded) {
+            StartCoyoteTime();
+        }
     }
 
-    public override void DoChecks()
+    public override void DoChecks(Player player)
     {
-        base.DoChecks();
+        base.DoChecks(player);
         isGrounded = player.CheckIfGrounded();
     }
 
-    public override void Enter()
+    public override void LogicUpdate(Player player)
     {
-        base.Enter();
-    }
-
-    public override void Exit()
-    {
-        base.Exit();
-    }
-
-    public override void LogicUpdate()
-    {
-        base.LogicUpdate();
-        CheckCoyoteTime();
+        base.LogicUpdate(player);
+        CheckCoyoteTime(player);
         if (isGrounded && player.CurrentVelocity.y < 0.01)
         {
             //This needs to be handled this way otherwise if you spam you can get multi jumps
             if(player.InputHandler.MoveInput.x == 0)
             {
                 allowMovement = false;
-                stateMachine.ChangeState(player.LandState);
+                player.ChangeState(new PlayerLandState("land"));
             }
             else
             {
                 allowMovement = false;
-                stateMachine.ChangeState(player.MoveState);
+                player.ChangeState(new PlayerMoveState("move"));
             }
         }
         else if (player.InputHandler.JumpInput && coyoteTime)
         {
             coyoteTime = false;
-            stateMachine.ChangeState(player.JumpState);
+            player.ChangeState(new PlayerJumpState("inAir"));
         }
         else
         {
@@ -63,17 +56,17 @@ public class PlayerInAirState : PlayerState
         }
     }
 
-    public override void PhysicsUpdate()
+    public override void PhysicsUpdate(Player player)
     {
-        base.PhysicsUpdate();
+        base.PhysicsUpdate(player);
         if (allowMovement)
         {
-            player.SetAccelerationX(new Vector2(player.InputHandler.MoveInput.x * playerData.movementAcceleration, 0), playerData.movementSpeedCap * Mathf.Abs(player.InputHandler.MoveInput.x));
+            player.SetAccelerationX(new Vector2(player.InputHandler.MoveInput.x * player.playerData.movementAcceleration, 0), player.playerData.movementSpeedCap * Mathf.Abs(player.InputHandler.MoveInput.x));
         }
     }
-    private void CheckCoyoteTime()
+    private void CheckCoyoteTime(Player player)
     {
-        if (coyoteTime && Time.time > startTime + playerData.coyoteTimeLength)
+        if (coyoteTime && Time.time > startTime + player.playerData.coyoteTimeLength)
         {
             coyoteTime = false;
             Debug.Log("Coyote Time Ended");

@@ -4,50 +4,43 @@ using UnityEngine;
 
 public class PlayerState
 {
-    protected Player player;
-    protected PlayerStateMachine stateMachine;
-    protected PlayerData playerData;
-
     protected bool isAnimationFinished;
 
     protected float startTime;
 
     private string animBoolName;
 
-    public PlayerState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName)
+    public PlayerState(string animBoolName)
     {
-        this.player = player;
-        this.stateMachine = stateMachine;
-        this.playerData = playerData;
         this.animBoolName = animBoolName;
     }
 
-    public virtual void Enter()
+    public virtual void Enter(Player player)
     {
-        DoChecks();
+        DoChecks(player);
         player.Anim.SetBool(animBoolName, true);
         startTime = Time.time;
         Debug.Log(animBoolName);
         isAnimationFinished = false;
     }
 
-    public virtual void Exit()
+    public virtual void Exit(Player player)
     {
         player.Anim.SetBool(animBoolName, false);
     }
 
-    public virtual void LogicUpdate()//Update()
+    public virtual void LogicUpdate(Player player)//Update()
     {
 
     }
 
-    public virtual void PhysicsUpdate()//FixedUpdate()
+    public virtual void PhysicsUpdate(Player player)//FixedUpdate()
     {
-        DoChecks();
+        DoChecks(player);
     }
 
-    public virtual void DoChecks() { }
+    public virtual void DoChecks(Player player) { }
 
-    public virtual void AnimationTrigger() { }
+    public virtual void AnimationTrigger(Player player) { }
     public virtual void AnimationFinishTrigger() => isAnimationFinished = true;
 }

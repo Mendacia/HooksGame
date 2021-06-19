@@ -5,13 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     #region State Variables
-    public PlayerStateMachine StateMachine { get; private set; }
-    [SerializeField] private PlayerData playerData;
-    public PlayerIdleState IdleState { get; private set; }
-    public PlayerMoveState MoveState { get; private set; }
-    public PlayerJumpState JumpState { get; private set; }
-    public PlayerInAirState InAirState { get; private set; }
-    public PlayerLandState LandState { get; private set; }
+
+    public PlayerState CurrentState { get; private set; }
+    public PlayerData playerData;
     #endregion
 
     #region Components
@@ -33,15 +29,6 @@ public class Player : MonoBehaviour
     #endregion
 
     #region Unity Callback Functions
-    private void Awake()
-    {
-        StateMachine = new PlayerStateMachine();
-        IdleState = new PlayerIdleState(this, StateMachine, playerData, "idle");
-        MoveState = new PlayerMoveState(this, StateMachine, playerData, "move");
-        JumpState = new PlayerJumpState(this, StateMachine, playerData, "inAir");
-        InAirState = new PlayerInAirState(this, StateMachine, playerData, "inAir");
-        LandState = new PlayerLandState(this, StateMachine, playerData, "land");
-    }
 
     void Start()
     {
@@ -52,18 +39,18 @@ public class Player : MonoBehaviour
 
         FacingDirection = -1;
 
-        StateMachine.Initialize(IdleState);
+        Initialize(new PlayerIdleState("idle"));
     }
 
     void Update()
     {
         CurrentVelocity = RB.velocity;
-        StateMachine.CurrentState.LogicUpdate();
+        CurrentState.LogicUpdate(this);
     }
 
     void FixedUpdate()
     {
-        StateMachine.CurrentState.PhysicsUpdate();
+        CurrentState.PhysicsUpdate(this);
     }
     #endregion
 
@@ -91,6 +78,19 @@ public class Player : MonoBehaviour
     {
         RB.velocity *= new Vector2(0.8f, 1);
     }
+
+    public void Initialize(PlayerState startingState)
+    {
+        CurrentState = startingState;
+        CurrentState.Enter(this);
+    }
+
+    public void ChangeState(PlayerState newState)
+    {
+        CurrentState.Exit(this);
+        CurrentState = newState;
+        CurrentState.Enter(this);
+    }
     #endregion
 
     #region Check Funtions
@@ -109,8 +109,8 @@ public class Player : MonoBehaviour
     #endregion
 
     #region Other Functions
-    public void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();
-    public void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinishTrigger();
+    public void AnimationTrigger() => CurrentState.AnimationTrigger(this);
+    public void AnimationFinishTrigger() => CurrentState.AnimationFinishTrigger();
 
     private void Flip()
     {

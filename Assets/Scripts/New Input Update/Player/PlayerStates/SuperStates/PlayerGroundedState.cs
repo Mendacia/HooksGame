@@ -7,46 +7,30 @@ public class PlayerGroundedState : PlayerState
     protected Vector2 input;
     private bool jumpInput;
     private bool isGrounded;
-    public PlayerGroundedState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+    public PlayerGroundedState(string animBoolName) : base(animBoolName)
     {
     }
 
-    public override void DoChecks()
+    public override void DoChecks(Player player)
     {
-        base.DoChecks();
+        base.DoChecks(player);
         isGrounded = player.CheckIfGrounded();
     }
 
-    public override void Enter()
+    public override void LogicUpdate(Player player)
     {
-        base.Enter();
-    }
-
-    public override void Exit()
-    {
-        base.Exit();
-    }
-
-    public override void LogicUpdate()
-    {
-        base.LogicUpdate();
+        base.LogicUpdate(player);
         input = player.InputHandler.MoveInput;
         jumpInput = player.InputHandler.JumpInput;
 
         if (jumpInput)
         {
             player.InputHandler.UseJumpInput();
-            stateMachine.ChangeState(player.JumpState);
+            player.ChangeState(new PlayerJumpState("inAir"));
         }
         else if (!isGrounded)
         {
-            player.InAirState.StartCoyoteTime();
-            stateMachine.ChangeState(player.InAirState);
+            player.ChangeState(new PlayerInAirState("inAir", true));
         }
-    }
-
-    public override void PhysicsUpdate()
-    {
-        base.PhysicsUpdate();
     }
 }

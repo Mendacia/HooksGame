@@ -1,34 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMoveState : PlayerGroundedState
 {
-    public PlayerMoveState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+    public PlayerMoveState(string animBoolName) : base(animBoolName)
     {
     }
 
-    public override void DoChecks()
+    public override void LogicUpdate(Player player)
     {
-        base.DoChecks();
-    }
-
-    public override void Enter()
-    {
-        base.Enter();
-    }
-
-    public override void Exit()
-    {
-        base.Exit();
-    }
-
-    public override void LogicUpdate()
-    {
-        base.LogicUpdate();
+        base.LogicUpdate(player);
         if(input.x == 0)
         {
-            stateMachine.ChangeState(player.IdleState);
+            player.ChangeState(new PlayerIdleState("idle"));
         }
         else
         {
@@ -36,9 +19,9 @@ public class PlayerMoveState : PlayerGroundedState
         }
     }
 
-    public override void PhysicsUpdate()
+    public override void PhysicsUpdate(Player player)
     {
-        base.PhysicsUpdate();
-        player.SetAccelerationX(new Vector2 (input.x * playerData.movementAcceleration, 0), playerData.movementSpeedCap * Mathf.Abs(input.x));
+        base.PhysicsUpdate(player);
+        player.SetAccelerationX(new Vector2 (input.x * player.playerData.movementAcceleration, 0), player.playerData.movementSpeedCap * Mathf.Abs(input.x));
     }
 }

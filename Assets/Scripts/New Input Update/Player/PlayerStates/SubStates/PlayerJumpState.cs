@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PlayerJumpState : PlayerAbilityState
 {
-    public PlayerJumpState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+    public PlayerJumpState(string animBoolName) : base(animBoolName)
     {
     }
 
-    public override void Enter()
+    public override void Enter(Player player)
     {
-        base.Enter();
+        base.Enter(player);
 
-        player.SetVelocityY(playerData.jumpVelocity);
+        player.SetVelocityY(player.playerData.jumpVelocity);
         isAbilityDone = true;
     }
 }
