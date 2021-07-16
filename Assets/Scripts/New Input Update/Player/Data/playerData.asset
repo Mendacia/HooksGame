@@ -16,6 +16,7 @@ MonoBehaviour:
   movementSpeedCap: 8
   jumpVelocity: 30
   coyoteTimeLength: 2
+  hookVelocity: 40
   groundCheckRadius: 0.3
   whatIsGround:
     serializedVersion: 2

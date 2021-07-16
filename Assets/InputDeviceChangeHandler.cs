@@ -7,7 +7,7 @@ using UnityEngine.InputSystem.Users;
 
 public class InputDeviceChangeHandler : MonoBehaviour
 {
-    [SerializeField] private PlayerAiming playerAiming;
+    [SerializeField] private PlayerCursor playerCursor;
     [SerializeField] private SpriteRenderer spriteToChange;
     [SerializeField] private Sprite mKSprite;
     [SerializeField] private Sprite cSprite;
@@ -39,12 +39,12 @@ public class InputDeviceChangeHandler : MonoBehaviour
     {
         if (schemeName.Equals("Gamepad"))
         {
-            playerAiming.ChangeControls(true);
+            playerCursor.ChangeControls(true);
             spriteToChange.sprite = cSprite;
         }
         else
         {
-            playerAiming.ChangeControls(false);
+            playerCursor.ChangeControls(false);
             spriteToChange.sprite = mKSprite;
         }
     }

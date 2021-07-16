@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     #region Other Variables
     public Vector2 CurrentVelocity { get; private set; }
     public int FacingDirection { get; private set; }
-
+    public bool inHookThrough = false;
     private Transform child;
     private Vector2 workspace;
     #endregion
@@ -72,6 +72,11 @@ public class Player : MonoBehaviour
         workspace.Set(CurrentVelocity.x, velocity);
         RB.velocity = workspace;
         CurrentVelocity = workspace;
+    }
+
+    public void SetVelocityHook(Vector2 destination, float velocity)
+    {
+        RB.velocity = (destination - RB.position).normalized * velocity;
     }
 
     public void StopThePlayer()

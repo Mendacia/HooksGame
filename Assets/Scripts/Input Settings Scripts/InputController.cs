@@ -38,6 +38,7 @@ public class InputController : MonoBehaviour
 
         //Stick Aiming
         controls.Gameplay.AimStick.performed += OnAimStickPerformed;
+        controls.Gameplay.AimStick.canceled += OnAimStickPerformed;
 
         //Jumping
         controls.Gameplay.Jump.performed += OnJumpPerformed;

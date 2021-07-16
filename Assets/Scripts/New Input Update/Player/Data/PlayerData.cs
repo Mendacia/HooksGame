@@ -15,6 +15,9 @@ public class PlayerData : ScriptableObject
     [Header("In Air State")]
     public float coyoteTimeLength = 0.1f;
 
+    [Header("Hook Through State")]
+    public float hookVelocity = 10f;
+
     [Header("Check Variables")]
     public float groundCheckRadius = 0.3f;
     public LayerMask whatIsGround;
