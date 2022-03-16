@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
         {
             RB.velocity += accelerationAndDirection * Time.deltaTime;
         }
-        if(Mathf.Sign(RB.velocity.x) != Mathf.Sign(accelerationAndDirection.x))
+        if(accelerationAndDirection.x != 0 && Mathf.Sign(RB.velocity.x) != Mathf.Sign(accelerationAndDirection.x))
         {
             RB.velocity *= new Vector2(0.8f, 1);
         }

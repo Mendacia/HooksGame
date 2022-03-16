@@ -5,9 +5,7 @@ using UnityEngine;
 public class PlayerState
 {
     protected bool isAnimationFinished;
-
     protected float startTime;
-
     private string animBoolName;
 
     public PlayerState(string animBoolName)
@@ -20,7 +18,7 @@ public class PlayerState
         DoChecks(player);
         player.Anim.SetBool(animBoolName, true);
         startTime = Time.time;
-        Debug.Log("Player State is now " + animBoolName);
+        //Debug.Log("Player State is now " + animBoolName);
         isAnimationFinished = false;
     }
 
@@ -36,7 +34,7 @@ public class PlayerState
 
     public virtual void PhysicsUpdate(Player player)//FixedUpdate()
     {
-        DoChecks(player);
+        DoChecks(player); //DoChecks in general is vestigial from the tutorial, but code in DoChecks will run before the rest of any state's physics update
     }
 
     public virtual void DoChecks(Player player) { }
