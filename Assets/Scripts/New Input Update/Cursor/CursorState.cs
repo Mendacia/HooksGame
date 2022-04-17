@@ -13,7 +13,7 @@ public class CursorState
 
     public virtual void Enter(PlayerCursor playerCursor)
     {
-        //Debug.Log("Cursor State is now " + stateName);
+        Debug.Log("Cursor State is now " + stateName);
     }
     public virtual void Exit(PlayerCursor playerCursor)
     {

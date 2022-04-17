@@ -28,6 +28,11 @@ public class CursorHookThroughState : CursorState
             playerCursor.MoveCursorMouse();
         }
 
+        if (playerCursor.InputHandler.SwingInput)
+        {
+            playerCursor.RemoveThePlayerFromPreSpinState();
+        }
+
         playerCursor.TargeterFollowTarget(targetPosition);
 
         if (playerCursor.CheckIfPlayerIsInHookThrough() == false)

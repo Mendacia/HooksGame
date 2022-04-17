@@ -12,11 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a3091bd3f5c914aa2f090d11d78a83, type: 3}
   m_Name: playerData
   m_EditorClassIdentifier: 
+  swingChainRoot: {fileID: 4828337909542705197, guid: 12509849ab0c53d43a2d9653271535ed,
+    type: 3}
+  swingChainLink: {fileID: 6927931676069471858, guid: f32f7dbc3b679a349bbc8b4e06a5cd58,
+    type: 3}
+  spinAxis: {fileID: 6593151747207657801, guid: f6520a3385f2e594e80d452f1debd770,
+    type: 3}
+  spinAnchor: {fileID: 291164654695111702, guid: f59140a8c519b204ba3c7af15c978df4,
+    type: 3}
+  hookLineRenderer: {fileID: 8758268425340618943, guid: 71d8acdd768d9084ab87f4414c23d546,
+    type: 3}
   movementAcceleration: 25
   movementSpeedCap: 8
   jumpVelocity: 30
   coyoteTimeLength: 2
   hookVelocity: 40
+  orbitalAcceleration: 100
+  spinSpeedThreshold: 10
+  orbitalSpeedCap: 10000
   groundCheckRadius: 0.3
   whatIsGround:
     serializedVersion: 2

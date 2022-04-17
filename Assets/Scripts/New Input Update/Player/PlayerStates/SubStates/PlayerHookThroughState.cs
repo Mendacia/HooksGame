@@ -17,12 +17,13 @@ public class PlayerHookThroughState : PlayerAbilityState
         player.inHookThrough = true;
         defaultGravityScale = player.RB.gravityScale;
         player.RB.gravityScale = 0;
+        player.DrawRope(targetPosition);
     }
 
     public override void LogicUpdate(Player player)
     {
         base.LogicUpdate(player);
-        //DrawHook
+        player.UpdateRope(targetPosition);
     }
 
     public override void PhysicsUpdate(Player player)
@@ -41,7 +42,7 @@ public class PlayerHookThroughState : PlayerAbilityState
     public override void Exit(Player player)
     {
         base.Exit(player);
-        //UndrawHook
+        player.DestroyRope();
         player.inHookThrough = false;
         player.RB.gravityScale = defaultGravityScale;
     }

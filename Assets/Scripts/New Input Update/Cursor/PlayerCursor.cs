@@ -24,6 +24,7 @@ public class PlayerCursor : MonoBehaviour
     public LayerMask hookTargetingLayerMask;
 
     private bool wantDisabledRhetical = false;
+    private bool wantDisabledTargeter = false;
     #endregion
     #region Hooks List
     [SerializeField] private Transform hooksFolder;
@@ -51,6 +52,13 @@ public class PlayerCursor : MonoBehaviour
             if (Vector2.Distance(new Vector2(player.position.x, player.position.y), new Vector2(rhetical.position.x, rhetical.position.y)) < 1)
             {
                 rheticalSprite.enabled = false;
+            }
+        }
+        if (wantDisabledTargeter && usingController)
+        {
+            if (Vector2.Distance(new Vector2(player.position.x, player.position.y), new Vector2(targeter.position.x, targeter.position.y)) < 1)
+            {
+                targeterSprite.enabled = false;
             }
         }
     }
@@ -123,6 +131,10 @@ public class PlayerCursor : MonoBehaviour
         rheticalSprite.sprite = rheticalDefault;
         targeterSprite.sprite = targeterDefault;
         targeterSprite.GetComponent<Animator>().SetBool("Targeting", false);
+        if(rheticalSprite.enabled == false)
+        {
+            wantDisabledTargeter = true;
+        }
     }
     public void ChangeControls(bool isGamepad)
     {
@@ -143,7 +155,9 @@ public class PlayerCursor : MonoBehaviour
     {
         cursorPos = mousePos;
         wantDisabledRhetical = false;
+        wantDisabledTargeter = false;
         rheticalSprite.enabled = true;
+        targeterSprite.enabled = true;
         if (usingController && mousePos == Vector2.zero)
         {
             wantDisabledRhetical = true;
@@ -172,14 +186,42 @@ public class PlayerCursor : MonoBehaviour
             rheticalSprite.enabled = false;
         }
     }
+    public void SetTargeterVisibility(bool visible)
+    {
+        if (visible)
+        {
+            wantDisabledTargeter = false;
+            targeterSprite.enabled = true;
+        }
+        else
+        {
+            wantDisabledTargeter = true;
+            targeterSprite.enabled = false;
+        }
+    }
 
     public void SetThePlayerStateToHookThroughState(Vector2 targetPosition)
     {
         playerStateMachineRootScript.ChangeState(new PlayerHookThroughState("hookThrough", targetPosition));
     }
+    public void AttemptToStartPreSpinState(Transform targetHook)
+    {
+        playerStateMachineRootScript.AttemptSwingEntry(targetHook, 0, false);
+    }
+    public void RemoveThePlayerFromPreSpinState()
+    {
+        InputHandler.UseSwingInput();
+        playerStateMachineRootScript.SwingExit();
+    }
     public bool CheckIfPlayerIsInHookThrough()
     {
-        bool check = playerStateMachineRootScript.inHookThrough;
-        return check;
+        if (playerStateMachineRootScript.inHookThrough || playerStateMachineRootScript.inSpinOrPreSpin)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

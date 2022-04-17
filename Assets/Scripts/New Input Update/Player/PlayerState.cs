@@ -18,7 +18,7 @@ public class PlayerState
         DoChecks(player);
         player.Anim.SetBool(animBoolName, true);
         startTime = Time.time;
-        //Debug.Log("Player State is now " + animBoolName);
+        Debug.Log("Player State is now " + animBoolName);
         isAnimationFinished = false;
     }
 

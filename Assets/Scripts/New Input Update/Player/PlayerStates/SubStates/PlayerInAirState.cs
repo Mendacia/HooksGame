@@ -14,6 +14,12 @@ public class PlayerInAirState : PlayerState
         }
     }
 
+    public override void Enter(Player player)
+    {
+        base.Enter(player);
+        player.inAir = true;
+    }
+
     public override void DoChecks(Player player)
     {
         base.DoChecks(player);
@@ -63,6 +69,12 @@ public class PlayerInAirState : PlayerState
         {
             player.SetAccelerationX(new Vector2(player.InputHandler.MoveInput.x * player.playerData.movementAcceleration, 0), player.playerData.movementSpeedCap * Mathf.Abs(player.InputHandler.MoveInput.x));
         }
+    }
+
+    public override void Exit(Player player)
+    {
+        base.Exit(player);
+        player.inAir = false;
     }
     private void CheckCoyoteTime(Player player)
     {

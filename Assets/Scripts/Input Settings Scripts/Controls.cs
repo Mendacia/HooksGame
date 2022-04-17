@@ -181,7 +181,7 @@ public class @Controls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""172f25df-2c14-4d5c-967a-76a533c24dd9"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
@@ -193,7 +193,7 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""a6f41d7b-40c0-4fa7-a625-79b67b7b05b8"",
                     ""path"": ""<Mouse>/rightButton"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press(behavior=2)"",
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
                     ""action"": ""HookSwing"",
@@ -203,8 +203,8 @@ public class @Controls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""eec15faf-ff5d-4640-9c6d-b72e55808242"",
-                    ""path"": ""<Gamepad>/leftTrigger"",
-                    ""interactions"": """",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": ""Press(behavior=2)"",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""HookSwing"",

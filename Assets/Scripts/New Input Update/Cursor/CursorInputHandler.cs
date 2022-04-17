@@ -35,7 +35,7 @@ public class CursorInputHandler : MonoBehaviour
         SwingInput = true;
         swingInputStartTime = Time.time;
     }
-    public void UseJumpInput() => SwingInput = false;
+    public void UseSwingInput() => SwingInput = false;
 
 
 

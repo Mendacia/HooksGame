@@ -7,6 +7,7 @@ public class CursorTargetingState : CursorState
     private Transform targetHook = null;
     private int buffer = 0;
     private bool hookThroughInput = false;
+    private bool hookSpinInput = false;
     public CursorTargetingState(string stateName):base(stateName)
     {
     }
@@ -14,6 +15,7 @@ public class CursorTargetingState : CursorState
     {
         base.Enter(playerCursor);
         playerCursor.SetRheticalVisibility(true);
+        playerCursor.SetTargeterVisibility(true);
     }
 
     public override void LogicUpdate(PlayerCursor playerCursor)
@@ -37,6 +39,7 @@ public class CursorTargetingState : CursorState
         {
             buffer = 50;
             playerCursor.TargeterFollowTarget(targetHook.position);
+            playerCursor.SetTargeterVisibility(true);
         }
         else
         {
@@ -49,6 +52,14 @@ public class CursorTargetingState : CursorState
         {
             playerCursor.InputHandler.UseHookInput();
             playerCursor.SetThePlayerStateToHookThroughState(targetHook.position);
+            playerCursor.ChangeState(new CursorHookThroughState("hookThroughState", targetHook.position));
+        }
+
+        hookSpinInput = playerCursor.InputHandler.SwingInput;
+        if(hookSpinInput && targetHook != null)
+        {
+            playerCursor.AttemptToStartPreSpinState(targetHook);
+            playerCursor.InputHandler.UseSwingInput();
             playerCursor.ChangeState(new CursorHookThroughState("hookThroughState", targetHook.position));
         }
     }
